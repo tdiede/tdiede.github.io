@@ -1,0 +1,16 @@
+/* Style */
+
+body {
+    /*background: #333 url("/static/img/splash.jpg");*/
+    background-size: cover;
+    color: #bbbbbb;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Style our navbar. */
+
+.navbar {
+    background-color: transparent;
+    margin-bottom: 0;
+}
