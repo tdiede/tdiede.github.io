@@ -1,12 +1,12 @@
 "use strict";
 
 
+var canvas = document.getElementById('canvas-element');
+
 function scrollToElement(selector) {
-    time = typeof(time) != 'undefined' ? time : 1000;
-    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
     element = $(selector);
     offset = element.offset();
-    offsetTop = offset.top + verticalOffset;
+    offsetTop = offset.top;
     $('html, body').animate({
         scrollTop: offsetTop
     }, time);
