@@ -14,3 +14,8 @@ body {
     background-color: transparent;
     margin-bottom: 0;
 }
+
+#canvas-element {
+    width: 1435px;
+    height: 571px;
+}
