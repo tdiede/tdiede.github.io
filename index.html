@@ -6,46 +6,177 @@
 
   <link rel="stylesheet" href="/static/css/site.css">
 
+  <!-- flash messages display here -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <div class="alert alert-info" role="alert">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+
 </head>
 <body>
 
-  <nav class=''></nav>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href='/buildings'>
+            <span><span class='glyphicon glyphicon-th-list'></span> &nbsp SF BUILDINGS</span>
+          </a>
+        </li>
+        <li>
+          <a href='/map'>
+            <span><span class='glyphicon glyphicon-map-marker'></span> &nbsp MAP VIEW</span>
+          </a>
+        </li>
+        <li>
+          <a href='/dendrogram'>
+            <span><span class='glyphicon glyphicon-user'></span> &nbsp DENDROGRAM</span>
+          </a>
+        </li>
+        <li>
+          <a href='/cities'>
+            <span><span class='glyphicon glyphicon-globe'></span> &nbsp CITIES</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href='/dashboard'>
+            <span><span class='glyphicon glyphicon-th'></span> &nbsp CARDS</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <section id='section0'>
-    <canvas id='canvas-element'></canvas>
-    <div id='content'>
-      <h1>tmdd.io</h1>
-      <p>
-        Hello! I'm Therese Diede and I like technology.
-      </p>
-      <img id='profile-photo' src='/static/img/me.png'>
-      <div id='links'>
-        <a href='http://www.twitter.com/thyrese'>
-          <span class='icon-twitter'>
-            ::before
-          </span>
-        </a>
-        <a href='http://www.instagram.com/tmdd_ly'>
-          <span class='icon-instagram'>
-            ::before
-          </span>
-        </a>
-        <a href='http://www.linkedin.com/in/theresediede'>
-          <span class='icon-linkedin'>
-            ::before
-          </span>
-        </a>
-        <a href='http://github.com/tdiede'>
-          <span class='icon-github'>
-            ::before
-          </span>
-        </a>     
+<section id='section0'>
+  <canvas id='canvas-element'></canvas>
+  <div id='content'>
+    <h1>tmdd.io</h1>
+    <p>
+      Hello! I'm Therese Diede and I like technology.
+    </p>
+    <img id='profile-photo' src='/static/img/me.png'>
+    <div id='links'>
+      <a href='http://www.twitter.com/thyrese'>
+        <span class='icon-twitter'>
+          ::before
+        </span>
+      </a>
+      <a href='http://www.instagram.com/tmdd_ly'>
+        <span class='icon-instagram'>
+          ::before
+        </span>
+      </a>
+      <a href='http://www.linkedin.com/in/theresediede'>
+        <span class='icon-linkedin'>
+          ::before
+        </span>
+      </a>
+      <a href='http://github.com/tdiede'>
+        <span class='icon-github'>
+          ::before
+        </span>
+      </a>     
+    </div>
+  </div>
+</section>
+
+<section class='projectinfo'>
+  <div class='background'>
+    <h2>Projects</h2>
+    <div class='grid-container row'>
+      <div class='col span_12'>
+        <p>
+          These are my projects.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <script src='http://code.jquery.com/jquery.js'></script>
-  <script src='../static/js/site.js'></script>
+<section class='projects'>
+  <div class='projectgrid'>
+    <ul>
+      <li class='project-screenshot p1'>
+        <div class='project'>
+          <h3>
+            <a target='_blank' class='portfolio-link'></a>
+          </h3>
+        </div>
+        <a class='portfolio-hover' href='#'>
+          <img width='400' height='400' src='' class='attach-post-thmb'>
+        </a>
+      </li>
+       <li class='project-screenshot p2'>
+        <div class='project'>
+          <h3>
+            <a target='_blank' class='portfolio-link'></a>
+          </h3>
+        </div>
+        <a class='portfolio-hover' href='#'>
+          <img width='400' height='400' src='' class='attach-post-thmb'>
+        </a>
+      </li>
+      <li class='project-screenshot p3'>
+        <div class='project'>
+          <h3>
+            <a target='_blank' class='portfolio-link'></a>
+          </h3>
+        </div>
+        <a class='portfolio-hover' href='#'>
+          <img width='400' height='400' src='' class='attach-post-thmb'>
+        </a>
+      </li>
+      <li class='project-screenshot p4'>
+        <div class='project'>
+          <h3>
+            <a target='_blank' class='portfolio-link'></a>
+          </h3>
+        </div>
+        <a class='portfolio-hover' href='#'>
+          <img width='400' height='400' src='' class='attach-post-thmb'>
+        </a>
+      </li>
+      <li class='project-screenshot p5'>
+        <div class='project'>
+          <h3>
+            <a target='_blank' class='portfolio-link'></a>
+          </h3>
+        </div>
+        <a class='portfolio-hover' href='#'>
+          <img width='400' height='400' src='' class='attach-post-thmb'>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class='aboutme'>
+  <div class='background'>
+    <h2>Skills</h2>
+    <div class='grid-container row'>
+      <div class='services col span_12'>
+        <p>
+          Reach out.
+        </p>
+        <a href='mailto:tmdd.design@gmail.com'>tmdd.design@gmail.com</a>
+        <img src=''>
+        <h2 class='contact'>Contact</h2>
+      </div>
+    </div>
+  </div>
+</section>
+     
+
+<script src='http://code.jquery.com/jquery.js'></script>
+<script src='../static/js/site.js'></script>
 
 </body>
 </html>
