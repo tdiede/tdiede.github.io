@@ -92,6 +92,36 @@ section {
     background-color: #E8E7EA;
 }
 
+.extra {
+    height: auto;
+    overflow: hidden;
+    background-color: #5A6A61;
+}
+
+.background {
+    position: relative;
+    height: 50%;
+    padding-top: 8em;
+    padding-bottom: 12em;
+}
+
+.background p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.background a:link, .fiddy a:visited {
+    color: #fff;
+}
+
+.background a:hover {
+    border-bottom: 1px dotted #9EA183;
+}
+
 
 
 
