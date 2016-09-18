@@ -6,18 +6,6 @@
 
   <link rel="stylesheet" href="/static/css/site.css">
 
-  <!-- flash messages display here -->
-  {% with messages = get_flashed_messages() %}
-  {% if messages %}
-  <div class="alert alert-info" role="alert">
-    {% for message in messages %}
-    {{ message }}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endwith %}
-
-
 </head>
 <body>
 
