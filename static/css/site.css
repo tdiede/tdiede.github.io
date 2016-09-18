@@ -114,10 +114,6 @@ section {
     font-size: 1.2em;
 }
 
-.background a:link, .fiddy a:visited {
-    color: #fff;
-}
-
 .background a:hover {
     border-bottom: 1px dotted #9EA183;
 }
