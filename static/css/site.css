@@ -66,3 +66,18 @@ body {
     width: 100px;
     height: auto;
 }
+
+
+
+.icon-twitter {
+    content: "\e600";
+}
+.icon-instagram:before {
+    content: "\e601";
+}
+.icon-facebook:before {
+    content: "\e602";
+}
+.icon-linkedin:before {
+    content: "\e603";
+}
