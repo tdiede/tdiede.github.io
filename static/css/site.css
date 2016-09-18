@@ -32,6 +32,15 @@ h3 {
     color: #333333;
 }
 
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Style */
 
 body {
