@@ -5,25 +5,30 @@ p {
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: medium;
+    font-size: 12pt;
     color: #dddddd;
 }
 
 h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: large;
+    font-size: 24pt;
     color: #333333;
 
 }
 
 h2 {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24pt;
     color: #333333;
 }
 
 h3 {
     font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16pt;
     color: #333333;
 }
 
