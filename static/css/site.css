@@ -1,9 +1,24 @@
 /* Fonts */
-@import 'https://fonts.googleapis.com/css?family=Roboto:300i,400';
+@import 'https://fonts.googleapis.com/css?family=Raleway:300i,600|Roboto:300i,400';
 
 p {
+    font-family: 'Raleway', sans-serif;
+    color: #bbbbbb;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h2 {
     font-family: 'Roboto', sans-serif;
-    color: blue;
+    color: #bbbbbb;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #bbbbbb;
 }
 
 /* Style */
