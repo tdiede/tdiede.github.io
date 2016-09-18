@@ -69,7 +69,7 @@ body {
 
 
 
-.icon-twitter {
+.icon-twitter:before {
     content: "\e600";
 }
 .icon-instagram:before {
