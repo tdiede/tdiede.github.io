@@ -1,7 +1,7 @@
 "use strict";
 
 
-function scrollToElement(selector, time, verticalOffset) {
+function scrollToElement(selector) {
     time = typeof(time) != 'undefined' ? time : 1000;
     verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
     element = $(selector);

@@ -51,7 +51,7 @@ a, a:visited, a:hover, a:active {
 }
 
 #links a:hover span {
-    color: #fcf6df;
+    color: yellow;
 }
 
 /* Style */
