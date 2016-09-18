@@ -1,9 +1,10 @@
 "use strict";
 
 
+
 var canvas = document.getElementById('canvas-element');
 
-function scrollToElement(selector) {
+function scrollToElement() {
     element = $(selector);
     offset = element.offset();
     offsetTop = offset.top;
@@ -22,7 +23,7 @@ $(document).ready(function() {
     });
 
     $('a.link-projects').click(function () {
-        scrollToElement('.link-projects');
+        $('.link-projects').scrollTop(this).hash;
     });
 
     $('a.link-aboutme').click(function () {
