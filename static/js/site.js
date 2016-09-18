@@ -59,5 +59,4 @@ $(document).ready(function() {
     if(wndtop <= (h/2)) {
       $canvas.fadeIn();
     }
-    });
 });
