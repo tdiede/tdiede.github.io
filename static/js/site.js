@@ -14,7 +14,7 @@ function scrollToElement(selector, time, verticalOffset) {
 
 $(document).ready(function() {
 
-   var header = $('nav.navbar').offset().top;
+    var header = $('nav.navbar').offset().top;
     var $canvas = $('#canvas-element');
 
     $('a.link-home').click(function () {
@@ -40,42 +40,24 @@ $(document).ready(function() {
         }
     });
 
-    $('.foliolink').click(function() {
+    $('.portfolio-link').click(function() {
         if($(this).attr('href') == '#') {
             event.preventDefault();
         }
     });
 
-    $('.foliohover').click(function() {
+    $('.portfolio-hover').click(function() {
             event.preventDefault();
     });
 
-    $(window).bind('scroll', function(){
-
-      if($(window).scrollTop() > header ) { // next
-
-            $('nav.main').fadeOut(function() {
-                $('nav.main').addClass("sticky");
-                $('nav.sticky').removeClass("main");
-            });
-
-
-      } else { // home
-
-            $('nav.sticky').addClass("main");
-            $('nav.main').removeClass("sticky");
-            $('nav.main').slideDown();
-
-      }
-
-       var pos = $canvas.offset();
-       var wndtop = $(this).scrollTop();
-        var h = $(window).height();
-       if(wndtop > h) {
-          $canvas.fadeOut();
-        }
-        if(wndtop <= (h/2)) {
-          $canvas.fadeIn();
-        }
+    var pos = $canvas.offset();
+    var wndtop = $(this).scrollTop();
+    var h = $(window).height();
+    if(wndtop > h) {
+      $canvas.fadeOut();
+    }
+    if(wndtop <= (h/2)) {
+      $canvas.fadeIn();
+    }
     });
 });
