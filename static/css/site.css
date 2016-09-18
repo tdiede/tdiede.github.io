@@ -41,6 +41,19 @@ a {
     cursor: pointer;
 }
 
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+#links {
+    padding-top: 30px;
+}
+
+#links a:hover span {
+    color: #fcf6df;
+}
+
 /* Style */
 
 body {
@@ -65,6 +78,18 @@ body {
 #profile-photo {
     width: 100px;
     height: auto;
+}
+
+
+
+
+section {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    background-color: #E8E7EA;
 }
 
 

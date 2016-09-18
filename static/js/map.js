@@ -67,3 +67,5 @@ var nav = new mapboxgl.Navigation({position: 'top-left'});
 map.addControl(nav);
 
 var canvas = map.getCanvasContainer();
+
+
