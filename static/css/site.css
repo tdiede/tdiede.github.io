@@ -1,3 +1,10 @@
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300i,400';
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Style */
 
 body {
