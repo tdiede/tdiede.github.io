@@ -19,3 +19,8 @@ body {
     width: 1435px;
     height: 571px;
 }
+
+#profile-photo {
+    width: 100px;
+    height: auto;
+}
