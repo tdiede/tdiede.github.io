@@ -3,22 +3,28 @@
 
 p {
     font-family: 'Raleway', sans-serif;
-    color: #bbbbbb;
+    font-style: italic;
+    font-weight: 300;
+    font-size: medium;
+    color: #888888;
 }
 
 h1 {
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: large;
+    color: #dddddd;
 
 }
 
 h2 {
     font-family: 'Roboto', sans-serif;
-    color: #bbbbbb;
+    color: black;
 }
 
 h3 {
     font-family: 'Roboto', sans-serif;
-    color: #bbbbbb;
+    color: black;
 }
 
 /* Style */
@@ -26,7 +32,6 @@ h3 {
 body {
     /*background: #333 url("/static/img/splash.jpg");*/
     background-size: cover;
-    color: #bbbbbb;
     margin-top: 50px;
     margin-bottom: 30px;
 }
