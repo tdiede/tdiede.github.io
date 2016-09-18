@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     $('a.link-projects').click(function () {
-        $('.link-projects').scrollTop(this).hash;
+        $('.link-projects').scrollTo(this).hash;
     });
 
     $('a.link-aboutme').click(function () {
