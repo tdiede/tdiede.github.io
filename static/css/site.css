@@ -66,7 +66,8 @@ body {
 /* Style our navbar. */
 
 .navbar {
-    background-color: transparent;
+    background-color: white;
+    opacity: 0.2;
     margin-bottom: 0;
 }
 
