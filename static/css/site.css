@@ -91,13 +91,11 @@ ul {
 }
 
 .project {
-    width: 1200px;
-    height: auto;
+    width: 100%;
 }
 
 .attach-post-thmb {
-    width: 600px;
-    height: auto;
+    width: 90%;
 }
 
 section {
