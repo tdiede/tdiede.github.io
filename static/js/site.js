@@ -3,14 +3,14 @@
 
 var canvas = document.getElementById('canvas-element');
 
-function scrollToElement() {
-    element = $(selector);
-    offset = element.offset();
-    offsetTop = offset.top;
-    $('html, body').animate({
-        scrollTop: offsetTop
-    }, time);
-}
+// function scrollToElement() {
+//     element = $(selector);
+//     offset = element.offset();
+//     offsetTop = offset.top;
+//     $('html, body').animate({
+//         scrollTop: offsetTop
+//     }, time);
+// }
 
 $(document).ready(function() {
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     $('a.link-projects').click(function () {
-        $('.link-projects').scrollTo(this).hash;
+        $('.link-projects').scrollTo(this);
     });
 
     $('a.link-aboutme').click(function () {
