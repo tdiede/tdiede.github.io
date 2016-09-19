@@ -90,13 +90,13 @@ ul {
     list-style-type:none;
 }
 
-.grid > .project {
+.project {
     width: 1200px;
     height: auto;
 }
 
-.grid > .project > .attach-post-thmb {
-    width: 80%;
+.attach-post-thmb {
+    width: 600px;
     height: auto;
 }
 
