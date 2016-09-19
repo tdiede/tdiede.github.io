@@ -90,6 +90,10 @@ ul {
     list-style-type:none;
 }
 
+.project {
+    width: 80%;
+    height: auto;
+}
 
 section {
     margin: 0;
