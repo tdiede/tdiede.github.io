@@ -72,6 +72,10 @@ body {
     z-index: -99;
 }
 
+.nav {
+    z-index: 1;
+}
+
 #canvas-element {
     width: 1435px;
     height: 571px;
