@@ -3,32 +3,23 @@
 
 var canvas = document.getElementById('canvas-element');
 
-// function scrollToElement() {
-//     element = $(selector);
-//     offset = element.offset();
-//     offsetTop = offset.top;
-//     $('html, body').animate({
-//         scrollTop: offsetTop
-//     }, time);
-// }
-
 $(document).ready(function() {
 
     var header = $('nav.navbar').offset().top;
 
     $('a.link-home').click(function () {
-        scrollToElement('body');
+        $.scrollTo('section.link-home');
     });
 
     $('a.link-projects').click(function () {
-        $('.link-projects').scrollTo(this);
+        $.scrollTo('section.link-projects');
     });
 
     $('a.link-aboutme').click(function () {
-        scrollToElement('.link-aboutme');
+        $.scrollTo('section.link-aboutme');
     });
 
     $('a.link-contact').click(function () {
-        scrollToElement('.link-contact');
+        $.scrollTo('section.link-contact');
     });
 });
