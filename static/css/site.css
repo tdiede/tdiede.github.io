@@ -119,7 +119,7 @@ section {
     height: 50%;
     padding-top: 8em;
     padding-bottom: 12em;
-    background: #333 url('/static/img/drawing.png');
+    /*background: #333 url('/static/img/drawing.png');*/
     /*background-size: cover;*/
 }
 
