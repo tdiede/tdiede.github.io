@@ -51,7 +51,11 @@ a, a:visited, a:hover, a:active {
     color: #333333;
 }
 
-#links a:hover {
+#links a i {
+    color: #333333;
+}
+
+#links a:hover i {
     color: black;
 }
 
