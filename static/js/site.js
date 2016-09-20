@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
     $('html, body').stop().animate({
-            scrollTop: $('a[href^="#contact"').offset().top
+            scrollTop: $('#contact').offset().top
         }, 1000);
-    console.log("hi");
+    console.log();
 });
 
 var canvas = document.getElementById('canvas-element');
