@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     $('html, body').stop().animate({
-            scrollTop: $('#contact').offset().top
+            scrollTop: $('#content').offset().top
         }, 1000);
     console.log();
 });
