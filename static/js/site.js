@@ -1,6 +1,6 @@
 "use strict";
 
-$document.on('load', function() {
+$(document).on('load', function() {
     $('html, body').stop().animate({
         scrollTop: $('#content').offset().top
         }, 500);
