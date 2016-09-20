@@ -27,6 +27,13 @@ h3 {
     color: #333333;
 }
 
+.navbar-links {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: #333333;
+}
+
 /*paragraph text*/
 p {
     font-family: 'Raleway', sans-serif;
