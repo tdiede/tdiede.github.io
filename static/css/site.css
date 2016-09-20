@@ -55,6 +55,10 @@ a, a:visited, a:hover, a:active {
 }
 
 #links a:hover i {
+    color: black;
+}
+
+h1 a:hover {
     color: orange;
 }
 
