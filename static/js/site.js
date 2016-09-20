@@ -1,7 +1,9 @@
 "use strict";
 
 $(document).ready(function() {
-    $('#contact').scrollTop(this).hash;
+    $('html, body').stop().animate({
+            scrollTop: $('a[href^="#contact"').offset().top
+        }, 1000);
 });
 
 var canvas = document.getElementById('canvas-element');
