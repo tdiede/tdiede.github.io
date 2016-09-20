@@ -114,17 +114,11 @@ section {
     background-color: #efefef;
 }
 
-.extra {
-    height: auto;
-    overflow: hidden;
-    background-color: #5A6A61;
-}
-
 .background {
     position: relative;
     height: 50%;
-    padding-top: 8em;
-    padding-bottom: 12em;
+    background: #333 url('/static/img/drawing.png');
+    background-size: cover;
 }
 
 .background p {
