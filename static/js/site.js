@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function() {
-    $('#content').scrollTop(this).hash;
+    $('#contact').scrollTop(this).hash;
 });
 
 var canvas = document.getElementById('canvas-element');
