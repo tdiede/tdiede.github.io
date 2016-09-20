@@ -8,13 +8,10 @@ $(document).ready(function() {
     console.log();
 });
 
-var canvas = document.getElementById('canvas-element');
-var header = $('nav.navbar').offset().top;
-
-canvas.hide();
+// var canvas = document.getElementById('canvas-element');
+// var header = $('nav.navbar').offset().top;
 
 $('a[href^="#"]').on('click', function(event) {
-    canvas.show();
     var target = $(this.getAttribute('href'));
     if( target.length ) {
         event.preventDefault();
