@@ -48,10 +48,11 @@ a, a:visited, a:hover, a:active {
 
 #links {
     padding-top: 30px;
+    color: #333333;
 }
 
-#links a:hover span {
-    color: yellow;
+#links a:hover {
+    color: black;
 }
 
 /* Style */
