@@ -95,11 +95,14 @@ body {
 }
 
 /* Style our navbar. */
-
 .navbar {
     background-color: white;
     opacity: 0.8;
     margin-bottom: 0;
+}
+
+#top-space {
+    min-height: 100px;
 }
 
 #canvas-element {
