@@ -4,6 +4,7 @@ $(document).ready(function() {
     $('html, body').stop().animate({
             scrollTop: $('a[href^="#contact"').offset().top
         }, 1000);
+    console.log("hi");
 });
 
 var canvas = document.getElementById('canvas-element');
