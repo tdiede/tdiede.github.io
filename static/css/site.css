@@ -27,11 +27,15 @@ h3 {
     color: #333333;
 }
 
-.navbar-links {
+.navbar-links span {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14pt;
     color: #333333;
+}
+
+.navbar-links span:hover {
+    color: orange;
 }
 
 /*paragraph text*/
