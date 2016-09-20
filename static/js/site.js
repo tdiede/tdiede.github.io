@@ -1,5 +1,11 @@
 "use strict";
 
+$document.on('load', function() {
+    $('html, body').stop().animate({
+        scrollTop: $('#content').offset().top
+        }, 500);
+    }
+});
 
 var canvas = document.getElementById('canvas-element');
 var header = $('nav.navbar').offset().top;
