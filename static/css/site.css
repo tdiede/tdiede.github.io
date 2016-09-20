@@ -60,10 +60,15 @@ a, a:visited, a:hover, a:active {
 
 h1 a:hover {
     color: orange;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .background a:hover {
-    border-bottom: 1px dotted #9EA183;
+    border-bottom: 1px dotted #999999;
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Style */
