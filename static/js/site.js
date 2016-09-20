@@ -1,10 +1,7 @@
 "use strict";
 
-$(document).on('load', function() {
-    $('html, body').stop().animate({
-        scrollTop: $('#content').offset().top
-        }, 500);
-    }
+$(document).ready(function() {
+    $('#content').scrollTop(this).hash;
 });
 
 var canvas = document.getElementById('canvas-element');
