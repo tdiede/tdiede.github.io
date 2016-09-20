@@ -37,7 +37,7 @@ p {
 }
 
 /*link text*/
-a, a:visited, a:hover, a:active {
+body a, a:visited, a:hover, a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 11pt;
