@@ -41,7 +41,7 @@ a, a:visited, a:hover, a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 11pt;
-    color: orange;
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
@@ -52,10 +52,9 @@ a, a:visited, a:hover, a:active {
 
 #links a i {
     color: #999999;
-}
 
 #links a:hover i {
-    color: black;
+    color: orange;
 }
 
 .background a:hover {
