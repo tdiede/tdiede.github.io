@@ -11,7 +11,7 @@ var layers = [{
                 }
             }];
 
-var lightStyle = "mapbox://styles/mapbox/light-v9";
+var tdiedeStyle = "mapbox://styles/tdiede/ciqt08rgj0005bjkn8qkc8axo";
 
 // This is the JSON style object, called below when creating a new instance of Map Class. Root properties.
 var style = {
@@ -22,7 +22,7 @@ var style = {
     "sources": {
             "mapboxstreets": {
                 "type": "vector",
-                "url": lightStyle,
+                "url": tdiedeStyle,
                 },
             },
     "transition": {
