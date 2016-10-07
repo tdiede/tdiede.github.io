@@ -29,4 +29,6 @@ if (!mapboxgl.supported()) {
 var nav = new mapboxgl.Navigation({position: 'top-left'});
 map.addControl(nav);
 
+map.scrollZoom.disable();
+
 var canvas = map.getCanvasContainer();

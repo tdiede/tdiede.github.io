@@ -162,10 +162,10 @@ section {
 }
 
 #map-mapbox {
-    height: 800px;
+    height: 600px;
 }
 
-.mapboxgl-canvas {
+canvas {
     position: relative;
     width: 100%;
 }
