@@ -2,36 +2,7 @@
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGRpZWRlIiwiYSI6ImNpdDd1aWoyajBiZW0yb3AxM3Y1djRvaHoifQ.IOrWn38ePpSiFqIoVF6Mjw';
 
-var layers = [{
-            "id": "water",
-            "type": "fill",
-            "paint": {
-                "fill-color": "#eeeeee",
-                "fill-opacity": 0.3,
-                }
-            }];
-
 var tdiedeStyle = "mapbox://styles/tdiede/ciqt08rgj0005bjkn8qkc8axo";
-
-// This is the JSON style object, called below when creating a new instance of Map Class. Root properties.
-var style = {
-    "version": 8,
-    "name": "Mapbox Streets",
-    "sprite": "mapbox://sprites/mapbox/streets-v8",
-    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
-    "sources": {
-            "mapboxstreets": {
-                "type": "vector",
-                "url": tdiedeStyle,
-                },
-            },
-    "transition": {
-        "duration": 300,
-        "delay": 0
-        },
-    "layers": layers,
-    };
-
 
 // Setting initial coordinates, zoom, pitch, bearing.
 var coord = [-122.43805537700867, 37.771823592326754];
@@ -52,7 +23,7 @@ if (!mapboxgl.supported()) {
 } else {
     var map = new mapboxgl.Map({
         container: 'map-mapbox',
-        style: lightStyle,  //stylesheet location
+        style: tdiedeStyle,  //stylesheet location
         center: coord,
         zoom: zoom,
         pitch: pitch, // pitch in degrees
