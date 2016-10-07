@@ -6,16 +6,9 @@ var tdiedeStyle = "mapbox://styles/tdiede/ciqt08rgj0005bjkn8qkc8axo";
 
 // Setting initial coordinates, zoom, pitch, bearing.
 var coord = [-122.43805537700867, 37.771823592326754];
-var zoom = 11.85;
+var zoom = 5;
 var pitch = 0;
 var bearing = 0;
-
-
-// Set bounds to San Francisco.
-var bounds = [
-    [-122.1, 37], // Southwest coordinates
-    [-122.6, 38]  // Northeast coordinates
-];
 
 // Check if Mapbox GL is supported by browser.
 if (!mapboxgl.supported()) {
@@ -28,7 +21,6 @@ if (!mapboxgl.supported()) {
         zoom: zoom,
         pitch: pitch, // pitch in degrees
         bearing: bearing, // bearing in degrees
-        maxBounds: bounds,
     });
 }
 
@@ -38,5 +30,3 @@ var nav = new mapboxgl.Navigation({position: 'top-left'});
 map.addControl(nav);
 
 var canvas = map.getCanvasContainer();
-
-
