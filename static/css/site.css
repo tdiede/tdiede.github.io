@@ -161,3 +161,6 @@ section {
     width: 500px;
 }
 
+#map-mapbox {
+    height: 400px;
+}
