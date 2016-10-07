@@ -165,11 +165,12 @@ section {
     height: 600px;
 }
 
-canvas {
-    position: relative;
-    width: 100%;
-}
-
 .mapboxgl-ctrl-top-left {
     padding: 10px;
+}
+
+canvas {
+    position: relative;
+    height: inherit;
+    width: 100%;
 }

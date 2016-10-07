@@ -31,4 +31,8 @@ map.addControl(nav);
 
 map.scrollZoom.disable();
 
-var canvas = map.getCanvasContainer();
+var canvas = map.getCanvas();
+
+canvas.style.position = 'relative';
+canvas.style.height = 'inherit';
+canvas.style.width = '100%';
