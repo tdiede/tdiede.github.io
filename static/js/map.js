@@ -1,7 +1,5 @@
 "use strict";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidGRpZWRlIiwiYSI6ImNpdDd1aWoyajBiZW0yb3AxM3Y1djRvaHoifQ.IOrWn38ePpSiFqIoVF6Mjw';
-
 var layers = [{
             "id": "water",
             "type": "fill",
@@ -60,6 +58,8 @@ if (!mapboxgl.supported()) {
         maxBounds: bounds,
     });
 }
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidGRpZWRlIiwiYSI6ImNpdDd1aWoyajBiZW0yb3AxM3Y1djRvaHoifQ.IOrWn38ePpSiFqIoVF6Mjw';
 
 // map.setStyle(lightStyle);  // if want to change at future point.
 
