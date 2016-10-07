@@ -5,8 +5,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGRpZWRlIiwiYSI6ImNpdDd1aWoyajBiZW0yb3AxM3Y1d
 var tdiedeStyle = "mapbox://styles/tdiede/ciqt08rgj0005bjkn8qkc8axo";
 
 // Setting initial coordinates, zoom, pitch, bearing.
-var coord = [-122.43805537700867, 37.771823592326754];
-var zoom = 5;
+var coord = [-185.81130846264423, 14.489482196592917];
+var zoom = 1.6;
 var pitch = 0;
 var bearing = 0;
 
