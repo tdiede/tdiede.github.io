@@ -36,3 +36,27 @@ var canvas = map.getCanvas();
 canvas.style.position = 'relative';
 canvas.style.height = 'inherit';
 canvas.style.width = '100%';
+
+var locations = new mapboxgl.GeoJSONSource({
+    data: '../../data/locations.geojson'
+});
+
+map.on('load', function () {
+
+    map.addSource('locations', {
+        'type': 'geojson',
+        'data': '../../data/locations.geojson',
+    });
+
+    map.addLayer({
+        'id': 'adus_data',
+        'type': 'fill',
+        'source': 'locations',
+        'layout': {},
+        'paint': {
+            'fill-color': '#088',
+            'fill-opacity': 0.2
+        }
+    });
+
+});
