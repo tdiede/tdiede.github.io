@@ -294,19 +294,17 @@ var m0,
     o0;
 
 
-svg.append("circle").attr("r", "50px").attr("fill", "red").attr("transform", function() {return "translate(" + projection([-75,43]) + ")";});
+
+d3.json('data/locations.geojson', function(collection) {
 
 svg.selectAll("circles.points")
-.data([-75,43])
+.data(collection.features)
 .enter()
 .append("circle")
 .attr("r", "8px")
 .attr("fill", "red")
 .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
 
-
-d3.json('data/locations.geojson', function(collection) {
-// Do stuff here
 });
 
 
