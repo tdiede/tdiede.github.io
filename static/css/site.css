@@ -36,14 +36,26 @@ p {
     color: #333333;
 }
 
-.background {
-    position: relative;
-    height: 50%;
-    padding-top: 8em;
-    padding-bottom: 12em;
+/* block elements. */
+
+body {
+    /*background: #333 url("/static/img/splash.jpg");*/
+    background-color: white;
+    background-size: cover;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.background p {
+section {
+    margin: 0;
+    padding: 0;
+    min-height: 700px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+section p {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +63,7 @@ p {
 }
 
 /*link text*/
-.background a, a:visited, a:active {
+section a, a:visited, a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 11pt;
@@ -60,7 +72,7 @@ p {
     cursor: pointer;
 }
 
-.background a:hover {
+section a:hover {
     border-bottom: 1px dotted #999999;
     color: orange;
     text-decoration: none;
@@ -85,24 +97,7 @@ h1 a:hover {
 }
 
 
-/* block elements. */
 
-body {
-    /*background: #333 url("/static/img/splash.jpg");*/
-    background-color: white;
-    background-size: cover;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-section {
-    margin: 0;
-    padding: 0;
-    min-height: 700px;
-    height: 100%;
-    text-align: center;
-    position: relative;
-}
 
 
 /* navbar. */
