@@ -172,8 +172,12 @@
   <div class='row text'>
     <h2>Geolocation</h2>
       <div id='map-mapbox' ></div>
-      <div id='canvas-d3' ></div>
+      
   </div>
+
+
+<div id='globe' ></div>
+
 
   <div class='row text'>
     <h2>Interests</h2>
@@ -247,7 +251,7 @@ var scale = {
 var path = d3.geo.path()
     .projection(projection);
 
-var svg = d3.select("#canvas-d3").append("svg:svg")
+var svg = d3.select("#globe").append("svg:svg")
     .attr("width", 1280)
     .attr("height", 800)
     .on("mousedown", mousedown);
