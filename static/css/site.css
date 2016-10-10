@@ -162,6 +162,10 @@ ul {
     padding: 10px;
 }
 
+#canvas-d3 {
+    height: 500px;
+}
+
 svg {
   width: 1280px;
   height: 800px;
