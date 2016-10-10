@@ -10,6 +10,12 @@ h1 {
     color: #333333;
 }
 
+h1 a:hover {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*section titles*/
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -90,11 +96,7 @@ section a:hover {
     text-decoration: none;
 }
 
-h1 a:hover {
-    color: orange;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 
 
 
