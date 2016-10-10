@@ -184,6 +184,6 @@ circle {
 }
 
 path {
-  fill: #aaa;
-  stroke: #fff;
+  fill: black;
+  stroke: orange;
 }
