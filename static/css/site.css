@@ -72,13 +72,11 @@ p {
 
 #links a {
     color: black;
-    padding: 30px;
+    padding: 15px;
 }
 
 #links a:hover {
     color: orange;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 h1 a:hover {
