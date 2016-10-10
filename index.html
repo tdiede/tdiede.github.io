@@ -297,7 +297,7 @@ var m0,
 svg.append("circle").attr("r", "50px").attr("fill", "red").attr("transform", function() {return "translate(" + projection([-75,43]) + ")";});
 
 svg.selectAll("circles.points")
-.data('data/locations.geojson')
+.data([-75,43])
 .enter()
 .append("circle")
 .attr("r", "8px")
