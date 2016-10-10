@@ -174,8 +174,8 @@ ul {
 
 
 svg {
-  width: 1280px;
-  height: 800px;
+  height: 100px;
+  width: 100%;
   pointer-events: all;
 }
 
