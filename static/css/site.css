@@ -100,7 +100,7 @@ body {
 .navbar {
     background-color: transparent;
     /*opacity: 0.8;*/
-    margin-bottom: 0;
+    border: 0;
 }
 
 #top-space {
