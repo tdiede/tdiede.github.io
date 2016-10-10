@@ -2,6 +2,11 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:300i,600|Roboto:300i,400';
 
 
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*tmdd*/
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -12,8 +17,6 @@ h1 {
 
 h1 a:hover {
     color: orange;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /*section titles*/
@@ -68,7 +71,7 @@ section p {
     width: 500px;
 }
 
-/*link text*/
+/* specific link text. */
 section a, a:visited, a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -79,22 +82,15 @@ section a, a:visited, a:active {
 }
 
 section a:hover {
-    border-bottom: 1px dotted #999999;
     color: orange;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-#links a {
+#contact a:hover {
     color: black;
-    padding: 15px;
-    z-index: 100;
+    border-bottom: 1px dotted #999999;
 }
 
-#links a:hover {
-    color: orange;
-    text-decoration: none;
-}
+
 
 
 
@@ -121,6 +117,21 @@ section a:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* external social media links icons. */
+#links a {
+    color: black;
+    padding: 15px;
+    z-index: 100;
+}
+
+#links a:hover {
+    color: orange;
+}
+
+
+
 
 #top-space {
     min-height: 100px;
