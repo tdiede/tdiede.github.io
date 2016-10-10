@@ -98,8 +98,8 @@ body {
 
 /* Style our navbar. */
 .navbar {
-    background-color: white;
-    opacity: 0.8;
+    background-color: transparent;
+    /*opacity: 0.8;*/
     margin-bottom: 0;
 }
 
@@ -175,9 +175,4 @@ canvas {
     position: relative;
     height: inherit;
     width: 100%;
-}
-
-#intro {
-    text-align: center;
-    width: 300px;
 }
