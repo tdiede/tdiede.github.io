@@ -70,12 +70,15 @@ p {
     padding-top: 30px;
 }
 
-#links a i {
-    color: #999999;
+#links a {
+    color: black;
+    padding: 30px;
 }
 
-#links a:hover i {
-    color: black;
+#links a:hover {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 h1 a:hover {
