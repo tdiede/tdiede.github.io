@@ -297,7 +297,7 @@ var m0,
 svg.append("circle").attr("r", "50px").attr("fill", "red").attr("transform", function() {return "translate(" + projection([-75,43]) + ")";});
 
 svg.selectAll("circles.points")
-.data(yourData)
+.data('data/locations.geojson')
 .enter()
 .append("circle")
 .attr("r", "8px")
@@ -305,8 +305,8 @@ svg.selectAll("circles.points")
 .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
 
 
-var myLocations =
-d3.json('data/locations.geojson', function(collection) {
+var myLocations;
+var yourData = d3.json('data/locations.geojson', function(collection) {
 // Do stuff here
 });
 
