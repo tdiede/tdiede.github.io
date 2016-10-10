@@ -88,16 +88,26 @@ h1 a:hover {
 }
 
 
-/* Style */
+/* block elements. */
 
 body {
     /*background: #333 url("/static/img/splash.jpg");*/
+    background-color: #efefef;
     background-size: cover;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* Style our navbar. */
+section {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+
+/* navbar. */
 .navbar {
     background-color: transparent;
     /*opacity: 0.8;*/
@@ -148,14 +158,7 @@ ul {
     width: 90%;
 }
 
-section {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    text-align: center;
-    position: relative;
-    background-color: #efefef;
-}
+
 
 .extra {
     height: auto;
