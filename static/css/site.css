@@ -67,10 +67,6 @@ p {
     cursor: pointer;
 }
 
-#links {
-    padding-top: 30px;
-}
-
 #links a {
     color: black;
     padding: 15px;
