@@ -129,18 +129,8 @@ section {
     min-height: 100px;
 }
 
-#canvas-element {
-    width: 1435px;
-    height: 571px;
-}
-
 #profile-photo {
     width: 200px;
-    height: auto;
-}
-
-#contact-photo {
-    width: 100px;
     height: auto;
 }
 
