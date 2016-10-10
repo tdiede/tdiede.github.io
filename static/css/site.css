@@ -27,19 +27,6 @@ h3 {
     color: #333333;
 }
 
-.navbar-links span {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 14pt;
-    color: #333333;
-}
-
-.navbar-links span:hover {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /*paragraph text*/
 p {
     font-family: 'Raleway', sans-serif;
@@ -47,6 +34,20 @@ p {
     font-weight: 300;
     font-size: 10pt;
     color: #333333;
+}
+
+.background {
+    position: relative;
+    height: 50%;
+    padding-top: 8em;
+    padding-bottom: 12em;
+}
+
+.background p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
 }
 
 /*link text*/
@@ -103,6 +104,19 @@ body {
     border: 0;
 }
 
+.navbar-links span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: #333333;
+}
+
+.navbar-links span:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #top-space {
     min-height: 100px;
 }
@@ -149,30 +163,10 @@ section {
     background-color: #5A6A61;
 }
 
-.background {
-    position: relative;
-    height: 50%;
-    padding-top: 8em;
-    padding-bottom: 12em;
-}
-
-.background p {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-}
-
 #map-mapbox {
     height: 600px;
 }
 
 .mapboxgl-ctrl-top-left {
     padding: 10px;
-}
-
-canvas {
-    position: relative;
-    height: inherit;
-    width: 100%;
 }
