@@ -101,7 +101,8 @@ body {
 section {
     margin: 0;
     padding: 0;
-    height: 700px;
+    min-height: 700px;
+    height: 100%;
     text-align: center;
     position: relative;
 }
