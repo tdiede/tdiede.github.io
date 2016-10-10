@@ -303,7 +303,7 @@ svg.selectAll("circles.points")
 .append("circle")
 .attr("r", "8px")
 .attr("fill", "red")
-.attr("transform", function(d) {return "translate(" + projection(geometry.coordinates) + ")";});
+.attr("transform", function(d) {return "translate(" + projection(d.geometry.coordinates) + ")";});
 
 });
 
