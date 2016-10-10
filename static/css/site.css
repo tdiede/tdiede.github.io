@@ -74,12 +74,12 @@ p {
 #links a {
     color: black;
     padding: 15px;
+    z-index: 100;
 }
 
 #links a:hover {
     color: orange;
     text-decoration: none;
-    z-index: 100;
 }
 
 h1 a:hover {
