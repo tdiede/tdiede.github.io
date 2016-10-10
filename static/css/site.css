@@ -92,7 +92,7 @@ h1 a:hover {
 
 body {
     /*background: #333 url("/static/img/splash.jpg");*/
-    background-color: #efefef;
+    background-color: red;
     background-size: cover;
     margin-top: 0;
     margin-bottom: 0;
