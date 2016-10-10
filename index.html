@@ -300,7 +300,8 @@ svg.selectAll("circles.points")
 .data(yourData)
 .enter()
 .append("circle")
-.attr("r",5)
+.attr("r", "8px")
+.attr("fill", "red")
 .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
 
 
