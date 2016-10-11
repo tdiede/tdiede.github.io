@@ -63,7 +63,9 @@ svg.selectAll("circles.points")
 
 });
 
-
+svg.append("circle")
+.attr("r", "8px")
+.attr("fill", "red")
 
 function mousedown() {
   m0 = [d3.event.pageX, d3.event.pageY];
