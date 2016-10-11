@@ -11,7 +11,7 @@ a, a:visited, a:active {
     cursor: pointer;
 }
 
-a:hover {
+a:hover, img:hover {
     text-decoration: none;
     cursor: pointer;
 }
