@@ -136,6 +136,10 @@ section a:hover {
     padding: 50px;
 }
 
+.fa-globe:hover {
+    color: orange;
+}
+
 
 
 #top-space {
