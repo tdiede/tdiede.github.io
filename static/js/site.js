@@ -6,8 +6,8 @@ $(document).ready(function() {
             scrollTop: $('#home').offset().top
         }, 1000);
     console.log();
-    $('#two').hide();
-    $('#show').show();
+    $('.two').hide();
+    $('.one').show();
 });
 
 // var canvas = document.getElementById('canvas-element');
@@ -24,12 +24,12 @@ $('a[href^="#"]').on('click', function(e) {
 });
 
 
-$('#one').on('click', function(e) {
-    $('#one').hide();
-    $('#two').show();
+$('.one').on('click', function(e) {
+    $('.one').hide();
+    $('.two').show();
 });
 
-$('#two').on('click', function(e) {
-    $('#two').hide();
-    $('#show').show();
+$('.two').on('click', function(e) {
+    $('.two').hide();
+    $('.one').show();
 });
