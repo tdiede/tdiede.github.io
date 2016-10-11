@@ -137,7 +137,7 @@ i:hover {
     padding: 50px;
 }
 
-.fa-globe:hover, .fa-globe:active {
+.fa-globe:hover, .fa-globe:visited, .fa-globe:active {
     color: orange;
 }
 
