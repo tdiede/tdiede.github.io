@@ -11,10 +11,11 @@ a, a:visited, a:active {
     cursor: pointer;
 }
 
-a:hover, img:hover {
+a:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 /*tmdd*/
