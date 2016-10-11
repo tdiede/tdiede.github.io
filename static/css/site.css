@@ -177,7 +177,8 @@ ul {
 
 
 #globe {
-    background-color: blue;
+    background-color: #48D1CC;
+    opacity: 0.4;
 }
 
 svg {
@@ -191,6 +192,6 @@ circle {
 }
 
 path {
-    fill: orange;
-    stroke: white;
+    fill: #FFFAFA;
+    stroke: #48D1CC;
 }
