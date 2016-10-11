@@ -282,8 +282,6 @@ var path = d3.geo.path()
     .projection(projection);
 
 var svg = d3.select("#globe").append("svg:svg")
-    .attr("width", 1280)
-    .attr("height", 800)
     .on("mousedown", mousedown);
 
 d3.json('data/world_countries.json', function(collection) {
