@@ -79,7 +79,7 @@ d3.json('data/locations.geojson', function(json) {
         .data(json.features)
       .enter().append('circle');
     // now use the projection to project your coords
-    var coordinates = projection([mylon, mylat]);
+    var coordinates = projection([-125, 30]);
     map.append('svg:circle')
         .attr('cx', coordinates[0])
         .attr('cy', coordinates[1])
