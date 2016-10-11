@@ -1,21 +1,19 @@
 "use strict";
 
-"http://code.jquery.com/jquery-2.2.4.min.js";
-"sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=";
-"anonymous";
-
 
 $(document).ready(function() {
     $('html, body').stop().animate({
             scrollTop: $('#home').offset().top
         }, 1000);
     console.log();
+    $('#two').hide();
+    $('#show').show();
 });
 
 // var canvas = document.getElementById('canvas-element');
 // var header = $('nav.navbar').offset().top;
 
-$('a[href^="#"]').on('click', function(event) {
+$('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
         event.preventDefault();
@@ -23,4 +21,15 @@ $('a[href^="#"]').on('click', function(event) {
             scrollTop: target.offset().top
         }, 1000);
     }
+});
+
+
+$('#one').on('click', function(e) {
+    $('#one').hide();
+    $('#two').show();
+});
+
+$('#two').on('click', function(e) {
+    $('#two').hide();
+    $('#show').show();
 });
