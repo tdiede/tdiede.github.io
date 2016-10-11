@@ -133,12 +133,12 @@ i:hover {
     color: orange;
 }
 
-a.globe {
+i.fa-globe {
     padding: 50px;
     color: #bbbbbb;
 }
 
-a.globe:hover, a.globe:visited, a.globe:active {
+i.fa-globe:hover {
     color: orange;
 }
 
