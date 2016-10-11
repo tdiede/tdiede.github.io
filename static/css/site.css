@@ -180,7 +180,7 @@ svg {
   height: 600px;
   width: 100%;
   pointer-events: all;
-  fill: blue;
+  background-color: blue;
 }
 
 circle {
