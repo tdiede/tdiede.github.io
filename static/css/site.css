@@ -145,6 +145,11 @@ i.fa-globe:hover {
     height: auto;
 }
 
+#project-photo {
+    width: inherit;
+    height: auto;
+}
+
 ul {
     list-style-type:none;
 }
