@@ -116,6 +116,7 @@ section a:hover {
 }
 
 
+
 /* external social media links icons. */
 i {
     color: black;
@@ -137,6 +138,8 @@ i.fa-globe:hover {
 }
 
 
+
+/* graphics. */
 #profile-photo {
     width: 200px;
     height: auto;
@@ -147,9 +150,8 @@ ul {
 }
 
 
-.attach-post-thmb {
-    width: 90%;
-}
+
+
 
 
 
@@ -159,14 +161,17 @@ ul {
     background-color: #5A6A61;
 }
 
-#map-mapbox {
+/*#map-mapbox {
     height: 600px;
 }
 
 .mapboxgl-ctrl-top-left {
     padding: 10px;
-}
+}*/
 
+
+
+/* d3 world. */
 
 #globe {
     background-color: #48D1CC;
