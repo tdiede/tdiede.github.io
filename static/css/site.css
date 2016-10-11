@@ -75,12 +75,6 @@ section {
     position: relative;
 }
 
-section p {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-}
 
 /* specific link text. */
 
@@ -152,9 +146,6 @@ ul {
     list-style-type:none;
 }
 
-.project {
-
-}
 
 .attach-post-thmb {
     width: 90%;
