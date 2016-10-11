@@ -176,18 +176,21 @@ ul {
 }
 
 
+#globe {
+    background-color: blue;
+}
+
 svg {
-  height: 600px;
-  width: 100%;
-  pointer-events: all;
-  background-color: blue;
+    height: 600px;
+    width: 100%;
+    pointer-events: all;
 }
 
 circle {
-  fill: red;
+    fill: red;
 }
 
 path {
-  fill: black;
-  stroke: orange;
+    fill: orange;
+    stroke: white;
 }
