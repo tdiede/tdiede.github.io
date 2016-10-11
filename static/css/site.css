@@ -68,6 +68,7 @@ body {
 section {
     margin: 0;
     padding: 0;
+    padding-top: 100px;
     min-height: 800px;
     height: 100%;
     text-align: center;
