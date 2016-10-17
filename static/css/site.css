@@ -23,6 +23,10 @@ a:hover {
     color: black;
 }
 
+a.non-link:hover {
+    color: black;
+}
+
 
 
 /*tmdd*/
