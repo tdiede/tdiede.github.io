@@ -47,6 +47,15 @@ h3 {
     color: #333333;
 }
 
+/*my introduction speech: hi!*/
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14pt;
+    color: #333333;
+}
+
 /*paragraph text*/
 p {
     font-family: 'Raleway', sans-serif;
@@ -76,6 +85,9 @@ section {
     position: relative;
 }
 
+.container {
+    padding: 30px;
+}
 
 /* specific link text. */
 
