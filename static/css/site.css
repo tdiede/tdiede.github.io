@@ -25,7 +25,7 @@ a:hover {
 
 a.non-link:hover {
     color: black;
-    cursor: none;
+    cursor: auto;
 }
 
 
