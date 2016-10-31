@@ -49,48 +49,6 @@ d3.select("select").on("change", function() {
 var m0,
     o0;
 
-
-
-d3.json('data/locations.geojson', function(collection) {
-
-svg.selectAll("circles.points")
-.data(collection.features)
-.enter()
-.append("circle")
-.attr("r", "8px")
-.attr("fill", "red")
-.attr("transform", function(d) {return "translate(" + projection(d.geometry.coordinates) + ")";});
-
-});
-
-svg.append("circle")
-.attr("r", "8px")
-.attr("fill", "red");
-
-
-var map = svg.append("g").attr("class", "map");
-var projection = d3.geo.albers()
-    .origin([3.4,46.8])
-    .scale(12000)
-    .translate([590, 570]);
-var path = d3.geo.path().projection(projection);
-d3.json('data/locations.geojson', function(json) {
-    map.selectAll('circle')
-        .data(json.features)
-      .enter().append('circle');
-    // now use the projection to project your coords
-    var coordinates = projection([-125, 30]);
-    map.append('svg:circle')
-        .attr('cx', coordinates[0])
-        .attr('cy', coordinates[1])
-        .attr('r', 5);
-});
-
-
-
-
-
-
 function mousedown() {
   m0 = [d3.event.pageX, d3.event.pageY];
   o0 = projection.origin();
