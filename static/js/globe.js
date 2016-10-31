@@ -5,7 +5,7 @@ var feature;
 
 var projection = d3.geo.azimuthal()
     .scale(380)
-    .origin([-125.03,42.37])
+    .origin([-50.03,42.37])
     .mode("gnomonic")
     .translate([640, 400]);
 
