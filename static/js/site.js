@@ -49,7 +49,7 @@ function submitProjectData (e) {
     console.log(this);
     console.log(this.href);
     console.log(this.data);
-    var projectName = $(this.getAttribute('data'));
+    var projectName = $('#data-project').data();
     console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
     console.log(src);
