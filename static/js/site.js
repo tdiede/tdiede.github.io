@@ -46,7 +46,7 @@ function showFeature (result) {
 
 function submitProjectData (e) {
     e.preventDefault();
-    var projectName = $(this.data();
+    var projectName = $(this.data());
     var src = '/static/img/features/'+projectName+'.png';
     console.log(number);
     console.log(url);
