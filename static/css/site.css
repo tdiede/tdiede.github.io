@@ -113,7 +113,8 @@ section#home {
 .buffer {
     background-color: white;
     background-opacity: 0.5;
-    margin: 200px;
+    margin: 25px;
+    width: 250px;
 }
 
 
