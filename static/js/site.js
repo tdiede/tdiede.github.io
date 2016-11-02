@@ -47,7 +47,7 @@ function showFeature (result) {
 function submitProjectData (e) {
     e.preventDefault();
     console.log(this);
-    console.log(this.href);
+    console.log(this.data);
     console.log('clicnowww');
     var projectName = $(this.getAttribute('data'));
     console.log(projectName);
