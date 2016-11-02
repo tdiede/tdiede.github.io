@@ -95,12 +95,13 @@ section {
     min-height: 800px;
     height: 100%;
     text-align: center;
-    top: 0;
-    transform: translateY(50%);
 }
 
 .container {
     padding: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
 }
 
 .container-home {
