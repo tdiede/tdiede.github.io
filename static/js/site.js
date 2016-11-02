@@ -40,6 +40,9 @@ $('.two').on('click', function(e) {
 
 function submitProjectData (e) {
     e.preventDefault();
+    console.log(this);
+    console.log(this.href);
+    console.log(this.data-project);
     var projectName = $(this.getAttribute('data-project'));
     console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
