@@ -46,9 +46,11 @@ function showFeature (result) {
 
 function submitProjectData (e) {
     e.preventDefault();
-    console.log('clicnowww');
     console.log(this);
-    var projectName = $(this).data();
+    console.log(this.href);
+    console.log('clicnowww');
+    var projectName = $(this.getAttribute('data'));
+    console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
     console.log(src);
     $.get(src, showFeature);
