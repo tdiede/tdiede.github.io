@@ -19,7 +19,7 @@ $('a[href^="#"]').on('click', function(e) {
         event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
-        }, 100);
+        }, 1000);
     }
 });
 
