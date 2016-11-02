@@ -98,7 +98,7 @@ section {
     position: relative;
 }
 
-#home {
+section#home {
     background-image: url("/static/img/drawing.png");
 }
 
