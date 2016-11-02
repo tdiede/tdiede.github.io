@@ -40,9 +40,7 @@ $('.two').on('click', function(e) {
 
 function submitProjectData (e) {
     e.preventDefault();
-    var project = this;
-    console.log(project['project-data']);
-    var projectName = $('#data-project').data().project;
+    var projectName = $(this.getAttribute('data-project'));
     console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
     console.log(src);
@@ -50,4 +48,4 @@ function submitProjectData (e) {
     // $('#data-card-id').attr('data-card', result.card_id);
 }
 
-$('.project-link').on('click', submitProjectData);
+$('#data-project').on('click', submitProjectData);
