@@ -137,8 +137,8 @@ section a:hover {
 
 /* navbar. */
 .navbar {
-    background-color: transparent;
-    /*opacity: 0.8;*/
+    background-color: white;
+    opacity: 0.8;
     border: 0;
 }
 
@@ -146,11 +146,11 @@ section a:hover {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 12pt;
-    color: #bbbbbb;
+    color: yellow;
 }
 
 .navbar-links span:hover {
-    color: black;
+    color: orange;
     text-decoration: none;
     cursor: pointer;
 }
@@ -170,7 +170,7 @@ i:hover {
 
 i.fa-globe {
     padding: 50px;
-    color: #bbbbbb;
+    color: yellow;
 }
 
 i.fa-globe:hover {
