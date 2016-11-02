@@ -96,6 +96,9 @@ section {
     height: 100%;
     text-align: center;
     position: relative;
+}
+
+#home {
     background-image: url("/static/img/drawing.png");
 }
 
