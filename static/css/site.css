@@ -120,7 +120,7 @@ section#home {
 
 /* specific link text. */
 section a:hover {
-    color: #ffae42;
+    color: #ffdd42;
 }
 #contact a:hover {
     color: black;
@@ -150,7 +150,7 @@ section a:hover {
 }
 
 .navbar-links span:hover {
-    color: #ffae42;
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
@@ -165,7 +165,7 @@ i {
 }
 
 i:hover {
-    color: #ffae42;
+    color: orange;
 }
 
 i.fa-globe {
@@ -174,7 +174,7 @@ i.fa-globe {
 }
 
 i.fa-globe:hover {
-    color: #ffae42;
+    color: orange;
 }
 
 
