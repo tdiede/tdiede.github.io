@@ -108,8 +108,12 @@ section#home {
 
 .container {
     padding: 30px;
+}
+
+.buffer {
     background-color: white;
     background-opacity: 0.5;
+    margin: 20px;
 }
 
 
