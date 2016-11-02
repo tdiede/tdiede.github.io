@@ -82,7 +82,6 @@ p {
 
 /* block elements. */
 body {
-    /*background: #333 url("/static/img/splash.jpg");*/
     background-color: white;
     background-size: cover;
     margin-top: 0;
@@ -97,6 +96,7 @@ section {
     height: 100%;
     text-align: center;
     position: relative;
+    background: url("/static/img/drawing.png");
 }
 
 .container {
