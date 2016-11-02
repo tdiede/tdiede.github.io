@@ -41,7 +41,7 @@ $('.two').on('click', function(e) {
 
 function showFeature (result) {
     console.log(result);
-    $('#project-photo-feature').attr('src', result);
+    $('#project-photo-feature').attr('src', result.src);
 }
 
 function submitProjectData (e) {
