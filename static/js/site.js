@@ -46,7 +46,7 @@ function showFeature (result) {
 
 function submitProjectData (e) {
     e.preventDefault();
-    var project = this.data.project;
+    var project = this.data().project;
     console.log(project);
     var projectName = $('#data-project').data().project;
     console.log(projectName);
