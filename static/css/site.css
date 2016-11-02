@@ -59,7 +59,7 @@ h3 {
     color: #333333;
 }
 
-/*resume subtitles*/
+/*resume subtitles and captions*/
 h4 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -76,12 +76,6 @@ p {
     color: #333333;
 }
 
-.caption {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 10pt;
-    color: #333333;
-}
 
 
 
