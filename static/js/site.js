@@ -15,10 +15,11 @@ $(document).ready(function() {
 
 $('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
+    var desiredHeight = $(window).height() - 100;
     if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - desiredHeight;
         }, 1000);
     }
 });
