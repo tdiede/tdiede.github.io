@@ -108,7 +108,8 @@ section#home {
 
 .container {
     padding: 30px;
-    background-color: white .5;
+    background-color: white;
+    opacity: 0.5;
 }
 
 
