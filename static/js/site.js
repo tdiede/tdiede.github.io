@@ -2,10 +2,10 @@
 
 
 $(document).ready(function() {
-    $('html, body').stop().animate({
-            scrollTop: $('#home').offset().top
-        }, 1000);
-    console.log();
+    // $('html, body').stop().animate({
+    //         scrollTop: $('#home').offset().top
+    //     }, 1000);
+    // console.log();
     $('.two').hide();
     $('.one').show();
 });
