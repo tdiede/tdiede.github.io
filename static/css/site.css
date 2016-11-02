@@ -39,7 +39,7 @@ h1 {
 }
 
 h1:hover {
-    color: orange;
+    color: #ffae42;
 }
 
 /*section titles*/
@@ -120,7 +120,7 @@ section#home {
 
 /* specific link text. */
 section a:hover {
-    color: orange;
+    color: #ffae42;
 }
 #contact a:hover {
     color: black;
@@ -150,7 +150,7 @@ section a:hover {
 }
 
 .navbar-links span:hover {
-    color: orange;
+    color: #ffae42;
     text-decoration: none;
     cursor: pointer;
 }
@@ -165,7 +165,7 @@ i {
 }
 
 i:hover {
-    color: orange;
+    color: #ffae42;
 }
 
 i.fa-globe {
