@@ -105,11 +105,11 @@ section {
 }
 
 .container-aboutme, .container-projects {
-    padding: 20px 0 0 0;
+    padding: 50px 0 0 0;
 }
 
 .container-skills, .container-contact {
-    padding: 200px 0 0 0;
+    padding: 250px 0 0 0;
 }
 
 .buffer {
