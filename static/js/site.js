@@ -48,8 +48,7 @@ function submitProjectData (e) {
     e.preventDefault();
     var projectName = $(this.data());
     var src = '/static/img/features/'+projectName+'.png';
-    console.log(number);
-    console.log(url);
+    console.log(src);
     $.get(src, showFeature);
     // $('#data-card-id').attr('data-card', result.card_id);
 }
