@@ -38,13 +38,6 @@ $('.two').on('click', function(e) {
 
 
 
-
-function showFeature (result) {
-    console.log(result);
-    console.log('hiii')
-    $('#project-photo-feature').attr('src', result);
-}
-
 function submitProjectData (e) {
     e.preventDefault();
     var project = this;
@@ -53,7 +46,7 @@ function submitProjectData (e) {
     console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
     console.log(src);
-    $.get(src, showFeature);
+    $('#project-photo-feature').attr('src', src);
     // $('#data-card-id').attr('data-card', result.card_id);
 }
 
