@@ -108,14 +108,15 @@ section#home {
 
 .container {
     padding: 30px;
+    background-color: white .5;
 }
 
-/* specific link text. */
 
+
+/* specific link text. */
 section a:hover {
     color: orange;
 }
-
 #contact a:hover {
     color: black;
     border-bottom: 1px dotted #999999;
