@@ -101,6 +101,7 @@ section {
     position: absolute;
     height: 100%;
     top: 50%;
+    margin-top: -50%;
     transform: translateY(50%);
 }
 
