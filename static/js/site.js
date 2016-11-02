@@ -54,4 +54,4 @@ function submitProjectData (e) {
     // $('#data-card-id').attr('data-card', result.card_id);
 }
 
-$('#project-photo-velib').on('submit', submitProjectData);
+$('.project-photo').on('submit', submitProjectData);
