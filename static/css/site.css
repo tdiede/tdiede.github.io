@@ -96,7 +96,7 @@ section {
     height: 100%;
     text-align: center;
     position: relative;
-    background: url("/static/img/drawing.png");
+    background-image: url("/static/img/drawing.png");
 }
 
 .container {
