@@ -33,3 +33,25 @@ $('.two').on('click', function(e) {
     $('.two').hide();
     $('.one').show();
 });
+
+
+
+
+
+
+function showFeature (result) {
+    console.log(result);
+    $('#project-photo-feature').attr('src', result);
+}
+
+function submitProjectData (e) {
+    e.preventDefault();
+    var projectName = $(this.data();
+    var src = '/static/img/features/'+projectName+'.png';
+    console.log(number);
+    console.log(url);
+    $.get(src, showFeature);
+    // $('#data-card-id').attr('data-card', result.card_id);
+}
+
+$('#project-photo-velib').on('submit', submitProjectData);
