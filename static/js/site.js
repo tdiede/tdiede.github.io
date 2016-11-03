@@ -36,14 +36,24 @@ $('.two').on('click', function(e) {
 
 
 
+$('div#feature').data( 'link', { one: 'hackscrapers',
+                                         two: 'movies',
+                                         three: 'pavilion',
+                                         four: 'parametric',
+                                         five: 'velib' } );
+
+
+
 $('a[href^="#"]').on('click', function(e) {
-    var target = $(this.getAttribute('href'));
-    console.log( $(this).data('href') );
-    if( target.length ) {
-        event.preventDefault();
-        console.log(target);
-        var src = '/static/img/features/'+target+'.png';
-        console.log(src);
-    $('#project-photo-feature').attr('src', src);
+    var data = $(this).data( 'link' );
+    $( "span:three" ).text( $( "div" ).data( 'link' ).three );
+    $( "span:four" ).text( $( "div" ).data( 'link' ).four );
+    console.log(data);
+    // if( target.length ) {
+    //     event.preventDefault();
+    //     console.log(target);
+    //     var src = '/static/img/features/'+target+'.png';
+    //     console.log(src);
+    // $('#project-photo-feature').attr('src', src);
     }
 });
