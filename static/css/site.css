@@ -136,6 +136,7 @@ section a:hover {
 .feature-project {
     background: rgba(235,235,235, 0.8);
     max-height: 800px;
+    margin: 25px;
     padding: 25px;
 }
 
