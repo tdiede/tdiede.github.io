@@ -38,16 +38,18 @@ $('a[href^="#"]').on('click', function(e) {
 // var currentFeature;
 
 
-$('.project-link').on('click', function(e) {
+$('#row-one > .project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
+    var title = $( this ).data( "title" );
     var src = '/static/img/features/'+projectName+'.png';
 
     $('#project-feature-row-two').hide();
     $('#project-feature-row-one').show();
     $('#project-photo-feature').attr('src', src);
+    $('#project-title').html(title);
 });
 
-$('.project-link').on('click', function(e) {
+$('#row-two > .project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
 
