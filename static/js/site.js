@@ -46,8 +46,8 @@ $('div#feature').data( 'link', { one: 'hackscrapers',
 
 $('a[href^="#"]').on('click', function(e) {
     var data = $(this).data( 'link' );
-    $( 'span:three' ).text( $( 'div#feature' ).data( 'link' ).three );
-    $( 'span:four' ).text( $( 'div#feature' ).data( 'link' ).four );
+    $( 'span#three' ).text( $( 'div#feature' ).data( 'link' ).three );
+    $( 'span#four' ).text( $( 'div#feature' ).data( 'link' ).four );
     console.log(data);
     // if( target.length ) {
     //     event.preventDefault();
