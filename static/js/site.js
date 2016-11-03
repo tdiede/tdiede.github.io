@@ -42,5 +42,6 @@ $('.two').on('click', function(e) {
 $('.project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
+    $('#feature').show();
     $('#project-photo-feature').attr('src', src);
 });
