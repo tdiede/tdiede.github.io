@@ -42,13 +42,16 @@ $('div#feature').data( 'link', { 'one': 'hackscrapers',
                                          'four': 'parametric',
                                          'five': 'velib' } );
 
-
-
-$('a[href^="#"]').on('click', function(e) {
     var data = $(this).data( 'link' );
     $( 'span#three' ).text( $( 'div#feature' ).data( 'link' ).three );
     $( 'span#four' ).text( $( 'div#feature' ).data( 'link' ).four );
     console.log(data);
+
+
+
+$('a[href^="#"]').on('click', function(e) {
+    var link = $(this.getAttribute('href'));
+    console.log(link);
     // if( target.length ) {
     //     event.preventDefault();
     //     console.log(target);
