@@ -58,11 +58,12 @@ $('.project-link').on('click', function(e) {
     console.log(link);
     console.log(hh);
     console.log(projectName);
+    var src = '/static/img/features/'+projectName+'.png';
     // if( target.length ) {
     //     event.preventDefault();
     //     console.log(target);
-    //     var src = '/static/img/features/'+target+'.png';
+    //     
     //     console.log(src);
-    // $('#project-photo-feature').attr('src', src);
+    $('#project-photo-feature').attr('src', src);
     // }
 });
