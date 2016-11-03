@@ -4,7 +4,8 @@
 $(document).ready(function() {
     // $('.two').hide();
     // $('.one').show();
-    $('#project-feature').hide();
+    $('#project-feature-row-one').hide();
+    $('#project-feature-row-two').hide();
 });
 
 // var canvas = document.getElementById('canvas-element');
@@ -37,10 +38,20 @@ $('a[href^="#"]').on('click', function(e) {
 // var currentFeature;
 
 
-$('.project-link').on('click', function(e) {
+$('row-one.project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
 
-    $('#project-feature').show();
+    $('#project-feature-row-two').hide();
+    $('#project-feature-row-one').show();
+    $('#project-photo-feature').attr('src', src);
+});
+
+$('row-two.project-link').on('click', function(e) {
+    var projectName = $( this ).data( "project" );
+    var src = '/static/img/features/'+projectName+'.png';
+
+    $('#project-feature-row-one').hide();
+    $('#project-feature-row-two').show();
     $('#project-photo-feature').attr('src', src);
 });
