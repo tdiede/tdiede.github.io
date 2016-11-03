@@ -38,9 +38,10 @@ $('.two').on('click', function(e) {
 
 $('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
+    console.log( $(this).data('href') );
     if( target.length ) {
         event.preventDefault();
-        console.log(this);
+        console.log(target);
         var src = '/static/img/features/'+target+'.png';
         console.log(src);
     $('#project-photo-feature').attr('src', src);
