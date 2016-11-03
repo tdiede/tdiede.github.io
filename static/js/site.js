@@ -38,7 +38,7 @@ $('a[href^="#"]').on('click', function(e) {
 // var currentFeature;
 
 
-$('row-one > .project-link').on('click', function(e) {
+$('.row-one > .project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
 
@@ -47,7 +47,7 @@ $('row-one > .project-link').on('click', function(e) {
     $('#project-photo-feature').attr('src', src);
 });
 
-$('row-two > .project-link').on('click', function(e) {
+$('.row-two > .project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
 
