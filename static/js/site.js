@@ -48,11 +48,12 @@ $('div#feature').data( 'link', { 'one': 'hackscrapers',
     console.log(data);
 
 
-
-$('a[href^="#"]').on('click', function(e) {
-    var link = $(this.getAttribute('href'));
+// a[href^="#"]
+$('.project-link').on('click', function(e) {
+    var link = $(this.getAttribute('id'));
+    var hh = $(this.getAttribute('href'));
     console.log(link);
-    console.log(link.id);
+    console.log(hh);
     // if( target.length ) {
     //     event.preventDefault();
     //     console.log(target);
