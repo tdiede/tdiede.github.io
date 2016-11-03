@@ -4,7 +4,7 @@
 $(document).ready(function() {
     // $('.two').hide();
     // $('.one').show();
-    $('#feature').hide();
+    $('#project-feature').hide();
 });
 
 // var canvas = document.getElementById('canvas-element');
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 $('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
-    if( target.length ) {
+    if ( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top
@@ -34,11 +34,13 @@ $('a[href^="#"]').on('click', function(e) {
 
 
 
+// var currentFeature;
 
 
 $('.project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
-    $('#feature').show();
+
+    $('#project-feature').show();
     $('#project-photo-feature').attr('src', src);
 });
