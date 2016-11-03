@@ -36,11 +36,11 @@ $('.two').on('click', function(e) {
 
 
 
-$('div#feature').data( 'link', { one: 'hackscrapers',
-                                         two: 'movies',
-                                         three: 'pavilion',
-                                         four: 'parametric',
-                                         five: 'velib' } );
+$('div#feature').data( 'link', { 'one': 'hackscrapers',
+                                         'two': 'movies',
+                                         'three': 'pavilion',
+                                         'four': 'parametric',
+                                         'five': 'velib' } );
 
 
 
