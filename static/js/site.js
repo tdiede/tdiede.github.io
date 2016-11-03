@@ -36,34 +36,11 @@ $('.two').on('click', function(e) {
 
 
 
-$('div#feature').data( 'link', { 'one': 'hackscrapers',
-                                         'two': 'movies',
-                                         'three': 'pavilion',
-                                         'four': 'parametric',
-                                         'five': 'velib' } );
-
-    var data = $(this).data( 'link' );
-    $( 'span#three' ).text( $( 'div#feature' ).data( 'link' ).three );
-    $( 'span#four' ).text( $( 'div#feature' ).data( 'link' ).four );
-    console.log(data);
 
 
 
-
-// a[href^="#"]
 $('.project-link').on('click', function(e) {
-    var link = $(this.getAttribute('id'));
-    var hh = $(this.getAttribute('href'));
     var projectName = $( this ).data( "project" );
-    console.log(link);
-    console.log(hh);
-    console.log(projectName);
     var src = '/static/img/features/'+projectName+'.png';
-    // if( target.length ) {
-    //     event.preventDefault();
-    //     console.log(target);
-    //     
-    //     console.log(src);
     $('#project-photo-feature').attr('src', src);
-    // }
 });

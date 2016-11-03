@@ -196,6 +196,11 @@ i.fa-globe:hover {
     height: auto;
 }
 
+#project-photo-feature {
+    width: 500px;
+    height: auto;
+}
+
 ul {
     list-style-type:none;
 }
