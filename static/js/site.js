@@ -41,12 +41,16 @@ $('a[href^="#"]').on('click', function(e) {
 $('.project-link-one').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var title = $( this ).data( "title" );
+    var date = $( this ).data( "date" );
+    var description = $( this ).data( "description" );
     var src = '/static/img/features/'+projectName+'.png';
 
     $('#project-feature-row-two').hide();
     $('#project-feature-row-one').show();
-    $('#project-photo-feature').attr('src', src);
-    $('#project-title').html(title);
+    $('.project-photo-feature').attr('src', src);
+    $('.project-title').html(title);
+    $('.project-date').html(date);
+    $('.project-description').html(description);
 });
 
 $('.project-link-two').on('click', function(e) {
@@ -55,5 +59,8 @@ $('.project-link-two').on('click', function(e) {
 
     $('#project-feature-row-one').hide();
     $('#project-feature-row-two').show();
-    $('#project-photo-feature').attr('src', src);
+    $('.project-photo-feature').attr('src', src);
+    $('.project-title').html(title);
+    $('.project-date').html(date);
+    $('.project-description').html(description);
 });
