@@ -52,6 +52,7 @@ $('div#feature').data( 'link', { 'one': 'hackscrapers',
 $('a[href^="#"]').on('click', function(e) {
     var link = $(this.getAttribute('href'));
     console.log(link);
+    console.log(link.id);
     // if( target.length ) {
     //     event.preventDefault();
     //     console.log(target);
