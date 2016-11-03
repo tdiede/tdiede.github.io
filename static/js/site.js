@@ -36,18 +36,13 @@ $('.two').on('click', function(e) {
 
 
 
-
-
-function submitProjectData (e) {
-    e.preventDefault();
-    console.log(this);
-    console.log(this.href);
-    var projectName = this.data('project');
-    console.log(projectName);
-    var src = '/static/img/features/'+projectName+'.png';
-    console.log(src);
+$('a[href^="#"]').on('click', function(e) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        console.log(this);
+        var src = '/static/img/features/'+target+'.png';
+        console.log(src);
     $('#project-photo-feature').attr('src', src);
-    // $('#data-card-id').attr('data-card', result.card_id);
-}
-
-$('#data-project').on('click', submitProjectData);
+    }
+});
