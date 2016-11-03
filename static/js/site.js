@@ -47,20 +47,23 @@ $('.project-link-one').on('click', function(e) {
 
     $('#project-feature-row-two').hide();
     $('#project-feature-row-one').show();
-    $('.project-photo-feature').attr('src', src);
-    $('.project-title').html(title);
-    $('.project-date').html(date);
-    $('.project-description').html(description);
+    $('#project-photo-feature-1').attr('src', src);
+    $('#project-title-1').html(title);
+    $('#project-date-1').html(date);
+    $('#project-description-1').html(description);
 });
 
 $('.project-link-two').on('click', function(e) {
     var projectName = $( this ).data( "project" );
+    var title = $( this ).data( "title" );
+    var date = $( this ).data( "date" );
+    var description = $( this ).data( "description" );
     var src = '/static/img/features/'+projectName+'.png';
 
     $('#project-feature-row-one').hide();
     $('#project-feature-row-two').show();
-    $('.project-photo-feature').attr('src', src);
-    $('.project-title').html(title);
-    $('.project-date').html(date);
-    $('.project-description').html(description);
+    $('#project-photo-feature-2').attr('src', src);
+    $('#project-title-2').html(title);
+    $('#project-date-2').html(date);
+    $('#project-description-2').html(description);
 });
