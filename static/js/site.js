@@ -16,8 +16,10 @@ $(document).ready(function() {
 
 var projectsJSON = '../../data/projects.json';
 
-var projects = $.getJSON(projects).responseText;
+var projects = $.getJSON(projects);
 
+var text = projects.responseText;
+console.log(text);
 
 
 $('a.project-link').on('click', function(e) {
