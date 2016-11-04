@@ -5,6 +5,8 @@ $(document).ready(function() {
     // $('.two').hide();
     // $('.one').show();
     $('#project-feature').hide();
+    $('#feature-row-one').hide();
+    $('#feature-row-two').hide();
 });
 
 // var canvas = document.getElementById('canvas-element');
@@ -22,12 +24,14 @@ $('a.project-link').on('click', function(e) {
 
     if ( isRowOne === true ) {
         console.log("feature row 1");
-        $('#project-feature').hide();
+        $('#feature-row-two').hide();
+        $('#feature-row-one').show();
         $('#project-feature').appendTo('#feature-row-one');
         $('#project-feature').show();
     } else if ( isRowTwo === true ) {
         console.log("feature row 2");
-        $('#project-feature').hide();
+        $('#feature-row-one').hide();
+        $('#feature-row-two').show();
         $('#project-feature').appendTo('#feature-row-two');
         $('#project-feature').show();
     }
