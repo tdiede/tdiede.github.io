@@ -2,12 +2,11 @@
 
 
 var json = '../../data/projects.json';
+var response = $.getJSON(json);
 
 $(document).ready(function() {
     var portfolio = {};
     var projects = [];
-
-    var response = $.getJSON(json);
 
     portfolio = response.responseText;
     console.log(portfolio);
