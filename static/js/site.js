@@ -1,19 +1,6 @@
 "use strict";
 
 
-$(document).ready(function() {
-    // $('.two').hide();
-    // $('.one').show();
-    $('#project-feature').hide();
-    $('#feature-row-one').hide();
-    $('#feature-row-two').hide();
-});
-
-// var canvas = document.getElementById('canvas-element');
-// var header = $('nav.navbar').offset().top;
-
-
-
 var json = '../../data/projects.json';
 
 var response = $.getJSON(json);
@@ -21,7 +8,25 @@ var response = $.getJSON(json);
 var portfolio = {};
 var projects = [];
 
-console.log(response.responseText);
+
+
+
+$(document).ready(function() {
+    // $('.two').hide();
+    // $('.one').show();
+    $('#project-feature').hide();
+    $('#feature-row-one').hide();
+    $('#feature-row-two').hide();
+
+    console.log(response.responseText);
+});
+
+// var canvas = document.getElementById('canvas-element');
+// var header = $('nav.navbar').offset().top;
+
+
+
+
 
 
 $('a.project-link').on('click', function(e) {
