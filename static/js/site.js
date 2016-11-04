@@ -18,7 +18,7 @@ var rowOne = $('#row-one');
 
 $('.project-link-one').on('click', function(e) {
 
-    if (this.parents('#row-one') {
+    if (this.parents('#row-one')) {
         console.log("yes");
     } else {
         console.log("no");
