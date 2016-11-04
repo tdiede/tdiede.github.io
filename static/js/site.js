@@ -1,8 +1,9 @@
 "use strict";
 
 
+var json = '../../data/projects.json';
+
 $(document).ready(function() {
-    var json = '../../data/projects.json';
     var portfolio = {};
     var projects = [];
 
