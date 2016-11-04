@@ -21,12 +21,15 @@ $('a.project-link').on('click', function(e) {
     var isRowTwo = $( this ).hasClass('row-two');
 
     if ( isRowOne === true ) {
-        console.log("feature");
-        $('#project-feature').appendTo('#feature-one');
+        console.log("feature row 1");
+        $('#project-feature').hide();
+        $('#project-feature').appendTo('#feature-row-one');
         $('#project-feature').show();
     } else if ( isRowTwo === true ) {
-        // $('#project-feature-row-one').hide();
-        // $('#project-feature-row-two').show();
+        console.log("feature row 2");
+        $('#project-feature').hide();
+        $('#project-feature').appendTo('#feature-row-two');
+        $('#project-feature').show();
     }
 
     var projectName = $( this ).data( "project" );
@@ -40,7 +43,6 @@ $('a.project-link').on('click', function(e) {
     var partners = $( this ).data( "partners" );
 
     var src = '/static/img/features/'+projectName+'.png';
-
 
     $('#project-photo').attr('src', src);
     $('#project-title').html(title);
