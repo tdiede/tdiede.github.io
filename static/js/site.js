@@ -27,6 +27,11 @@ $('.project-link-one').on('click', function(e) {
     $('#project-title-1').html(title);
     $('#project-date-1').html(date);
     $('#project-description-1').html(description);
+    $('#project-techstack-1').html(techstack);
+    $('#project-apis-1').html(apis);
+    $('#project-github-1').html(github);
+    $('#project-deployed-1').html(deployed);
+    $('#project-partners-1').html(partners);
 });
 
 $('.project-link-two').on('click', function(e) {
@@ -42,6 +47,11 @@ $('.project-link-two').on('click', function(e) {
     $('#project-title-2').html(title);
     $('#project-date-2').html(date);
     $('#project-description-2').html(description);
+    $('#project-techstack-2').html(techstack);
+    $('#project-apis-2').html(apis);
+    $('#project-github-2').html(github);
+    $('#project-deployed-2').html(deployed);
+    $('#project-partners-2').html(partners);
 });
 
 
