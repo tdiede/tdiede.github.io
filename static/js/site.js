@@ -3,11 +3,11 @@
 
 
 var portfolio = {};
-
+var json = '../../data/projects.json';
 
 
 function createPortfolio() {
-    var json = '../../data/projects.json';
+
     var response = $.getJSON(json);
     portfolio = response.responseJSON;
 };
