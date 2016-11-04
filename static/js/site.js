@@ -7,11 +7,14 @@ var projects = [];
 var json = '../../data/projects.json';
 var response = $.getJSON(json);
 
+portfolio = response.responseJSON;
+
 $(document).ready(function() {
     alert('po');
 
-    portfolio = response.responseJSON;
-    console.log(portfolio);
+    
+    // console.log(portfolio);
+    alert(portfolio);
 
 });
 
