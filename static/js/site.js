@@ -1,12 +1,15 @@
 "use strict";
 
 
-var json = '../../data/projects.json';
+$(document).ready(function() {
+    var json = '../../data/projects.json';
+    var portfolio = {};
+    var projects = [];
 
-var response = $.getJSON(json);
+    portfolio = response.responseText;
+    console.log(portfolio);
 
-var portfolio = {};
-var projects = [];
+});
 
 
 
@@ -18,7 +21,6 @@ $(document).ready(function() {
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
 
-    console.log(response.responseText);
 });
 
 // var canvas = document.getElementById('canvas-element');
