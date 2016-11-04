@@ -21,6 +21,8 @@ $('a.project-link').on('click', function(e) {
     if ( $(this).hasClass('.row-one') === true ) {
         console.log("yessss");
     } else {
+        console.log($(this));
+        console.log($(this).hasClass('.row-one'));
         console.log("nddddo");
     }
 
