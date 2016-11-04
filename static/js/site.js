@@ -12,16 +12,13 @@ $(document).ready(function() {
 // var header = $('nav.navbar').offset().top;
 
 
-var rowOne = $('#row-one');
-if rowOne.length {
-    console.log('I exist');
-}
+
 
 
 
 $('.project-link-one').on('click', function(e) {
 
-    if (this.parents('#row-one')) {
+    if (this.hasClass('.project-link-one')) {
         console.log("yes");
     } else {
         console.log("no");
