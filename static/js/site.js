@@ -25,11 +25,14 @@ $(document).ready(function() {
 // var canvas = document.getElementById('canvas-element');
 // var header = $('nav.navbar').offset().top;
 
+
+function getTitle() {
+    var projectID = 1;
     var projects = portfolio.projects;
 
     var title = projects[projectID].title;
     console.log(title);
-
+}
 
 
 
