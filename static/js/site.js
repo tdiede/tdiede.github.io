@@ -14,14 +14,9 @@ $(document).ready(function() {
 
 
 
-var projects = '../../data/projects.json';
+var projectsJSON = '../../data/projects.json';
 
-var projectsJSON;
-
- $.getJSON(projects, function(response){
-       projectsJSON = response;
-       alert(projectsJSON.property);
- })
+var projects = $.getJSON(projects).responseText;
 
 
 
