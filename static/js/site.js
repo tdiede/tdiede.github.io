@@ -21,7 +21,7 @@ var response = $.getJSON(json);
 var portfolio = {};
 var projects = [];
 
-portfolio = response.responseText;
+console.log(response.responseText);
 
 
 $('a.project-link').on('click', function(e) {
