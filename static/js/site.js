@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 $('.project-link-one').on('click', function(e) {
 
-    if (this.hasClass('.project-link-one')) {
+    if ($(this).hasClass('.project-link-one')) {
         console.log("yes");
     } else {
         console.log("no");
