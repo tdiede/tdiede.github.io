@@ -1,12 +1,13 @@
 "use strict";
 
 
+
+var portfolio = {};
+
+var json = '../../data/projects.json';
+var response = $.getJSON(json);
+
 function createPortfolio() {
-    var portfolio = {};
-
-    var json = '../../data/projects.json';
-    var response = $.getJSON(json);
-
     portfolio = response.responseJSON;
 };
 
