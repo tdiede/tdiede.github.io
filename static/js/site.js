@@ -11,7 +11,7 @@ var response = $.getJSON(json);
 function console() {
     portfolio = response.responseJSON;
     alert(portfolio);
-});
+};
 
 window.setTimeout(console, 1000);
 
