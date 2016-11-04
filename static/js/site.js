@@ -1,15 +1,14 @@
 "use strict";
 
 
+var portfolio = {};
+var projects = [];
 
+var json = '../../data/projects.json';
+var response = $.getJSON(json);
 
 $(document).ready(function() {
     alert('po');
-    var portfolio = {};
-    var projects = [];
-
-    var json = '../../data/projects.json';
-    var response = $.getJSON(json);
 
     portfolio = response.responseJSON;
     console.log(portfolio);
