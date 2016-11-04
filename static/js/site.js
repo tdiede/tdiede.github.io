@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 $('a.project-link').on('click', function(e) {
 
-    if ( $(this).hasClass('.project-link.row-one') === true ) {
+    if ( $(this).hasClass('row-one') === true ) {
         console.log("yessss");
     } else {
         console.log($(this));
