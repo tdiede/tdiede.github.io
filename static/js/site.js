@@ -14,6 +14,7 @@ $(document).ready(function() {
 
 
 
+var projects = '../../data/projects.json';
 
 
 
