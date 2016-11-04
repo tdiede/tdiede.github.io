@@ -48,7 +48,7 @@ $('a.project-link').on('click', function(e) {
 
     var src = '/static/img/features/'+projectName+'.png';
 
-    $('#project-photo').attr('src', src);
+    $('#project-photo-feature').attr('src', src);
     $('#project-title').html(title);
     $('#project-date').html(date);
     $('#project-description').html(description);
