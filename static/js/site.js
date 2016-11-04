@@ -19,6 +19,12 @@ $('.project-link-one').on('click', function(e) {
     var title = $( this ).data( "title" );
     var date = $( this ).data( "date" );
     var description = $( this ).data( "description" );
+    var techstack = $( this ).data( "techstack" );
+    var apis = $( this ).data( "apis" );
+    var github = $( this ).data( "github" );
+    var deployed = $( this ).data( "deployed")
+    var partners = $( this ).data( "partners" );
+
     var src = '/static/img/features/'+projectName+'.png';
 
     $('#project-feature-row-two').hide();
@@ -39,6 +45,12 @@ $('.project-link-two').on('click', function(e) {
     var title = $( this ).data( "title" );
     var date = $( this ).data( "date" );
     var description = $( this ).data( "description" );
+    var techstack = $( this ).data( "techstack" );
+    var apis = $( this ).data( "apis" );
+    var github = $( this ).data( "github" );
+    var deployed = $( this ).data( "deployed")
+    var partners = $( this ).data( "partners" );
+
     var src = '/static/img/features/'+projectName+'.png';
 
     $('#project-feature-row-one').hide();
