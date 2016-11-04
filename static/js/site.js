@@ -19,9 +19,9 @@ $(document).ready(function() {
 $('a.project-link').on('click', function(e) {
 
     if ( $(this).hasClass('.row-one') === true ) {
-        console.log("yes");
+        console.log("yessss");
     } else {
-        console.log("no");
+        console.log("nddddo");
     }
 
     var projectName = $( this ).data( "project" );
