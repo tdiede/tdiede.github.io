@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 var projectsJSON = '../../data/projects.json';
 
-var projects = $.getJSON(projects);
+var projects = $.getJSON(projectsJSON);
 
 var text = projects.responseText;
 console.log(text);
