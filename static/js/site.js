@@ -23,6 +23,7 @@ $('a.project-link').on('click', function(e) {
     if ( isRowOne === true ) {
         console.log("feature");
         $('#project-feature').appendTo('#feature-one');
+        $('#project-feature').show();
     } else if ( isRowTwo === true ) {
         // $('#project-feature-row-one').hide();
         // $('#project-feature-row-two').show();
