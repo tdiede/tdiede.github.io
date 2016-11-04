@@ -8,7 +8,7 @@ $(document).ready(function() {
     var portfolio = {};
     var projects = [];
 
-    portfolio = response.responseText;
+    portfolio = response.responseJSON;
     console.log(portfolio);
 
 });
