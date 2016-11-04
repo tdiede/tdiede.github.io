@@ -17,8 +17,8 @@ $(document).ready(function() {
 
 $('a.project-link').on('click', function(e) {
 
-    var isRowOne = $( this ).hasClass('row-one'));
-    var isRowTwo = $( this ).hasClass('row-two'));
+    var isRowOne = $( this ).hasClass('row-one');
+    var isRowTwo = $( this ).hasClass('row-two');
 
     if ( isRowOne === true ) {
         console.log("feature");
