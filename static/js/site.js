@@ -14,11 +14,11 @@ $(document).ready(function() {
 
 
 
-var projectsJSON = '../../data/projects.json';
+var projects = '../../data/projects.json';
 
-var projects = $.getJSON(projectsJSON);
+var projectsJSON = $.getJSON(projects);
 
-var text = projects.responseText;
+var text = projectsJSON.responseText;
 console.log(text);
 
 
