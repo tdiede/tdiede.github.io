@@ -1,19 +1,16 @@
 "use strict";
 
 
-var portfolio = {};
-var projects = [];
+function createPortfolio() {
+    var portfolio = {};
 
-var json = '../../data/projects.json';
-var response = $.getJSON(json);
+    var json = '../../data/projects.json';
+    var response = $.getJSON(json);
 
-
-function console() {
     portfolio = response.responseJSON;
-    alert(portfolio);
 };
 
-window.setTimeout(console, 1000);
+window.setTimeout(createPortfolio, 1000);
 
 
 $(document).ready(function() {
@@ -28,7 +25,10 @@ $(document).ready(function() {
 // var canvas = document.getElementById('canvas-element');
 // var header = $('nav.navbar').offset().top;
 
+    var projects = portfolio.projects;
 
+    var title = projects[projectID].title;
+    console.log(title);
 
 
 
@@ -41,6 +41,7 @@ $('a.project-link').on('click', function(e) {
     if ( isRowOne === true ) {
         console.log("feature row 1");
         $('#feature-row-two').hide();
+        var projectID = 0;
         $('#feature-row-one').show();
         $('#project-feature').appendTo('#feature-row-one');
         $('#project-feature').show();
@@ -52,19 +53,12 @@ $('a.project-link').on('click', function(e) {
         $('#project-feature').show();
     }
 
+
+
     var projectName = $( this ).data( "project" );
-    var title = $( this ).data( "title" );
-    var date = $( this ).data( "date" );
-    var description = $( this ).data( "description" );
-    var techstack = $( this ).data( "techstack" );
-    var apis = $( this ).data( "apis" );
-    var github = $( this ).data( "github" );
-    var deployed = $( this ).data( "deployed")
-    var partners = $( this ).data( "partners" );
-
     var src = '/static/img/features/'+projectName+'.png';
-
     $('#project-photo-feature').attr('src', src);
+
     $('#project-title').html(title);
     $('#project-date').html(date);
     $('#project-description').html(description);
