@@ -23,7 +23,7 @@ $('a.project-link').on('click', function(e) {
     } else {
         console.log($(this));
         console.log($(this).hasClass('.row-one'));
-        console.log("nddddo");
+        console.log("ndddddeeeeddo");
     }
 
     var projectName = $( this ).data( "project" );
