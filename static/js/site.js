@@ -13,6 +13,9 @@ $(document).ready(function() {
 
 
 var rowOne = $('#row-one');
+if rowOne.length {
+    console.log('I exist');
+}
 
 
 
