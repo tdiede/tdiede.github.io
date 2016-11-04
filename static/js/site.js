@@ -14,13 +14,14 @@ $(document).ready(function() {
 
 
 
-var projects = '../../data/projects.json';
+var json = '../../data/projects.json';
 
-var projectsJSON = $.getJSON(projects);
+var response = $.getJSON(json);
 
-var text = {};
-text = projectsJSON.responseText;
-console.log(text);
+var portfolio = {};
+var projects = [];
+
+portfolio = response.responseText;
 
 
 $('a.project-link').on('click', function(e) {
