@@ -36,7 +36,9 @@ $('.project-link-one').on('click', function(e) {
     $('#project-techstack-1').html(techstack);
     $('#project-apis-1').html(apis);
     $('#project-github-1').html(github);
+    $('#project-github-1').attr('src', github);
     $('#project-deployed-1').html(deployed);
+    $('#project-deployed-1').attr('src', deployed);
     $('#project-partners-1').html(partners);
 });
 
