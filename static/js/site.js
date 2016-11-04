@@ -12,9 +12,18 @@ $(document).ready(function() {
 // var header = $('nav.navbar').offset().top;
 
 
+var rowOne = $('#row-one');
+
 
 
 $('.project-link-one').on('click', function(e) {
+
+    if ($elem.parents('#row-one')) {
+        console.log("yes");
+    } else {
+        console.log("no");
+    }
+
     var projectName = $( this ).data( "project" );
     var title = $( this ).data( "title" );
     var date = $( this ).data( "date" );
