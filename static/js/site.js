@@ -4,8 +4,7 @@
 $(document).ready(function() {
     // $('.two').hide();
     // $('.one').show();
-    $('#project-feature-row-one').hide();
-    $('#project-feature-row-two').hide();
+    $('#project-feature').hide();
 });
 
 // var canvas = document.getElementById('canvas-element');
@@ -18,12 +17,15 @@ $(document).ready(function() {
 
 $('a.project-link').on('click', function(e) {
 
-    if ( $(this).hasClass('row-one') === true ) {
-        console.log("yessss");
-    } else {
-        console.log($(this));
-        console.log($(this).hasClass('.row-one'));
-        console.log("ndddddeeeeddo");
+    var isRowOne = $( this ).hasClass('row-one'));
+    var isRowTwo = $( this ).hasClass('row-two'));
+
+    if ( isRowOne === true ) {
+        console.log("feature");
+        $('#project-feature').appendTo('.feature-one');
+    } else if ( isRowTwo === true ) {
+        // $('#project-feature-row-one').hide();
+        // $('#project-feature-row-two').show();
     }
 
     var projectName = $( this ).data( "project" );
@@ -38,46 +40,20 @@ $('a.project-link').on('click', function(e) {
 
     var src = '/static/img/features/'+projectName+'.png';
 
-    $('#project-feature-row-two').hide();
-    $('#project-feature-row-one').show();
-    $('#project-photo-feature-1').attr('src', src);
-    $('#project-title-1').html(title);
-    $('#project-date-1').html(date);
-    $('#project-description-1').html(description);
-    $('#project-techstack-1').html(techstack);
-    $('#project-apis-1').html(apis);
-    $('#project-github-1').html(github);
-    $('#project-github-1').attr('href', github);
-    $('#project-deployed-1').html(deployed);
-    $('#project-deployed-1').attr('href', deployed);
-    $('#project-partners-1').html(partners);
+
+    $('#project-photo').attr('src', src);
+    $('#project-title').html(title);
+    $('#project-date').html(date);
+    $('#project-description').html(description);
+    $('#project-techstack').html(techstack);
+    $('#project-apis').html(apis);
+    $('#project-github').html(github);
+    $('#project-github').attr('href', github);
+    $('#project-deployed').html(deployed);
+    $('#project-deployed').attr('href', deployed);
+    $('#project-partners').html(partners);
 });
 
-$('.project-link-two').on('click', function(e) {
-    var projectName = $( this ).data( "project" );
-    var title = $( this ).data( "title" );
-    var date = $( this ).data( "date" );
-    var description = $( this ).data( "description" );
-    var techstack = $( this ).data( "techstack" );
-    var apis = $( this ).data( "apis" );
-    var github = $( this ).data( "github" );
-    var deployed = $( this ).data( "deployed")
-    var partners = $( this ).data( "partners" );
-
-    var src = '/static/img/features/'+projectName+'.png';
-
-    $('#project-feature-row-one').hide();
-    $('#project-feature-row-two').show();
-    $('#project-photo-feature-2').attr('src', src);
-    $('#project-title-2').html(title);
-    $('#project-date-2').html(date);
-    $('#project-description-2').html(description);
-    $('#project-techstack-2').html(techstack);
-    $('#project-apis-2').html(apis);
-    $('#project-github-2').html(github);
-    $('#project-deployed-2').html(deployed);
-    $('#project-partners-2').html(partners);
-});
 
 
 
