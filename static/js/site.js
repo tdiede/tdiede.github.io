@@ -25,14 +25,6 @@ $(document).ready(function() {
 // var header = $('nav.navbar').offset().top;
 
 
-function getTitle(id) {
-    var projects = portfolio.projects;
-    var title = projects[id].title;
-    console.log(title);
-}
-
-
-
 $('a.project-link').on('click', function(e) {
 
     var isRowOne = $( this ).hasClass('row-one');
@@ -59,9 +51,23 @@ $('a.project-link').on('click', function(e) {
 
 
 function updateFeatureProject(result) {
+
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
+
+    var id = $( this ).data( "projectID" );
+
+    var title = projects[id].title;
+    var date = projects[id].date;
+    var description = projects[id].description;
+    var techstack = projects[id].techstack;
+    var apis = projects[id].apis;
+    var github = projects[id].github;
+    var deployed = projects[id].deployed;
+    var partners = projects[id].partners;
+    var image1URL = projects[id].image1URL;
+    var image1Caption = projects[id].image1Caption;
 
     $('#project-title').html(title);
     $('#project-date').html(date);
