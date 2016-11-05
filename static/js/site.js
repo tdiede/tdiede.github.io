@@ -13,9 +13,8 @@ function createPortfolio() {
 
 
 $(document).ajaxSuccess(function() {
-    alert("It's loaded!");
+    // alert("It's loaded!");
     createPortfolio();
-    alert(portfolio);
 });
 
 
@@ -57,12 +56,9 @@ $('a.project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
-    console.log('hiii');
 
     var projectNumber = $( this ).data( "num" );
-    console.log(projectNumber);
     var id = parseInt(projectNumber);
-    console.log(id);
 
     var title = projects[id].title;
     var date = projects[id].date;
