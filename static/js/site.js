@@ -7,6 +7,7 @@ var response = $.getJSON(json);
 
 function createPortfolio() {
     portfolio = response.responseJSON;
+    var master = portfolio.master;
 };
 
 window.setTimeout(createPortfolio, 1000);
@@ -51,8 +52,6 @@ $('a.project-link').on('click', function(e) {
 
 
 function updateFeatureProject(result) {
-
-    var master = portfolio.master;
 
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
