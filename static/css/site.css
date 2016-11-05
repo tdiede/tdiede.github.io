@@ -77,7 +77,7 @@ p {
     color: #333333;
 }
 
-div#project-feature > p {
+div#project-info > p {
     display: inline;
 }
 
