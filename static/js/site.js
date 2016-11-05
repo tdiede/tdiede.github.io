@@ -4,9 +4,9 @@ var portfolio = {};
 var projects;
 
 var json = '../../data/projects.json';
+var response = $.getJSON(json);
 
 function createPortfolio() {
-    var response = $.getJSON(json);
     portfolio = response.responseJSON;
     projects = portfolio.master;
 };
