@@ -60,6 +60,9 @@ $('a.project-link').on('click', function(e) {
     var projectNumber = $( this ).data( "num" );
     var id = parseInt(projectNumber);
 
+    var currentCaption = projects[id].image1Caption;
+    $('#project-caption-feature').html(currentCaption);
+
     var title = projects[id].title;
     var date = projects[id].date;
     var description = projects[id].description;
