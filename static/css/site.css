@@ -75,6 +75,9 @@ p {
     font-weight: 300;
     font-size: 11pt;
     color: #333333;
+}
+
+div#project-feature > p {
     display: inline;
 }
 

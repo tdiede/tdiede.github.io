@@ -79,8 +79,8 @@ $('a.project-link').on('click', function(e) {
     $('#project-description').html(description);
     $('#project-techstack').html("<p>tech stack | <h4>" + techstack + "</h4></p>");
     $('#project-apis').html("<p>APIs | <h4>" + apis + "</h4></p>");
-    $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: <a href='" + github + "' target='_blank'>" + github + "</a></p>");
-    $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: <a href='" + deployed + "' target='_blank'>" + deployed + "</a></p>");
+    $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: </p><a href='" + github + "' target='_blank'>" + github + "</a>");
+    $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
 });
 
 
