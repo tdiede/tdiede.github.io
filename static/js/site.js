@@ -77,8 +77,8 @@ $('a.project-link').on('click', function(e) {
     $('#project-title').html(title);
     $('#project-date').html(date + '|' + partners);
     $('#project-description').html(description);
-    $('#project-techstack').html(techstack);
-    $('#project-apis').html(apis);
+    $('#project-techstack').html('tech stack |' + techstack);
+    $('#project-apis').html('APIs |' + apis);
     $('#project-github').html(github);
     $('#project-github').attr('href', github);
     $('#project-deployed').html(deployed);
