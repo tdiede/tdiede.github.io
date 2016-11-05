@@ -25,11 +25,9 @@ $(document).ready(function() {
 // var header = $('nav.navbar').offset().top;
 
 
-function getTitle() {
-    var projectID = 1;
+function getTitle(id) {
     var projects = portfolio.projects;
-
-    var title = projects[projectID].title;
+    var title = projects[id].title;
     console.log(title);
 }
 
