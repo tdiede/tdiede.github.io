@@ -79,10 +79,12 @@ $('a.project-link').on('click', function(e) {
     $('#project-description').html(description);
     $('#project-techstack').html("<p>tech stack | </p>" + techstack);
     $('#project-apis').html("<p>APIs | </p>" + apis);
-    $('#project-github').html(github);
+    $('#project-github').html("<p><span>
+                                    <i class='fa fa-github' aria-hidden='true'></i>
+                                  </span> review my code: </p>
+                                  <a href='" + github + "' target='_blank'>LINK</a>");
 
-    <p><span><i class="fa fa-github" aria-hidden="true"></i></span> review my code: </p>
-                            <a href='' target='_blank' id='project-github'></a>
+
     $('#project-github').attr('href', github);
     $('#project-deployed').html(deployed);
     $('#project-deployed').attr('href', deployed);
