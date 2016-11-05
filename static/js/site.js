@@ -74,9 +74,8 @@ $('a.project-link').on('click', function(e) {
     var image1URL = projects[id].image1URL;
     var image1Caption = projects[id].image1Caption;
 
-    $('#project-title').append(title);
-    $('#project-date').append(date);
-    $('#project-partners').html(partners);
+    $('#project-title').html(title);
+    $('#project-date').html(date + '|' + partners);
     $('#project-description').html(description);
     $('#project-techstack').html(techstack);
     $('#project-apis').html(apis);
