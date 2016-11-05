@@ -75,10 +75,10 @@ $('a.project-link').on('click', function(e) {
     var image1Caption = projects[id].image1Caption;
 
     $('#project-title').html(title);
-    $('#project-date').html(date + "|" + partners);
+    $('#project-date-partners').html(date + " | " + partners);
     $('#project-description').html(description);
-    $('#project-techstack').html("<p>tech stack | </p>" + techstack);
-    $('#project-apis').html("<p>APIs | </p>" + apis);
+    $('#project-techstack').html("<p>tech stack | " + techstack + "</p>");
+    $('#project-apis').html("<p>APIs | " + apis + "</p>");
     $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: <a href='" + github + "' target='_blank'>" + github + "</a></p>");
     $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: <a href='" + deployed + "' target='_blank'>" + deployed + "</a></p>");
 });
