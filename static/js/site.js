@@ -76,7 +76,7 @@ $('a.project-link').on('click', function(e) {
     $('#project-deployed').html(deployed);
     $('#project-deployed').attr('href', deployed);
     $('#project-partners').html(partners);
-}
+});
 
 
 
