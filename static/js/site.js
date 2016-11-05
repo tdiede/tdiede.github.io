@@ -19,14 +19,13 @@ $(document).ready(function() {
     $('#project-feature').hide();
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
-});
 
-
-window.onload = function () {
     alert("It's loaded!");
     createPortfolio();
     alert(portfolio);
-}
+
+});
+
 
 // var canvas = document.getElementById('canvas-element');
 // var header = $('nav.navbar').offset().top;
