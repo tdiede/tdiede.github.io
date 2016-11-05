@@ -48,13 +48,6 @@ $('a.project-link').on('click', function(e) {
         $('#project-feature').show();
     }
 
-    $.get($( this ), updateFeatureProject);
-
-});
-
-
-function updateFeatureProject(result) {
-
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
