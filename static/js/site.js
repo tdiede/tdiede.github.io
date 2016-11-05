@@ -59,7 +59,8 @@ function updateFeatureProject(result) {
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
 
-    var id = $( this ).data( "projectID" );
+    var projectID = $( this ).data( "projectID" );
+    var id = int(projectID);
 
     var title = projects[id].title;
     var date = projects[id].date;
