@@ -12,6 +12,12 @@ function createPortfolio() {
 };
 
 
+$(document).ajaxSuccess(function() {
+    alert("It's loaded!");
+    createPortfolio();
+    alert(portfolio);
+});
+
 
 
 $(document).ready(function() {
@@ -20,13 +26,6 @@ $(document).ready(function() {
     $('#project-feature').hide();
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
-
-
-$(document).ajaxComplete(function() {
-    alert("It's loaded!");
-    createPortfolio();
-    alert(portfolio);
-});
 
 });
 
