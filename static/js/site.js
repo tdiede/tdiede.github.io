@@ -12,8 +12,6 @@ function createPortfolio() {
     projects = portfolio.master;
 };
 
-window.setTimeout(createPortfolio, 1000);
-
 
 $(document).ready(function() {
     // $('.two').hide();
@@ -21,6 +19,8 @@ $(document).ready(function() {
     $('#project-feature').hide();
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
+
+    createPortfolio();
 
 });
 
