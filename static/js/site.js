@@ -55,7 +55,7 @@ $('a.project-link').on('click', function(e) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
-    console.log(src);
+    console.log('hiii');
 
     var projectNumber = $( this ).data( "projectNumber" );
     console.log(projectNumber);
