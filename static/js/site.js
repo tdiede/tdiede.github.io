@@ -2,12 +2,14 @@
 
 
 var portfolio = {};
+var projects = [];
 var json = '../../data/projects.json';
 var response = $.getJSON(json);
 
+
 function createPortfolio() {
     portfolio = response.responseJSON;
-    var master = portfolio.master;
+    projects = portfolio.master;
 };
 
 window.setTimeout(createPortfolio, 1000);
@@ -59,16 +61,16 @@ function updateFeatureProject(result) {
 
     var id = $( this ).data( "projectID" );
 
-    var title = master[id].title;
-    var date = master[id].date;
-    var description = master[id].description;
-    var techstack = master[id].techstack;
-    var apis = master[id].apis;
-    var github = master[id].github;
-    var deployed = master[id].deployed;
-    var partners = master[id].partners;
-    var image1URL = master[id].image1URL;
-    var image1Caption = master[id].image1Caption;
+    var title = projects[id].title;
+    var date = projects[id].date;
+    var description = projects[id].description;
+    var techstack = projects[id].techstack;
+    var apis = projects[id].apis;
+    var github = projects[id].github;
+    var deployed = projects[id].deployed;
+    var partners = projects[id].partners;
+    var image1URL = projects[id].image1URL;
+    var image1Caption = projects[id].image1Caption;
 
     $('#project-title').html(title);
     $('#project-date').html(date);
