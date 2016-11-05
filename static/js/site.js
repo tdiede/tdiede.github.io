@@ -74,8 +74,9 @@ $('a.project-link').on('click', function(e) {
     var image1URL = projects[id].image1URL;
     var image1Caption = projects[id].image1Caption;
 
-    $('#project-title').html(title);
-    $('#project-date').html(date);
+    $('#project-title').append(title);
+    $('#project-date').append(date);
+    $('#project-partners').html(partners);
     $('#project-description').html(description);
     $('#project-techstack').html(techstack);
     $('#project-apis').html(apis);
@@ -83,7 +84,6 @@ $('a.project-link').on('click', function(e) {
     $('#project-github').attr('href', github);
     $('#project-deployed').html(deployed);
     $('#project-deployed').attr('href', deployed);
-    $('#project-partners').html(partners);
 });
 
 
