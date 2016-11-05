@@ -52,6 +52,8 @@ $('a.project-link').on('click', function(e) {
 
 function updateFeatureProject(result) {
 
+    var projects = portfolio.projects;
+
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
