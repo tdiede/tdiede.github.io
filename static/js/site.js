@@ -57,9 +57,9 @@ $('a.project-link').on('click', function(e) {
     $('#project-photo-feature').attr('src', src);
     console.log(src);
 
-    var projectID = $( this ).data( "projectID" );
-    console.log(projectID);
-    var id = parseInt(projectID);
+    var projectNumber = $( this ).data( "projectNumber" );
+    console.log(projectNumber);
+    var id = parseInt(projectNumber);
     console.log(id);
 
     var title = projects[id].title;
