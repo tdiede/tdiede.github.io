@@ -2,7 +2,7 @@
 
 
 var portfolio = {};
-var projects = [];
+var projects;
 var json = '../../data/projects.json';
 var response = $.getJSON(json);
 
