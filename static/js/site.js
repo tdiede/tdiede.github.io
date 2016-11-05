@@ -11,6 +11,12 @@ function createPortfolio() {
     projects = portfolio.master;
 };
 
+$(document).ajaxComplete(function() {
+    alert("It's loaded!");
+    createPortfolio();
+    alert(portfolio);
+});
+
 
 $(document).ready(function() {
     // $('.two').hide();
@@ -19,9 +25,6 @@ $(document).ready(function() {
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
 
-    alert("It's loaded!");
-    createPortfolio();
-    alert(portfolio);
 
 });
 
