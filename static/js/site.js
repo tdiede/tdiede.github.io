@@ -48,7 +48,7 @@ $('a.project-link').on('click', function(e) {
         $('#project-feature').show();
     }
 
-    $.get(this, updateFeatureProject);
+    $.get($( this ), updateFeatureProject);
 
 });
 
