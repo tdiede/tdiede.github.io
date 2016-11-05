@@ -195,10 +195,12 @@ i.fa-globe:hover {
 }
 
 i.fa-times {
-    position: relative;
-    text-align: right;
-    padding: 50px;
+    margin-right: 50px;
     color: #333333;
+}
+
+i.fa-times:hover {
+    color: #ffdd42;
 }
 
 
