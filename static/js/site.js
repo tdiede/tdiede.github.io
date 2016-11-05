@@ -1,14 +1,11 @@
 "use strict";
 
 
-
 var portfolio = {};
 var json = '../../data/projects.json';
-
+var response = $.getJSON(json);
 
 function createPortfolio() {
-
-    var response = $.getJSON(json);
     portfolio = response.responseJSON;
 };
 
@@ -58,8 +55,12 @@ $('a.project-link').on('click', function(e) {
         $('#project-feature').show();
     }
 
+    $.get(this, updateFeatureProject);
+
+});
 
 
+function updateFeatureProject(result) {
     var projectName = $( this ).data( "project" );
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
@@ -74,8 +75,7 @@ $('a.project-link').on('click', function(e) {
     $('#project-deployed').html(deployed);
     $('#project-deployed').attr('href', deployed);
     $('#project-partners').html(partners);
-});
-
+}
 
 
 
