@@ -144,6 +144,7 @@ section a:hover {
     padding: 25px;
     height: 100%;
     max-height: 800px;
+    overflow: scroll;
 }
 
 #project-photo {
