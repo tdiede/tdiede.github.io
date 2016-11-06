@@ -86,7 +86,7 @@ $('a.project-link').on('click', function(e) {
     var sidebarPhotos;
     var sidebar;
     var number;
-    for ( var i=0; i < photoCount.length; i++ ) {
+    for ( var i=0; i < photoCount; i++ ) {
         number = i.toString();
         console.log(number);
         sidebar = '/static/img/sidebar/'+number+'_'+projectName+'_200.png';
