@@ -82,7 +82,7 @@ $('a.project-link').on('click', function(e) {
     $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
 
     var photoCount = projects[id].count;
-    var sidebarPhotos;
+    var sidebarPhotos = "";
     for ( var i=0; i < photoCount; i++ ) {
         var number = i.toString();
         var sidebar = '/static/img/sidebar/'+number+'_'+projectName+'_200.png';
