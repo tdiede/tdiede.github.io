@@ -86,16 +86,21 @@ $('a.project-link').on('click', function(e) {
     for ( var i=0; i < photoCount; i++ ) {
         var number = i.toString();
         var sidebar = '/static/img/sidebar/'+number+'_'+projectName+'_200.png';
-        sidebarPhotos += "<img class='project-photo-sidebar' src='" + sidebar + "'></img>";
+        sidebarPhotos += "<img class='project-photo-sidebar' id='sidebar-photo-"+number+"' src='" + sidebar + "'></img><br>";
     }
 
     console.log(sidebarPhotos);
 
     $('#sidebar-photos').html(sidebarPhotos);
 
-
 });
 
+$('img.project-photo-sidebar').on('click', function(e) {
+    var srcFeature = $('#project-photo-feature').attr('src');
+    var srcNew = $( this ).attr('src');
+    $('#project-photo-feature').attr('src', srcNew);
+    $( this ).attr('src', srcFeature);
+});
 
 
 
