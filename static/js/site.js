@@ -55,11 +55,12 @@ $('a.project-link').on('click', function(e) {
 
     var id = parseInt( $( this ).data( "num" ) );
 
-    var projectName = $( this ).data( "project" );
-    var src = '/static/img/features/'+projectName+'_'+id+'.png';
-    $('#project-photo-feature').attr('src', src);
+    // var projectName = $( this ).data( "project" );
+    // var src = '/static/img/features/'+projectName+'.png';
 
-    var currentCaption = projects[id].image1Caption;
+    var currentPhoto = projects[id].image0URL;
+    var currentCaption = projects[id].image0Caption;
+    $('#project-photo-feature').attr('src', currentPhoto);
     $('#project-caption-feature').html(currentCaption);
 
     var title = projects[id].title;
