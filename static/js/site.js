@@ -43,13 +43,13 @@ $('a.project-link').on('click', function(e) {
         $('#feature-row-two').hide();
         var projectID = 0;
         $('#feature-row-one').show();
-        $('#project-feature').appendTo('#feature-row-one');
+        $('#project-feature').appendTo('#project-goes-here-one');
         $('#project-feature').show();
     } else if ( isRowTwo === true ) {
         console.log("feature row 2");
         $('#feature-row-one').hide();
         $('#feature-row-two').show();
-        $('#project-feature').appendTo('#feature-row-two');
+        $('#project-feature').appendTo('#project-goes-here-two');
         $('#project-feature').show();
     }
 
