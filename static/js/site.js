@@ -84,9 +84,7 @@ $('a.project-link').on('click', function(e) {
 
     var sidebar = '/static/img/sidebar/0_'+projectName+'_200.png'
 
-    $('#sidebar-photos').append("<img class='project-photo-sidebar' src=''></img>
-            <img class='project-photo-sidebar' src=''></img>
-            <img class='project-photo-sidebar' src=''></img>");
+    $('#sidebar-photos').append("<img class='project-photo-sidebar' src='" + sidebar + "'></img>");
 
 
 });
