@@ -222,6 +222,11 @@ i.fa-globe:hover {
     height: auto;
 }
 
+.project-photo-sidebar {
+    width: 100%;
+    height: auto;
+}
+
 ul {
     list-style-type:none;
 }
