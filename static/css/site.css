@@ -144,18 +144,23 @@ section a:hover {
     padding: 25px;
     height: 100%;
     max-height: 800px;
+}
+
+#project-photo {
+    height: 100%;
     text-align: left;
 }
 
-/*#sidebar-photos {
-    max-height: 750px;
+#sidebar-photos {
+    height: 100%;
     overflow: scroll;
 }
 
 #project-info {
     max-height: 750px;
     overflow: scroll;
-}*/
+    text-align: left;
+}
 
 
 
