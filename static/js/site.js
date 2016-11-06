@@ -84,8 +84,9 @@ $('a.project-link').on('click', function(e) {
     var photoCount = projects[id].count;
 
     var sidebarPhotos = '';
+    var sidebar = '';
     for (i=0;i < photoCount.length; i++) {
-        var sidebar = '/static/img/sidebar/'i+'_'+projectName+'_200.png';
+        sidebar = '/static/img/sidebar/'i+'_'+projectName+'_200.png';
         sidebarPhotos += "<img class='project-photo-sidebar' src='" + sidebar + "'></img>";
 
     }
