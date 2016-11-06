@@ -57,8 +57,7 @@ $('a.project-link').on('click', function(e) {
     var src = '/static/img/features/'+projectName+'.png';
     $('#project-photo-feature').attr('src', src);
 
-    var projectNumber = $( this ).data( "num" );
-    var id = parseInt(projectNumber);
+    var id = parseInt( $( this ).data( "num" ) );
 
     var currentCaption = projects[id].image1Caption;
     $('#project-caption-feature').html(currentCaption);
@@ -82,9 +81,16 @@ $('a.project-link').on('click', function(e) {
     $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: </p><a href='" + github + "' target='_blank'>" + github + "</a>");
     $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
 
-    var sidebar = '/static/img/sidebar/0_'+projectName+'_200.png'
+    var photoCount = projects[id].count;
 
-    $('#sidebar-photos').html("<img class='project-photo-sidebar' src='" + sidebar + "'></img>");
+    var sidebarPhotos = '';
+    for (i=0;i < photoCount.length; i++) {
+        var sidebar = '/static/img/sidebar/'i+'_'+projectName+'_200.png';
+        sidebarPhotos += "<img class='project-photo-sidebar' src='" + sidebar + "'></img>";
+
+    }
+
+    $('#sidebar-photos').html(sidebarPhotos);
 
 
 });

@@ -16,6 +16,7 @@
    "github": "https://github.com/tdiede/hackscrapers_SF",
    "deployed": "https://hackscrapers.herokuapp.com",
    "images": "",
+   "count": 3,
    "image1URL": "",
    "image1Caption": "The app interface allows users to toggle back and forth between map and table views.",
    "image2URL": "",
@@ -23,7 +24,15 @@
    "image3URL": "",
    "image3Caption": "An offshoot of this project is a curatorial tool where users help build the photo database of city buildings. Here users identify buildings in photos and remove those that do not belong, a process which crowdsources the accuracy of photo tags.",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 1,
@@ -42,6 +51,7 @@
    "github": "https://github.com/tdiede/bentobox_adu",
    "deployed": "https://adubentobox.herokuapp.com/",
    "images": "",
+   "count": 1,
    "image1URL": "",
    "image1Caption": "",
    "image2URL": "",
@@ -49,7 +59,15 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 2,
@@ -68,6 +86,7 @@
    "github": "",
    "deployed": "",
    "images": "",
+   "count": 0,
    "image1URL": "",
    "image1Caption": "",
    "image2URL": "",
@@ -75,7 +94,15 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 3,
@@ -94,6 +121,7 @@
    "github": "",
    "deployed": "",
    "images": "",
+   "count": 2,
    "image1URL": "",
    "image1Caption": "The CNC machine takes the x,y,z coordinates as instructed by the design software and drills into the material. After the first pass, subsequent passes utilize a smaller drill bit to add precision and refine the surface.",
    "image2URL": "",
@@ -101,7 +129,15 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 4,
@@ -120,6 +156,7 @@
    "github": "",
    "deployed": "",
    "images": "",
+   "count": 1,
    "image1URL": "",
    "image1Caption": "",
    "image2URL": "",
@@ -127,7 +164,15 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 5,
@@ -146,6 +191,7 @@
    "github": "",
    "deployed": "http://www.westpointhistoryofwarfare.com/more",
    "images": "",
+   "count": 3,
    "image1URL": "",
    "image1Caption": "Setting the stage for present-day conflicts in Afghanistan, this map depicts Soviet engagement 30 years prior, highlighting the logistics of the invasion. The background map blends elevation data with faint aerial imagery, presenting the very real features of the terrain as key to military decisions and outcomes.",
    "image2URL": "",
@@ -153,7 +199,15 @@
    "image3URL": "",
    "image3Caption": "A still from an animated in-depth feature asset: the Battle of Little Bighorn. I built a 3D model of the terrain from a digital elevation model and crafted a custom rendering material out of aerial imagery to bring out the unique colors and textures of the landscape.",
    "image4URL": "",
-   "image4Caption": "This choropleth map..."
+   "image4Caption": "This choropleth map...",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 6,
@@ -172,6 +226,7 @@
    "github": "",
    "deployed": "",
    "images": "",
+   "count": 5,
    "image1URL": "",
    "image1Caption": "make a gif of revolving cubes",
    "image2URL": "",
@@ -179,7 +234,15 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  },
  {
    "projectID": 7,
@@ -198,6 +261,7 @@
    "github": "",
    "deployed": "",
    "images": "",
+   "count": 3,
    "image1URL": "",
    "image1Caption": "mortise + tenon | mono-directional, mortise + tenon | bi-directional, shoulder | bi-directional, shoulder | base plate attachment",
    "image2URL": "",
@@ -205,6 +269,14 @@
    "image3URL": "",
    "image3Caption": "",
    "image4URL": "",
-   "image4Caption": ""
+   "image4Caption": "",
+   "image5URL": "",
+   "image5Caption": "",
+   "image6URL": "",
+   "image6Caption": "",
+   "image7URL": "",
+   "image7Caption": "",
+   "image8URL": "",
+   "image8Caption": ""
  }
-] }
+]}
