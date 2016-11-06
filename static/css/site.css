@@ -194,13 +194,13 @@ i.fa-globe:hover {
     color: #ffdd42;
 }
 
-.fa-times {
+i.fa-times {
     text-align: right;
     margin: 0 auto;
     color: #333333;
 }
 
-.fa-times:hover {
+i.fa-times:hover {
     color: #ffdd42;
 }
 

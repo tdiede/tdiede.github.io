@@ -81,6 +81,14 @@ $('a.project-link').on('click', function(e) {
     $('#project-apis').html("<p>APIs | <h4>" + apis + "</h4></p>");
     $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: </p><a href='" + github + "' target='_blank'>" + github + "</a>");
     $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
+
+    var sidebar = '/static/img/features/0_'+projectName+'_200.png'
+
+    $('#sidebar-photos').append("<img class='project-photo-sidebar' src=''></img>
+            <img class='project-photo-sidebar' src=''></img>
+            <img class='project-photo-sidebar' src=''></img>");
+
+
 });
 
 
