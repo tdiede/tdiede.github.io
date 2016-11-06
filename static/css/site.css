@@ -141,20 +141,19 @@ section a:hover {
 .feature-project {
     background: rgba(235,235,235, 0.8);
     margin: 25px 0 25px 0;
-    padding: 15px 0;
+    padding: 25px 10px;
     height: 100%;
+    max-height: 800px;
 }
 
 #sidebar-photos {
-    height: 100%;
-    max-height: 800px;
+    max-height: 750px;
     overflow: scroll;
 }
 
 #project-info {
     text-align: left;
-    height: 100%;
-    max-height: 800px;
+    max-height: 750px;
     overflow: scroll;
 }
 
