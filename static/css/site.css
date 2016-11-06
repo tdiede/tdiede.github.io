@@ -142,9 +142,7 @@ section a:hover {
     background: rgba(235,235,235, 0.8);
     margin: 25px 0 25px 0;
     padding: 25px 10px;
-    height: 100%;
     max-height: 800px;
-    overflow: scroll;
 }
 
 
@@ -159,7 +157,7 @@ section a:hover {
 }
 
 #project-info {
-    max-height: 750px;
+    height: 100%;
     overflow: scroll;
     text-align: left;
 }
