@@ -53,11 +53,11 @@ $('a.project-link').on('click', function(e) {
         $('#project-feature').show();
     }
 
-    var projectName = $( this ).data( "project" );
-    var src = '/static/img/features/'+projectName+'.png';
-    $('#project-photo-feature').attr('src', src);
-
     var id = parseInt( $( this ).data( "num" ) );
+
+    var projectName = $( this ).data( "project" );
+    var src = '/static/img/features/'+projectName+'_'+id+'.png';
+    $('#project-photo-feature').attr('src', src);
 
     var currentCaption = projects[id].image1Caption;
     $('#project-caption-feature').html(currentCaption);
