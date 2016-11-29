@@ -77,15 +77,23 @@ $('a.project-link').on('click', function(e) {
     $('#project-description').html(description);
     if (techstack !== '') {
         $('#project-techstack').html("<p>tech stack | <h4>" + techstack + "</h4></p>");
+    } else {
+        $('#project-techstack').html("");
     }
     if (apis !== '') {
         $('#project-apis').html("<p>APIs | <h4>" + apis + "</h4></p>");
+    } else {
+        $('#project-apis').html("");
     }
     if (github !== '') {
         $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: </p><a href='" + github + "' target='_blank'>" + github + "</a>");
+    } else {
+        $('#project-github').html("");
     }
     if (deployed !== '') {
         $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
+    } else {
+        $('#project-deployed').html("");
     }
 
     var photoCount = projects[id].count;
