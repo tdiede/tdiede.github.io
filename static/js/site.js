@@ -71,8 +71,6 @@ $('a.project-link').on('click', function(e) {
     var github = projects[id].github;
     var deployed = projects[id].deployed;
     var partners = projects[id].partners;
-    var image1URL = projects[id].image1URL;
-    var image1Caption = projects[id].image1Caption;
 
     $('#project-title').html(title);
     $('#project-date-partners').html(date + " | " + partners);
