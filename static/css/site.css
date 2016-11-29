@@ -71,8 +71,7 @@ h4 {
 /*paragraph text*/
 p {
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-weight: extra-light;
     font-size: 10pt;
     color: #BBBBBB;
 }
