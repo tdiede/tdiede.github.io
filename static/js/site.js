@@ -76,24 +76,28 @@ $('a.project-link').on('click', function(e) {
     $('#project-date-partners').html(date + " | " + partners);
     $('#project-description').html(description);
     if (techstack !== '') {
+        $('#project-techstack').show();
         $('#project-techstack').html("<p>tech stack | <h4>" + techstack + "</h4></p>");
     } else {
-        $('#project-techstack').html("");
+        $('#project-techstack').hide();
     }
     if (apis !== '') {
+        $('#project-apis').show();
         $('#project-apis').html("<p>APIs | <h4>" + apis + "</h4></p>");
     } else {
-        $('#project-apis').html("");
+        $('#project-apis').hide();
     }
     if (github !== '') {
+        $('#project-github').show();
         $('#project-github').html("<p><span><i class='fa fa-github' aria-hidden='true'></i></span> review my code: </p><a href='" + github + "' target='_blank'>" + github + "</a>");
     } else {
-        $('#project-github').html("");
+        $('#project-github').hide();
     }
     if (deployed !== '') {
+        $('#project-deployed').show();
         $('#project-deployed').html("<p><span><i class='fa fa-user' aria-hidden='true'></i></span> try it out: </p><a href='" + deployed + "' target='_blank'>" + deployed + "</a>");
     } else {
-        $('#project-deployed').html("");
+        $('#project-deployed').hide();
     }
 
     var photoCount = projects[id].count;
