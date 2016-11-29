@@ -9,7 +9,7 @@ var response = $.getJSON(json);
 function createPortfolio() {
     portfolio = response.responseJSON;
     projects = portfolio.master;
-};
+}
 
 
 $(document).ajaxSuccess(function() {
@@ -18,19 +18,20 @@ $(document).ajaxSuccess(function() {
 });
 
 
-
-$(document).ready(function() {
-    // $('.two').hide();
-    // $('.one').show();
+function hideFeature() {
     $('#project-feature').hide();
     $('#feature-row-one').hide();
     $('#feature-row-two').hide();
+}
 
+
+$(document).ready(function() {
+    hideFeature();
 });
 
-
-// var canvas = document.getElementById('canvas-element');
-// var header = $('nav.navbar').offset().top;
+$('.fa-times').on('click', function(e) {
+    hideFeature();
+});
 
 
 $('a.project-link').on('click', function(e) {
@@ -57,6 +58,8 @@ $('a.project-link').on('click', function(e) {
 
     // var projectName = $( this ).data( "project" );
     // var src = '/static/img/features/'+projectName+'.png';
+
+    $('#project-photo-feature').attr('src', '');  // clears the photo momentarily until new one can be loaded.
 
     var currentPhoto = projects[id].image0URL;
     var currentCaption = projects[id].image0Caption;
@@ -105,6 +108,8 @@ $('img.project-photo-sidebar').on('click', function(e) {
 
 
 
+
+
 $('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
     if ( target.length ) {
@@ -114,15 +119,4 @@ $('a[href^="#"]').on('click', function(e) {
         }, 1000);
     }
 });
-
-
-// $('.one').on('click', function(e) {
-//     $('.one').hide();
-//     $('.two').show();
-// });
-
-// $('.two').on('click', function(e) {
-//     $('.two').hide();
-//     $('.one').show();
-// });
 
