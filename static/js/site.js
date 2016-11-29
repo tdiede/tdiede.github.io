@@ -55,12 +55,9 @@ $('a.project-link').on('click', function(e) {
     }
 
     var id = parseInt( $( this ).data( "num" ) );
-
-    // var projectName = $( this ).data( "project" );
-    // var src = '/static/img/features/'+projectName+'.png';
+    var projectName = $( this ).data( "project" );
 
     $('#project-photo-feature').attr('src', '');  // clears the photo momentarily until new one can be loaded.
-
     var currentPhoto = projects[id].image0URL;
     var currentCaption = projects[id].image0Caption;
     $('#project-photo-feature').attr('src', currentPhoto);
