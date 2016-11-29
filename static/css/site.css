@@ -208,7 +208,8 @@ i:hover {
 }
 
 i.fa-globe {
-    padding: 30px 80px;
+    padding-top: 30px;
+    padding-right: 100px;
     color: black;
 }
 
