@@ -71,7 +71,7 @@ h4 {
 /*paragraph text*/
 p {
     font-family: 'Raleway', sans-serif;
-    font-style: italic;
+    font-style: normal;
     font-weight: 300;
     font-size: 10pt;
     color: #333333;
@@ -82,10 +82,12 @@ div#project-info > div > p {
 }
 
 p#intro-speech {
+    font-style: italic;
     font-size: 11pt;
 }
 
 p#project-caption-feature {
+    font-style: italic;
     font-size: 9pt;
 }
 
