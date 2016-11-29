@@ -81,7 +81,13 @@ div#project-info > div > p {
     display: inline;
 }
 
-
+p#project-caption-feature {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 9pt;
+    color: #333333;
+}
 
 
 
