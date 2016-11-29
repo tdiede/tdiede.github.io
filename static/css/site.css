@@ -178,7 +178,7 @@ section a:hover {
     background-color: transparent;
     /*opacity: 0.8;*/
     border: 0;
-    z-index: 0;
+    max-height: 30px;
 }
 
 .navbar-links span {
@@ -186,7 +186,6 @@ section a:hover {
     font-weight: 400;
     font-size: 14pt;
     color: #ffdd42;
-    z-index: 100;
 }
 
 .navbar-links span:hover {
