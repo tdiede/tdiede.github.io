@@ -208,7 +208,7 @@ i:hover {
 }
 
 i.fa-globe {
-    padding: 50px;
+    padding: 30px 80px;
     color: black;
 }
 
@@ -217,8 +217,8 @@ i.fa-globe:hover {
 }
 
 i.fa-times {
-    text-align: right;
     margin: 0 auto;
+    right: 50px;
     color: #333333;
 }
 
