@@ -220,17 +220,13 @@ i.fa-globe:hover {
 
 i.fa-times {
     color: #333333;
+    display: inline;
 }
 
 i.fa-times:hover {
     color: #ffdd42;
 }
 
-#close {
-    position: relative;
-    top: 10px;
-    right: 10px;
-}
 
 
 
