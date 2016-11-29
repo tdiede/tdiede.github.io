@@ -178,6 +178,7 @@ section a:hover {
     background-color: transparent;
     /*opacity: 0.8;*/
     border: 0;
+    z-index: 0;
 }
 
 .navbar-links span {
