@@ -211,6 +211,7 @@ i.fa-globe {
     padding-top: 30px;
     padding-right: 100px;
     color: black;
+    z-index: 0;
 }
 
 i.fa-globe:hover {
