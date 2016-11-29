@@ -217,8 +217,10 @@ i.fa-globe:hover {
 }
 
 i.fa-times {
+    position: absolute;
+    top: 0;
+    right: 0;
     color: #333333;
-    display: inline;
 }
 
 i.fa-times:hover {
