@@ -7,11 +7,9 @@ a, a:visited, a:active {
     font-weight: 400;
     font-size: 11pt;
     color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-a:hover {
+a:hover, i:hover {
     text-decoration: none;
     cursor: pointer;
 }
