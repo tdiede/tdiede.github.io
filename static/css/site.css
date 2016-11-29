@@ -192,6 +192,7 @@ section a:hover {
 i {
     color: black;
     padding: 15px;
+    z-index: 100;
 }
 
 i:hover {
