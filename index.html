@@ -18,52 +18,39 @@
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
   <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' />
 
-  <script src='static/js/d3.js'></script>
-  <script src='static/js/d3.geo.js'></script>
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+<!--     <script src='static/js/d3.geo.js'></script> -->
 
   <!-- my favicon -->
-  <link rel="icon" 
-  type="image/png" 
-  href="/static/img/favicon-leaf.png">
+  <link rel="icon" type="image/png" href="/static/img/favicon-leaf.png">
 
 </head>
 <body>
 
+<!-- <div id='geo'>
+  <div class='collapse' id='globe' ></div>
+</div> -->
+
+<section id='home'>
+
   <nav class="navbar navbar-default navbar-fixed-top">
-      <ul class="nav navbar-nav">
-        <li>
-          <a class='navbar-links' href='#home'><span>home</span></a>
-        </li>
-        <li>
-          <a class='navbar-links' href='#aboutme'><span>about me</span></a>
-        </li>
-        <li>
-          <a class='navbar-links' href='#projects'><span>projects</span></a>
-        </li>
-        <li>
-          <a class='navbar-links' href='#skills'><span>skills</span></a>
-        </li>
-        <li>
-          <a class='navbar-links' href='#contact'><span>contact</span></a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class='navbar-links globe' href='#geo'>
-            <span type="button" data-toggle="collapse" data-target="#globe" aria-expanded="false" aria-controls="globe">
-            <i class="fa fa-globe fa-3x"></i></span>
-          </a>
-        </li>
-      </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a class='navbar-links' href='#home'><span>home</span></a></li>
+      <li><a class='navbar-links' href='#aboutme'><span>about me</span></a></li>
+      <li><a class='navbar-links' href='#projects'><span>projects</span></a></li>
+      <li><a class='navbar-links' href='#skills'><span>skills</span></a></li>
+      <li><a class='navbar-links' href='#contact'><span>contact</span></a></li>
+    </ul>
+    <!-- <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class='navbar-links globe' href='#geo'>
+          <span type="button" data-toggle="collapse" data-target="#globe" aria-expanded="false" aria-controls="globe"><i class="fa fa-globe"></i></span>
+        </a>
+      </li>
+    </ul> -->
   </nav>
 
 
-<div id='geo'>
-  <div class='collapse' id='globe' ></div>
-</div>
-
-
-<section id='home'>
 <div class='container-home'>
 <div class='buffer'>
 
@@ -72,7 +59,7 @@
     and I'm a software engineer!</p>
 
     <a href='#aboutme'>
-      <img id='profile-photo' src='/static/img/me/me.png'>
+      <img class='profile-photo' src='/static/img/me/me.png'>
       <h1>tmdd</h1>
     </a>
 
@@ -103,26 +90,44 @@
 <section id='aboutme'>
 <div class='container-aboutme'>
 
-  <h2>About me</h2>
+  <h2>about me</h2>
 
+    <br>
+
+  <div class='row' id='photos-row'>
+      <div class='photo-container'>
+        <img class='profile-photo' src='/static/img/me/hardhat.png'>
+        <p class='project-caption-feature'>Wearing other hats.</p>
+      </div>
+      <div class='photo-container'>
+        <img class='profile-photo' src='/static/img/me/half-marathon.png'>
+        <p class='project-caption-feature'>Running halfs.</p>
+      </div>
+      <div class='photo-container'>
+        <img class='profile-photo' src='/static/img/me/kitchen.png'>
+        <p class='project-caption-feature'>Running tasty experiments.</p>
+      </div>
+  </div>
 
   <div class='row'>
-    <div class='col-md-offset-1 col-md-10'>
+    <div class='col-md-offset-2 col-md-8'>
 
-    <p>
-       I do the full stack of web application development. With a background in urban planning and architecture,<br>
-       I have extensive experience in GIS mapping, spatial data analysis, and architectural 3D modeling.
-    </p>
-    <p>Please connect if you would like to discuss an opportunity to collaborate!</p>
+    <p class='description'>I am a <span class='bold'>FULL STACK SOFTWARE ENGINEER</span> with a background in urban planning, cartography, and architecture. My primary tech stack for database-driven web apps is Python/Flask with jQuery and PostgreSQL, but I also work with MongoDB and in full-stack JavaScript (ES6): Node.js, Meteor.js, React.js, and other frameworks as needed — always changing! I love to solve problems both practical and imaginary. Clean, modular code is important to me, as is good visual design. The user is always at the forefront of my decisions on application interface.</p>
 
-    <hr>
+    <p class='description'>What drew me to tech was the fast pace, team orientation, and creative environment, where there are always new challenges and it is possible to prototype an entire web application in a relatively short timeframe. I first learned code during my time in graduate school at Columbia University, implementing scripts to analyze open data about all things planning-related New York City and generate countless iterations of geometry to automate architectural possibilities. In both contract and full time roles, I have extensive professional experience in <span class='bold'>GIS</span> mapping, spatial data analysis, and architectural <span class='bold'>3D</span> modeling. Working with clients as well as independently to build a variety of software tools, web apps, and games, I have the combined equivalent of <span class='bold'>one+ year</span> of programming experience.</p>
+
+    <p class='description'>Please <a href="#contact">connect</a> if you would like to discuss an opportunity to collaborate!</p>
 
     </div>
   </div>
 
 
   <div class='row'>
-    <div class='col-md-4'>
+    <div class='col-md-offset-4 col-md-4'>
+
+      <br>
+      <hr class='resume'>
+      <br>
 
       <h3>EDUCATION</h3>
 
@@ -133,38 +138,12 @@
       <p>Master of Architecture, M.S. Urban Planning • 2013</p>
 
       <h4>TULANE UNIVERSITY | NOLA</h4>
-      <p>B.A. Sociology, Envir. Science<br>
+      <p>B.A. Sociology & Environmental Science<br>
          Magna cum laude, Senior Scholar</p>
 
       <br>
-
-      <h3>VOLUNTEER</h3>
-
-      <h4>Studio + Tools | The Crucible</h4>
-      <p>2015 - 2016 • Oakland</p>
-
+      <hr class='resume'>
       <br>
-      <br>
-
-      <a class='resume' href='static/pdf/Therese_M_Diede_software_engineer.pdf' target='_blank'>
-        <i class="fa fa-file-pdf-o" aria-hidden="true"></i><span type="button"> resumé </span>
-      </a>
-
-    </div>
-
-
-    <div class='col-md-4'>
-
-      <img id='profile-photo' src='/static/img/me/hardhat.png'>
-      <p>Wearing other hats.</p>
-
-      <img id='profile-photo' src='/static/img/me/half-marathon.png'>
-      <p>Running halfs.</p>
-
-    </div>
-
-
-    <div class='col-md-4'>
 
       <h3>WORK</h3>
 
@@ -178,204 +157,30 @@
       <p>Jul 2013 – Oct 2014 • New York</p>
 
       <br>
+      <hr class='resume'>
       <br>
 
-      <h3>PROJECTS</h3>
+      <h3>VOLUNTEER</h3>
 
-      <a href='#projects'>See section below.</a>
+      <h4>Studio + Tools | The Crucible</h4>
+      <p>2015 - ongoing • Oakland</p>
+
+      <br>
+      <hr class='resume'>
+      <br>
+
+      <a href='static/pdf/Therese_M_Diede_software_engineer.pdf' target='_blank'>
+        <span class='resume'><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Click here for a PDF version of my resumé.</span>
+      </a>
 
       <br>
       <br>
 
-      <h3>SKILLS</h3>
-
-      <a href='#skills'>See section below.</a>
+<!--  <h3>PROJECTS</h3><a href='#projects'>See section below.</a>
+      <h3>SKILLS</h3><a href='#skills'>See section below.</a> -->
 
     </div>
-
   </div>
-
-
-  <div class='row'>
-    <div class='col-md-offset-1 col-md-10'>
-      <hr>
-    </div>
-  </div>
-
-</div>
-</section>
-
-
-
-<section id='projects'>
-<div class='container-projects'>
-
-  <div class='row'>
-
-    <h2>Projects</h2>
-    <p>These are my projects.</p>
-
-  </div>
-
-
-  <hr>
-
-  <div class='row' id='row-one'>
-
-      <div class='project col-md-3'>
-
-        <a href='#feature-row-one' class='project-link row-one'
-                      data-project="hackscrapers"
-                      data-num="0">
-
-          <img class='project-photo' src='/static/img/thumbs/hackscrapers_thumb.png'>
-          <h4>Hackscrapers SF</h4>
-        </a>
-
-      </div>
-
-
-      <div class='project col-md-3'>
-
-        <a href='#feature-row-one' class='project-link row-one'
-                      data-project="bentobox"
-                      data-num="1">
-          <img class='project-photo' src='/static/img/thumbs/bentobox_thumb.png'>
-          <h4>Project Bento Box</h4>
-        </a>
-
-      </div>
-
-
-      <div class='project col-md-3'>
-
-        <a href='#feature-row-one' class='project-link row-one'
-                      data-project="movies"
-                      data-num="2">
-          <img class='project-photo' src=''>
-          <h4>Movie Ratings Lab</h4>
-        </a>
-
-      </div>
-
-
-      <div class='project col-md-3'>
-
-        <a href='#feature-row-one' class='project-link row-one'
-                        data-project="parametric"
-                        data-num="3">
-          <img class='project-photo' src='/static/img/thumbs/parametric_thumb.png'>
-          <h4>Parametric Realizations</h4>
-        </a>
-
-      </div>
-
-  </div>
-
-
-  <!-- FEATURE PROJECT ON-CLICK! -->
-  <div class='row' id='feature-row-one'>
-    <hr>
-    <div class='project-goes-here' id='project-goes-here-one'></div>
-    <hr>
-  </div>
-  <!-- FEATURE PROJECT ON-CLICK! -->
-
-  <br>
-
-
-  <div class='row' id='row-two'>
-
-        <div class='project col-md-3'>
-
-        <a href='#feature-row-two' class='project-link row-two'
-                        data-project="velib"
-                        data-num="4">
-          <img class='project-photo' src='/static/img/thumbs/velib_thumb.png'>
-          <h4>Quantitative Thesis</h4>
-        </a>
-
-        </div>
-
-        <div class='project col-md-3'>
-
-        <a href='#feature-row-two' class='project-link row-two'
-                        data-project="map"
-                        data-num="5">
-          <img class='project-photo' src='/static/img/thumbs/map_thumb.png'>
-          <h4>Cartography</h4>
-        </a>
-
-        </div>
-
-        <div class='project col-md-3'>
-
-        <a href='#feature-row-two' class='project-link row-two'
-                        data-project="cubes"
-                        data-num="6">
-          <img class='project-photo' src='/static/img/thumbs/cubes_thumb.png'>
-          <h4>Revolving Architecture</h4>
-        </a>
-
-        </div>
-
-        <div class='project col-md-3'>
-
-        <a href='#feature-row-two' class='project-link row-two'
-                        data-project="pavilion"
-                        data-num="7">
-          <img class='project-photo' src='/static/img/thumbs/pavilion_thumb.png'>
-          <h4>Pudelma Pavilion</h4>
-        </a>
-
-        </div>
-
-  </div>
-
-
-
-  <!-- FEATURE PROJECT ON-CLICK! -->
-  <div class='row' id='feature-row-two'>
-    <hr>
-    <div class='project-goes-here' id='project-goes-here-two'></div>
-    <hr>
-  </div>
-  <!-- FEATURE PROJECT ON-CLICK! -->
-
-
-
-  <div id='project-feature' >
-
-          <div class='col-md-6' id='project-photo'>
-                                  <img id='project-photo-feature' src=''>
-                                  <br><br>
-                                  <p id='project-caption-feature'></p>
-          </div>
-
-          <div class='col-md-2' id='sidebar-photos'></div>
-
-          <div class='col-md-4' id='project-info'>
-
-              <i class='fa fa-times fa-2x' aria-hidden='true'></i>
-
-                                  <div id='project-title'></div>
-                                  <div id='project-date-partners'></div>
-                                  <br>
-                                  <p id='project-description'></p>
-                                  <br>
-                                  <br>
-                                  <div id='project-techstack'></div>
-                                  <br>
-                                  <div id='project-apis'></div>
-                                  <br>
-                                  <div id='project-github'></div>
-                                  <div id='project-deployed'></div>
-          </div>
-
-  </div>
-
-
-
 </div>
 </section>
 
@@ -384,20 +189,24 @@
 <section id='skills'>
 <div class='container-skills'>
 
-    <div class='row'>
+  <h2>skills</h2>
 
-        <h2>Skills</h2>
-        <p>Back End | Python, Ruby, SQL<br>
-           Front End | JavaScript, HTML, CSS, Bootstrap, Jinja<br>
-           Frameworks | Flask, AJAX, jQuery, Angular.js, React.js, Node.js<br>
-           Databases | PostgreSQL, MongoDB<br>
-           OS + Tools | Linux, Git<br>
-           Data Software | GIS, SPSS, R<br>
-           Design | CAD, Illustrator/Photoshop/InDesign, After Effects, Sketch<br>
-           3D | CNC, Rhino, Grasshopper, 3dsMax, V-Ray, Unity
-        </p>
+  <br>
 
-    </div>
+  <div class='row'>
+      <div class='col-md-offset-4 col-md-4'>
+
+        <p class='description-center'>On a scale of 1 to 10 here I rate my relative experience and familiarity with a wide range of skills, from 2D to 3D design software and data analysis tools to programming languages:</p>
+
+      </div>
+  </div>
+
+
+  <div class='row' id='skills-row'>
+    <div id='skills-barchart'></div>
+  </div>
+
+  <p id="quotes"></p>
 
 </div>
 </section>
@@ -409,8 +218,8 @@
 
     <div class='row'>
 
-        <h2>Contact</h2>
-        <p>Reach out.</p>
+        <h2>contact</h2>
+        <p><span class='emoji'>🐧</span> Reach out.</p>
         <a href='mailto:tmdd.design@gmail.com'>tmdd.design@gmail.com</a>
 
     </div>
@@ -427,6 +236,79 @@
 <script src='/static/js/site.js'></script>
 <script src='/static/js/globe.js'></script>
 
+<script type='text/javascript'>
+"use strict";
+
+
+const quotes = [
+  '“Great leaders get people to admit the truth because they know that dreams are buried under the lies they tell themselves, in order to feel okay with giving up.” <br> ― Shannon L. Alder', '“You can’t improve what you won’t face and own.” ― Michael Hyatt, Living Forward', '“Anybody who says they are a good liar obviously is not, because any legitimately savvy liar would always insist they\'re honest about everything.” ― Chuck Klosterman'
+];
+
+
+$(document).ready(function() {
+  let i = 0;
+  setInterval(function(){
+    $("#quotes").html(quotes[i]);
+    i = (i+1) % quotes.length;
+  },10000);
+});
+
+// function swapQuote() {
+//   setInterval
+
+let winWidth = $(window).width();
+// let winHeight = 1000;
+
+const margin = {top:30,right:50,bottom:20,left:140};
+const width = winWidth - margin.left - margin.right;
+const height = 600 - margin.top - margin.bottom;
+
+const x = d3.scaleLinear().range([0,width]);
+const y = d3.scaleBand().range([0,height]).padding(0.5);
+
+svg = d3.select("#skills-barchart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("/data/skills.json", function(error,data) {
+  if (error) throw error;
+
+  data.forEach(function(d) {
+    d.skill = d.skill;
+    d.experience = + d.experience;
+  });
+
+  x.domain([0,10]);
+  y.domain(data.map(function(d) { return d.skill; }));
+
+  svg.selectAll("bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", 0)
+      .attr("width", function(d) { return x(d.experience); })
+      .attr("y", function(d) { return y(d.skill); })
+      .attr("height", y.bandwidth());
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .call(d3.axisTop(x))
+    .selectAll("text")
+      .style("text-anchor", "end")
+      .attr("dx", "0.2em")
+      .attr("dy", "-0.5em");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(d3.axisLeft(y))
+    .selectAll("text")
+      .style("text-anchor", "end");
+
+});
+
+</script>
 
 
 <!--   <div class='row text'>

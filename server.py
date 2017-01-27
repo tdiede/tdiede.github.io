@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     result = doctest.testmod()
     if not result.failed:
-        print "ALL TESTS PASSED. GOOD WORK!"
+        print("ALL TESTS PASSED. GOOD WORK!")
 
 
 ####################################################################

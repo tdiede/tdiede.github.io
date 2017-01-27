@@ -2,16 +2,21 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway|Roboto';
 
 
-a, a:visited, a:active {
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+a, a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 11pt;
     color: black;
+    text-decoration: none;
 }
 
 a:hover, i:hover {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .non-link {
@@ -26,6 +31,19 @@ a.non-link:hover {
     cursor: auto;
 }
 
+hr {
+    background-color: #333333;
+    border: 0 none;
+    color: #333333;
+    height: 1px;
+}
+
+hr.resume {
+    background-color: black;
+    border: 0 none;
+    color: black;
+    height: 7px;
+}
 
 
 /*tmdd*/
@@ -34,10 +52,15 @@ h1 {
     font-weight: 600;
     font-size: 24pt;
     color: #333333;
+    text-decoration: none;
 }
 
 h1:hover {
     color: #ffae42;
+}
+
+h1:visited {
+    text-decoration: none;
 }
 
 /*section titles*/
@@ -83,12 +106,32 @@ p#intro-speech {
     font-size: 11pt;
 }
 
-p#project-caption-feature {
+p#quotes {
+    height: 100px;
+    width: 50%;
+    display: inline-block;
+}
+
+p.project-caption-feature {
     font-style: italic;
     font-size: 10pt;
 }
 
-
+p.description {
+    text-align: left;
+    text-indent: -20px;
+}
+p.description-center {
+    text-align: center;
+    display: inline-block;
+}
+span.bold {
+    font-family: Arial;
+    font-weight: 600;
+}
+span.emoji {
+    font-size: 24pt;
+}
 
 
 /* block elements. */
@@ -115,11 +158,15 @@ section {
     background-position: 0 bottom, 1000 bottom;
 }
 
-.container-aboutme, .container-projects {
+.container-aboutme {
+    padding: 100px 50px 0 50px;
+}
+
+.container-projects, .container-skills {
     padding: 50px 50px 0 50px;
 }
 
-.container-skills, .container-contact {
+.container-contact {
     padding: 250px 0 0 0;
 }
 
@@ -173,17 +220,23 @@ section a:hover {
 
 /* navbar. */
 .navbar {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.4);
+    /*background-color: transparent;*/
     /*opacity: 0.8;*/
     border: 0;
     max-height: 30px;
+}
+
+.navbar-left {
+    position: fixed;
 }
 
 .navbar-links span {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14pt;
-    color: #ffdd42;
+    /*color: #ffdd42;*/
+    color: black;
 }
 
 .navbar-links span:hover {
@@ -206,8 +259,9 @@ i:hover {
 }
 
 i.fa-globe {
-    padding-top: 30px;
-    padding-right: 100px;
+    /*padding-top: 30px;*/
+    /*padding-right: 100px;*/
+    font-size: 32pt;
     color: black;
     z-index: 0;
 }
@@ -227,13 +281,28 @@ i.fa-times:hover {
     color: #ffdd42;
 }
 
+i.fa-twitter, i.fa-instagram, i.fa-linkedin, i.fa-github {
+    font-size: 14pt;
+}
 
+span.resume:hover {
+    color: #b8b8b8;
+}
 
 
 /* graphics. */
-#profile-photo {
+.profile-photo {
     width: 200px;
     height: auto;
+}
+
+#photos-row, #skills-row {
+    text-align: center;
+}
+
+.photo-container, #skills-barchart {
+    display: inline-block;
+    margin: 20px;
 }
 
 .project-photo {
@@ -290,4 +359,32 @@ circle {
 path {
     fill: #FFFAFA;
     stroke: #48D1CC;
+}
+
+
+
+
+.bar {
+    /*fill: #AADD99;*/
+    fill: #CF2D08;
+    stroke: #CF2D08;
+}
+.bar:hover {
+    fill: none;
+    stroke: #CF2D08;
+    /*fill: #AADD99;*/
+    /*stroke: orange;*/
+    /*fill: #009999;*/
+    cursor: pointer;
+}
+.axis text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    fill: #888888;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #AAAAAA;
+    shape-rendering: crispEdges;
 }
