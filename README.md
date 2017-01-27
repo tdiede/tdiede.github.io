@@ -2,6 +2,6 @@
 
 A simple portfolio website.
 
-## Demo
+## demo
 
 ![demo](./static/img/demo_c.gif)
