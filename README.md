@@ -4,4 +4,4 @@ A simple portfolio website.
 
 ## Demo
 
-[![demo](./static/img/demo_c.gif)]
+![demo](./static/img/demo_c.gif)
