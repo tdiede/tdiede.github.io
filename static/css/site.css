@@ -159,10 +159,12 @@ section {
 }
 
 .container-aboutme {
-    padding: 100px 50px 0 50px;
+    padding: 100px 50px 50px 50px;
 }
 
-.container-projects, .container-skills {
+
+
+.container-skills {
     padding: 50px 50px 0 50px;
 }
 
@@ -290,6 +292,14 @@ span.resume:hover {
 }
 
 
+#projects {
+    background-color: #efefef;
+}
+
+.container-projects {
+    padding: 50px;
+}
+
 /* graphics. */
 .profile-photo {
     width: 200px;
@@ -305,8 +315,44 @@ span.resume:hover {
     margin: 20px;
 }
 
-.project-photo {
+.wrap-content {
+    /*background-color: purple;*/
+    overflow: scroll;
+}
+.fit-content {
+    display: inline-block;
+    width: max-content;
+    max-width: 1500px;
+    min-width: 450px;
+}
+
+ul.project-container {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+}
+
+li.project {
+    width: max-content;
+    max-width: 300px;
+    min-height: 425px;
+    margin: 10px;
+    padding: 0;
+    vertical-align: text-top;
+    text-align: left;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.project-text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.project-photo-thumbs {
     width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
@@ -324,7 +370,13 @@ ul {
     list-style-type:none;
 }
 
-
+footer {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: #FFA500;
+}
 
 
 
@@ -366,12 +418,12 @@ path {
 
 .bar {
     /*fill: #AADD99;*/
-    fill: #CF2D08;
-    stroke: #CF2D08;
+    fill: #FFA500;
+    /*stroke: #CF2D08;*/
 }
 .bar:hover {
     fill: none;
-    stroke: #CF2D08;
+    stroke: #FFA500;
     /*fill: #AADD99;*/
     /*stroke: orange;*/
     /*fill: #009999;*/
