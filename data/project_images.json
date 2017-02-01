@@ -1,7 +1,5 @@
-module.exports = [
-{
-   "projectID": 0,
-   "images": [
+module.exports = {
+"0" : [
       {
          "imageID": 0,
          "url": "/static/img/features/hackscrapers_0_map_500.png",
@@ -16,22 +14,22 @@ module.exports = [
          "caption": "An offshoot of this project is a curatorial tool where users help build the photo database of city buildings. Here users identify buildings in photos and remove those that do not belong, a process which crowdsources the accuracy of photo tags."
       }
    ]
-},{
-   "projectID": 1,
-   "images": [
+,
+
+"1" : [
       {
          "imageID": 0,
          "url": "/static/img/features/bentobox_0_roof_500.png",
          "caption": "The app interface allows users to toggle back and forth between map and table views."
       }
    ]
-},{
-   "projectID": 2,
-   "images": [
+,
+
+"2" : [
    ]
-},{
-   "projectID": 3,
-   "images": [
+,
+
+"3" : [
       {
          "imageID": 0,
          "url": "/static/img/features/parametric_0_drawing_500.png",
@@ -42,25 +40,25 @@ module.exports = [
          "caption": "The CNC machine takes the x,y,z coordinates as instructed by the design software and drills into the material. After the first pass, subsequent passes utilize a smaller drill bit to add precision and refine the surface."
       }
    ]
-},{
-   "projectID": 4,
-   "images": [
+,
+
+"4" : [
       {
          "imageID": 0,
          "url": "/static/img/features/velib_0_routes_500.png",
          "caption": "Routes of users surveyed."
       }
    ]
-},{
-   "projectID": 5,
-   "images": [
+,
+
+"5" : [
       {
          "imageID": 0,
          "url": "/static/img/features/map_0_afghanistan_500.png",
          "caption": "Setting the stage for present-day conflicts in Afghanistan, this map depicts Soviet engagement 30 years prior, highlighting the logistics of the invasion. The background map blends elevation data with faint aerial imagery, presenting the very real features of the terrain as key to military decisions and outcomes."
       },{
          "imageID": 1,
-         "url": "/static/img/features/map_1_ethnogeography_500.png",
+         "url": "/static/img/features/map_1_afghanistan_500.png",
          "caption": "This thematic map illustrates the complexity of ethnogeography in Afghanistan."
       },{
          "imageID": 2,
@@ -72,9 +70,9 @@ module.exports = [
          "caption": "This choropleth map..."
       }
    ]
-},{
-   "projectID": 6,
-   "images": [
+,
+
+"6" : [
       {
          "imageID": 0,
          "url": "/static/img/features/cubes_0_ghop_500.png",
@@ -101,9 +99,9 @@ module.exports = [
          "caption": "caption."
       }
    ]
-},{
-   "projectID": 7,
-   "images": [
+,
+
+"7" : [
       {
          "imageID": 0,
          "url": "/static/img/features/pavilion_0_interior_500.png",
@@ -118,5 +116,33 @@ module.exports = [
          "caption": "a | 1, a | 2, b | 1, b | 2"
       }
    ]
+,
+
+"8" : [
+   ]
+,
+
+"9" : [
+   ]
+,
+
+"10" : [
+   ]
+,
+
+"11" : [
+   ]
+,
+
+"12" : [
+   ]
+,
+
+"13" : [
+   ]
+,
+
+"14" : [
+   ]
+
 }
-]

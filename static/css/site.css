@@ -112,10 +112,7 @@ p#quotes {
     display: inline-block;
 }
 
-p.project-caption-feature {
-    font-style: italic;
-    font-size: 10pt;
-}
+
 
 p.description {
     text-align: left;
@@ -315,50 +312,128 @@ span.resume:hover {
     margin: 20px;
 }
 
+
+/* shows a grid of projects */
 .wrap-content {
     /*background-color: purple;*/
-    overflow: scroll;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 }
-.fit-content {
+.fit-grid-content {
     display: inline-block;
     width: max-content;
     max-width: 1500px;
     min-width: 450px;
 }
-
 ul.project-container {
-    margin: 0;
+    margin: 0 -10px;
     padding-left: 0;
     padding-right: 0;
     list-style: none;
 }
-
 li.project {
     width: max-content;
     max-width: 300px;
-    min-height: 425px;
+    min-height: 450px;
+    vertical-align: text-top;
     margin: 10px;
     padding: 0;
-    vertical-align: text-top;
     text-align: left;
     background-color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
-
-.project-text {
+.project-summary {
     padding-left: 15px;
     padding-right: 15px;
 }
-
 .project-photo-thumbs {
     width: 100%;
     max-width: 300px;
     height: auto;
 }
 
-#project-photo-feature {
+
+
+/* when a project is clicked */
+.project-details {
     width: 100%;
+    overflow-x: hidden;
+    height: 800px;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 0;
+    text-align: left;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+/* here is where image is made to float to left */
+.wrap-image-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.project-image {
+    cursor: pointer;
+}
+/* here is where text description is made to float to right */
+.wrap-project-container {
+    height: inherit;
+    margin: 0;
+    background-color: rgba(255,255,255,0.85);
+    overflow-y: auto;
+}
+.project-text {
+    padding: 0 15px;
+}
+.gallery-container {
+    overflow-x: auto;
+    border-top: #333333 1px dotted;
+}
+.project-gallery {
+    height: min-content;
+    max-height: 230px;
+    width: max-content;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.gallery-photo {
+    width: 100%;
+    max-width: 200px;
     height: auto;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.wrap-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.caption-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: #333333 1px dotted;
+    background-color: rgba(155,155,155,0.5);
+}
+.project-caption {
+    color: #333333;
+    height: max-content;
+    padding: 5px;
+    margin: 0;
+    font-style: italic;
+    font-size: 10pt;
+}
+
+
+
+
+.project-photo-feature {
 }
 
 .project-photo-sidebar {

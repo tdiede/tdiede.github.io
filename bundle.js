@@ -56,11 +56,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Project = __webpack_require__(178);
+	var _ProjectGrid = __webpack_require__(178);
 
-	var _Project2 = _interopRequireDefault(_Project);
+	var _ProjectGrid2 = _interopRequireDefault(_ProjectGrid);
 
-	var _Clock = __webpack_require__(181);
+	var _Clock = __webpack_require__(186);
 
 	var _Clock2 = _interopRequireDefault(_Clock);
 
@@ -71,9 +71,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var projectsList = __webpack_require__(179);
-	var projectImages = __webpack_require__(180);
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -92,7 +89,7 @@
 	        'div',
 	        { className: 'container-projects' },
 	        header,
-	        _react2.default.createElement(_Project2.default, { name: projectsList[0].projectName })
+	        _react2.default.createElement(_ProjectGrid2.default, null)
 	      );
 	    }
 	  }]);
@@ -21582,6 +21579,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Project = __webpack_require__(179);
+
+	var _Project2 = _interopRequireDefault(_Project);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21590,33 +21591,259 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectsList = __webpack_require__(179);
-	var projectImages = __webpack_require__(180);
+	var projectsList = __webpack_require__(181);
 
-	var Project = function (_React$Component) {
-	  _inherits(Project, _React$Component);
+	var ProjectGrid = function (_React$Component) {
+	  _inherits(ProjectGrid, _React$Component);
 
-	  function Project() {
-	    _classCallCheck(this, Project);
+	  function ProjectGrid() {
+	    _classCallCheck(this, ProjectGrid);
 
-	    var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
+	    var _this = _possibleConstructorReturn(this, (ProjectGrid.__proto__ || Object.getPrototypeOf(ProjectGrid)).call(this));
 
 	    _this.state = {
-	      text: "Initial text..."
+	      isExpanded: false,
+	      currentProject: null
+	    };
+	    // this binding is necessary to make `this` work in the callback
+	    _this.handleClick = _this.handleClick.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(ProjectGrid, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      // called the first time the component is loaded, right before component is added to page
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      // called after component has been rendered onto the page
+	      // this.isExpanded = false;
+	      // this.currentProject = null;
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      // called when props provided to the component are changed
+	    }
+	  }, {
+	    key: 'componentWillUpdate',
+	    value: function componentWillUpdate(nextProps, nextState) {
+	      // called when props and/or state change
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      // called when the component is removed
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick(value) {
+	      this.setState(function (prevState) {
+	        return {
+	          isExpanded: !prevState.isExpanded
+	        };
+	      });
+	      console.log(this.state.isExpanded);
+	      this.setState(function (prevState) {
+	        return {
+	          currentProject: value
+	        };
+	      });
+	      console.log(this.state.currentProject);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var projects = Object.keys(projectsList).map(function (prjct) {
+	        return _react2.default.createElement(
+	          'a',
+	          { href: '#projects', key: prjct },
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'col-lg-3 col-md-3 col-sm-6 col-xs-12 project', onClick: function onClick() {
+	                _this2.handleClick(projectsList[prjct].projectID);
+	              } },
+	            _react2.default.createElement('img', { className: 'project-photo-thumbs', src: projectsList[prjct].thumbURL }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'project-summary' },
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                projectsList[prjct].title
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                projectsList[prjct].summary
+	              )
+	            )
+	          )
+	        );
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        this.state.currentProject !== null && _react2.default.createElement(_Project2.default, { currentProject: this.state.currentProject }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'wrap-content col-lg-12 col-md-12 col-sm-12 col-xs-12 row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'fit-grid-content' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'project-container' },
+	              projects
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ProjectGrid;
+	}(_react2.default.Component);
+
+	exports.default = ProjectGrid;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ProjectDetails = __webpack_require__(180);
+
+	var _ProjectDetails2 = _interopRequireDefault(_ProjectDetails);
+
+	var _ProjectImage = __webpack_require__(182);
+
+	var _ProjectImage2 = _interopRequireDefault(_ProjectImage);
+
+	var _ProjectImageGallery = __webpack_require__(184);
+
+	var _ProjectImageGallery2 = _interopRequireDefault(_ProjectImageGallery);
+
+	var _ProjectImageCaption = __webpack_require__(185);
+
+	var _ProjectImageCaption2 = _interopRequireDefault(_ProjectImageCaption);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectsList = __webpack_require__(181);
+
+	var Project = function (_React$Component) {
+	    _inherits(Project, _React$Component);
+
+	    function Project(props) {
+	        _classCallCheck(this, Project);
+
+	        var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
+
+	        _this.state = {
+	            currentProject: props.currentProject
+	        };
+	        return _this;
+	    }
+
+	    _createClass(Project, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'project-details col-lg-12 col-md-12 col-sm-12 col-xs-12 row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'wrap-project-container col-lg-6 col-md-6 col-lg-push-6 col-md-push-6' },
+	                    this.state.currentProject !== null && _react2.default.createElement(_ProjectDetails2.default, { current: this.state.currentProject }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'wrap-footer' },
+	                        this.state.currentProject !== null && _react2.default.createElement(_ProjectImageGallery2.default, { current: this.state.currentProject }),
+	                        this.state.currentProject !== null && _react2.default.createElement(_ProjectImageCaption2.default, { current: this.state.currentProject })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'wrap-image-container col-lg-6 col-md-6 col-lg-pull-6 col-md-pull-6' },
+	                    this.state.currentProject !== null && _react2.default.createElement(_ProjectImage2.default, { current: this.state.currentProject })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Project;
+	}(_react2.default.Component);
+
+	exports.default = Project;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectsList = __webpack_require__(181);
+
+	var ProjectDetails = function (_React$Component) {
+	  _inherits(ProjectDetails, _React$Component);
+
+	  function ProjectDetails(props) {
+	    _classCallCheck(this, ProjectDetails);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectDetails.__proto__ || Object.getPrototypeOf(ProjectDetails)).call(this, props));
+
+	    _this.state = {
+	      current: props.current
 	    };
 	    return _this;
 	  }
 
-	  _createClass(Project, [{
+	  _createClass(ProjectDetails, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      // called the first time the component is loaded, right before component is added to page
-	      // var data = '../../data/projects.json';
-	      // Request.get(data).then((response) => {
-	      //   this.setState({
-	      //     projects: response.responseJSON
-	      //   });
-	      // });
 	    }
 	  }, {
 	    key: 'componentDidMount',
@@ -21641,56 +21868,85 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var projects = projectsList.map(function (prjct) {
-	        return _react2.default.createElement(
-	          'li',
-	          { className: 'col-md-3 col-sm-6 col-xs-12 project', key: prjct.projectID },
-	          _react2.default.createElement('img', { className: 'project-photo-thumbs', src: prjct.thumbURL }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'project-text' },
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              prjct.title
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              prjct.summary
-	            )
-	          )
-	        );
-	      });
+	      console.log("just clicked: " + this.props.current);
+	      var current = this.props.current;
+	      var prjct = projectsList[current];
+
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'row wrap-content' },
-	        _react2.default.createElement('hr', null),
+	        { className: 'project-text' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'fit-content' },
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'col-md-12 col-sm-12 col-xs-12 project-container' },
-	            projects
-	          )
+	          'h2',
+	          null,
+	          prjct.title
 	        ),
-	        _react2.default.createElement('hr', null)
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          prjct.date
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        prjct.description && _react2.default.createElement(
+	          'p',
+	          null,
+	          prjct.description
+	        ),
+	        prjct.problem && _react2.default.createElement(
+	          'p',
+	          null,
+	          prjct.problem
+	        ),
+	        prjct.solution && _react2.default.createElement(
+	          'p',
+	          null,
+	          prjct.solution
+	        ),
+	        prjct.future && _react2.default.createElement(
+	          'p',
+	          null,
+	          prjct.future
+	        ),
+	        _react2.default.createElement('br', null),
+	        prjct.partners && _react2.default.createElement(
+	          'h4',
+	          null,
+	          prjct.partners
+	        ),
+	        prjct.techstack && _react2.default.createElement(
+	          'h4',
+	          null,
+	          prjct.techstack
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        prjct.github && _react2.default.createElement(
+	          'a',
+	          { href: prjct.github },
+	          prjct.github
+	        ),
+	        _react2.default.createElement('br', null),
+	        prjct.deployed && _react2.default.createElement(
+	          'a',
+	          { href: prjct.deployed },
+	          prjct.deployed
+	        ),
+	        _react2.default.createElement('br', null)
 	      );
 	    }
 	  }]);
 
-	  return Project;
+	  return ProjectDetails;
 	}(_react2.default.Component);
 
-	exports.default = Project;
+	exports.default = ProjectDetails;
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports) {
 
-	module.exports = [
-	{
+	module.exports = {
+	"0" : {
 	   "projectID": 0,
 	   "projectName": "HackscrapersSF",
 	   "thumbURL": "/static/img/thumbs/hackscrapers_thumb.png",
@@ -21700,29 +21956,167 @@
 	   "problem-statement": "Hackscrapers SF encourages users to get to know the skyline of their city and explore the tall buildings around them. An API call to Flickr returns building photo urls, based on a query of photo tags, but the accuracy of existing Flickr tags, given the intent of the search, is not 100%. The quality of these tags is improved as users of the Hackscrapers app crowdsource their accuracy.",
 	   "solution-statement": "The app authenticates with a Flickr account and makes API calls so that users can save their favorite photos of buildings and contribute their own photos to the photos database.",
 	   "description": "Hackscrapers SF encourages San Francisco residents to get to know the skyline of their city and explore the tall buildings around them. Users can interact with a Mapbox GL web map that displays markers to represent tall buildings from a PostgreSQL database. An AJAX request returns a chart with more information and a Flickr photo selected at random from metadata stored in a MongoDB database. The photo results can be further queried to allow users to contribute their own search terms and filter per their interests. Users can then assemble collectible cards to display favorite buildings on their profile.",
-	   "future-features": "Establishing a training dataset to tag a good or bad photo, using machine learning to know which photos are of an actual building and of decent quality.",
+	   "future": "Establishing a training dataset to tag a good or bad photo, using machine learning to know which photos are of an actual building and of decent quality.",
 	   "partners": "solo project",
 	   "data": "Data come from the Skyscraper Center, a database of tall buildings maintained and updated by the Council on Tall Buildings and Urban Habitat.",
 	   "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, MongoDB, PyMongo, Javascript, jQuery, AJAX, Jinja, Bootstrap, Chart.js, D3.js, turf.js",
 	   "apis": "Mapbox, Google Places, Flickr",
 	   "github": "https://github.com/tdiede/hackscrapers_SF",
 	   "deployed": "https://hackscrapers.herokuapp.com"
-	},{
+	},
+
+
+
+
+	"9" : {
+	   "projectID": 9,
+	   "projectName": "Battleship",
+	   "thumbURL": "/static/img/thumbs/battleship_thumb.png",
+	   "title": "Battleship Game",
+	   "summary": "A two-player battleship game built in Node.js.",
+	   "date": "2017",
+	   "problem": "",
+	   "solution": "",
+	   "description": "",
+	   "future": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+	"10" : {
+	   "projectID": 10,
+	   "projectName": "Color Wheel",
+	   "thumbURL": "/static/img/thumbs/colorwheel_thumb.png",
+	   "title": "Color Wheel",
+	   "summary": "A tool to pick a color from a photo, and convert between HEX and RGB.",
+	   "date": "2017",
+	   "problem": "",
+	   "solution": "",
+	   "description": "",
+	   "future": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+	"11" : {
+	   "projectID": 11,
+	   "projectName": "Geocoder",
+	   "thumbURL": "/static/img/thumbs/geocoder_thumb.png",
+	   "title": "Geocoder",
+	   "summary": "Input a table of locations, and out comes a GEOJSON of latitudes and longitudes.",
+	   "date": "2017",
+	   "problem": "",
+	   "solution": "",
+	   "description": "",
+	   "future": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+
+	"12" : {
+	   "projectID": 12,
+	   "projectName": "Eduists Timeline",
+	   "thumbURL": "/static/img/thumbs/timeline_thumb.png",
+	   "title": "Battleship Game",
+	   "summary": "Timeline of events.",
+	   "date": "2017",
+	   "problem": "",
+	   "solution": "",
+	   "description": "",
+	   "future-features": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+	"13" : {
+	   "projectID": 13,
+	   "projectName": "Project Include (Women in Tech)",
+	   "thumbURL": "/static/img/thumbs/women_thumb.png",
+	   "title": "Data Visualization",
+	   "summary": "Visualizing the data on women in tech.",
+	   "date": "2017",
+	   "problem": "",
+	   "solution": "",
+	   "description": "",
+	   "future-features": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+
+	"14" : {
+	   "projectID": 14,
+	   "projectName": "Game",
+	   "thumbURL": "/static/img/thumbs/boomboom_thumb.png",
+	   "title": "A multi-player game.",
+	   "summary": "Visualizing the data on women in tech.",
+	   "date": "2017",
+	   "problem-statement": "",
+	   "solution-statement": "",
+	   "description": "",
+	   "future-features": "",
+	   "partners": "solo project",
+	   "techstack": "JavaScript, Node.js",
+	   "github": "https://github.com/tdiede/battleshipnode",
+	   "deployed": "https://battleshipnode.herokuapp.com"
+	},
+
+
+	"8" : {
+	   "projectID": 8,
+	   "projectName": "PackTheBox",
+	   "thumbURL": "/static/img/thumbs/packthebox_thumb.gif",
+	   "title": "Pack the Box",
+	   "summary": "A Python script that packs the box with a specified shape using randomized placement, then calculates the resulting space efficiency.",
+	   "date": "2016",
+	   "problem-statement": "",
+	   "solution-statement": "",
+	   "description": "",
+	   "future-features": "",
+	   "partners": "solo project",
+	   "techstack": "Python, Turtle",
+	   "github": "https://github.com/tdiede/packthebox",
+	   "deployed": "n/a"
+	},
+
+
+
+
+
+	"1" : {
 	   "projectID": 1,
 	   "projectName": "ADU",
 	   "thumbURL": "/static/img/thumbs/bentobox_thumb.png",
-	   "title": "ADU (Accessory Dwelling Unit) Toolkit",
-	   "summary": "A tool to customize and preview your ADU with a variety of architectural features.",
+	   "title": "ADU Toolkit",
+	   "summary": "A tool to customize and preview your ADU (Accessory Dwelling Unit) with a variety of architectural features.",
 	   "date": "2012",
-	   "problem-statement": "As everyone knows, the San Francisco Bay Area is in a housing crisis. According to San Francisco's Chief Economist, in order to stabilize median rents in the city, an estimated 100,000 units of housing would need to be constructed; this amount equals the number of units built since 1920.",
-	   "solution-statement": "Where lot size allows, the solution may be modular. Here we look to architecture for a minimum viable living condition. What sort of secondary structure can property owners consider to add capacity to their lots? This app guides users through various design and material options and their aesthetic implications.",
+	   "problem": "As everyone knows, the San Francisco Bay Area is in a housing crisis. According to San Francisco's Chief Economist, in order to stabilize median rents in the city, an estimated 100,000 units of housing would need to be constructed; this amount equals the number of units built since 1920.",
+	   "solution": "Where lot size allows, the solution may be modular. Here we look to architecture for a minimum viable living condition. What sort of secondary structure can property owners consider to add capacity to their lots? This app guides users through various design and material options and their aesthetic implications.",
 	   "description": "",
-	   "future-features": "",
+	   "future": "",
 	   "partners": "a collaborative effort with WARE in which I was the solo developer<p>ADU design, 3D model of unit, and drawings by: <a href='https://christophergparschalk.wordpress.com' target='_blank'>Chris Parschalk</a></p>",
 	   "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, Javascript, jQuery, AJAX, Jinja, Bootstrap",
 	   "github": "https://github.com/tdiede/bentobox_adu",
 	   "deployed": "https://adubentobox.herokuapp.com/"
-	},{
+	},
+
+	"2" : {
 	   "projectID": 2,
 	   "projectName": "RatingsLab",
 	   "thumbURL": "/static/img/thumbs/movieratings_thumb.png",
@@ -21739,7 +22133,9 @@
 	   "apis": "OMDB, https://www.omdbapi.com/",
 	   "github": "https://github.com/tdiede/hblab_0801-0804_ratings.git",
 	   "deployed": "https://movieratingsmachinelearning.herokuapp.com"
-	},{
+	},
+
+	"3" : {
 	   "projectID": 3,
 	   "projectName": "ParametricRealizations",
 	   "thumbURL": "/static/img/thumbs/parametric_thumb.png",
@@ -21756,7 +22152,9 @@
 	   "links": "",
 	   "github": "",
 	   "deployed": ""
-	},{
+	},
+
+	"4" : {
 	   "projectID": 4,
 	   "projectName": "VelibThesis",
 	   "thumbURL": "/static/img/thumbs/velib_thumb.png",
@@ -21773,7 +22171,9 @@
 	   "links": "",
 	   "github": "",
 	   "deployed": ""
-	},{
+	},
+
+	"5" : {
 	   "projectID": 5,
 	   "projectName": "RowanCarto",
 	   "thumbURL": "/static/img/thumbs/map_thumb.png",
@@ -21790,7 +22190,9 @@
 	   "links": "",
 	   "github": "",
 	   "deployed": "http://www.westpointhistoryofwarfare.com/more"
-	},{
+	},
+
+	"6" : {
 	   "projectID": 6,
 	   "projectName": "GobernaStudioLibrary",
 	   "thumbURL": "/static/img/thumbs/cubes_thumb.png",
@@ -21807,7 +22209,9 @@
 	   "links": "",
 	   "github": "",
 	   "deployed": ""
-	},{
+	},
+
+	"7" : {
 	   "projectID": 7,
 	   "projectName": "PudelmaPavilion",
 	   "thumbURL": "/static/img/thumbs/pavilion_thumb.png",
@@ -21824,33 +22228,88 @@
 	   "links": "",
 	   "github": "",
 	   "deployed": ""
-	},{
-	   "projectID": 8,
-	   "projectName": "PackTheBox",
-	   "thumbURL": "/static/img/thumbs/packthebox_thumb.gif",
-	   "title": "Pack the Box",
-	   "summary": "A Python script that packs the box with a specified shape using randomized placement, then calculates the resulting space efficiency.",
-	   "date": "2016",
-	   "problem-statement": "",
-	   "solution-statement": "",
-	   "description": "",
-	   "future-features": "",
-	   "partners": "solo project",
-	   "techstack": "Python, Turtle",
-	   "github": "https://github.com/tdiede/packthebox",
-	   "deployed": "n/a"
 	}
-	]
+	}
 
+
+	// other projects: udemy course on node, udacity data science, udacity d3, three.js, partner projects (cocktail bucketlist, house plants, top words), general algorithms with discussion about runtime
 
 /***/ },
-/* 180 */
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectImages = __webpack_require__(183);
+
+	var ProjectImage = function (_React$Component) {
+	  _inherits(ProjectImage, _React$Component);
+
+	  function ProjectImage(props) {
+	    _classCallCheck(this, ProjectImage);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectImage.__proto__ || Object.getPrototypeOf(ProjectImage)).call(this, props));
+
+	    _this.state = {
+	      current: props.current,
+	      i: 0
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ProjectImage, [{
+	    key: 'render',
+	    value: function render() {
+	      console.log("just clicked: " + this.props.current);
+	      var current = this.props.current;
+	      var imagesList = projectImages[current];
+	      var images = imagesList.map(function (img) {
+	        return _react2.default.createElement('img', { key: img.imageID, className: 'project-photo-feature', src: img.url, onClick: function onClick() {} });
+	      });
+	      console.dir(images);
+	      console.log(images);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'project-image' },
+	        ' ',
+	        images[0],
+	        ' '
+	      );
+	    }
+	  }]);
+
+	  return ProjectImage;
+	}(_react2.default.Component);
+
+	exports.default = ProjectImage;
+
+	// this.handleClick( projectsList[prjct].projectID )
+
+/***/ },
+/* 183 */
 /***/ function(module, exports) {
 
-	module.exports = [
-	{
-	   "projectID": 0,
-	   "images": [
+	module.exports = {
+	"0" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/hackscrapers_0_map_500.png",
@@ -21865,22 +22324,22 @@
 	         "caption": "An offshoot of this project is a curatorial tool where users help build the photo database of city buildings. Here users identify buildings in photos and remove those that do not belong, a process which crowdsources the accuracy of photo tags."
 	      }
 	   ]
-	},{
-	   "projectID": 1,
-	   "images": [
+	,
+
+	"1" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/bentobox_0_roof_500.png",
 	         "caption": "The app interface allows users to toggle back and forth between map and table views."
 	      }
 	   ]
-	},{
-	   "projectID": 2,
-	   "images": [
+	,
+
+	"2" : [
 	   ]
-	},{
-	   "projectID": 3,
-	   "images": [
+	,
+
+	"3" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/parametric_0_drawing_500.png",
@@ -21891,25 +22350,25 @@
 	         "caption": "The CNC machine takes the x,y,z coordinates as instructed by the design software and drills into the material. After the first pass, subsequent passes utilize a smaller drill bit to add precision and refine the surface."
 	      }
 	   ]
-	},{
-	   "projectID": 4,
-	   "images": [
+	,
+
+	"4" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/velib_0_routes_500.png",
 	         "caption": "Routes of users surveyed."
 	      }
 	   ]
-	},{
-	   "projectID": 5,
-	   "images": [
+	,
+
+	"5" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/map_0_afghanistan_500.png",
 	         "caption": "Setting the stage for present-day conflicts in Afghanistan, this map depicts Soviet engagement 30 years prior, highlighting the logistics of the invasion. The background map blends elevation data with faint aerial imagery, presenting the very real features of the terrain as key to military decisions and outcomes."
 	      },{
 	         "imageID": 1,
-	         "url": "/static/img/features/map_1_ethnogeography_500.png",
+	         "url": "/static/img/features/map_1_afghanistan_500.png",
 	         "caption": "This thematic map illustrates the complexity of ethnogeography in Afghanistan."
 	      },{
 	         "imageID": 2,
@@ -21921,9 +22380,9 @@
 	         "caption": "This choropleth map..."
 	      }
 	   ]
-	},{
-	   "projectID": 6,
-	   "images": [
+	,
+
+	"6" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/cubes_0_ghop_500.png",
@@ -21950,9 +22409,9 @@
 	         "caption": "caption."
 	      }
 	   ]
-	},{
-	   "projectID": 7,
-	   "images": [
+	,
+
+	"7" : [
 	      {
 	         "imageID": 0,
 	         "url": "/static/img/features/pavilion_0_interior_500.png",
@@ -21967,12 +22426,181 @@
 	         "caption": "a | 1, a | 2, b | 1, b | 2"
 	      }
 	   ]
+	,
+
+	"8" : [
+	   ]
+	,
+
+	"9" : [
+	   ]
+	,
+
+	"10" : [
+	   ]
+	,
+
+	"11" : [
+	   ]
+	,
+
+	"12" : [
+	   ]
+	,
+
+	"13" : [
+	   ]
+	,
+
+	"14" : [
+	   ]
+
 	}
-	]
 
 
 /***/ },
-/* 181 */
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectImages = __webpack_require__(183);
+
+	var ProjectImageGallery = function (_React$Component) {
+	  _inherits(ProjectImageGallery, _React$Component);
+
+	  function ProjectImageGallery(props) {
+	    _classCallCheck(this, ProjectImageGallery);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectImageGallery.__proto__ || Object.getPrototypeOf(ProjectImageGallery)).call(this, props));
+
+	    _this.state = {
+	      current: props.current,
+	      i: 0
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ProjectImageGallery, [{
+	    key: 'render',
+	    value: function render() {
+	      var current = this.props.current;
+	      var imagesList = projectImages[current].slice(this.state.i + 1);
+	      console.log('images in gallery should be: ' + imagesList);
+	      var gallery = imagesList.map(function (img) {
+	        return _react2.default.createElement('img', { key: img.imageID, className: 'gallery-photo', src: img.url, onClick: function onClick() {} });
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'gallery-container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'project-gallery' },
+	          ' ',
+	          gallery,
+	          ' '
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ProjectImageGallery;
+	}(_react2.default.Component);
+
+	exports.default = ProjectImageGallery;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectImages = __webpack_require__(183);
+
+	var ProjectImageCaption = function (_React$Component) {
+	  _inherits(ProjectImageCaption, _React$Component);
+
+	  function ProjectImageCaption(props) {
+	    _classCallCheck(this, ProjectImageCaption);
+
+	    var _this = _possibleConstructorReturn(this, (ProjectImageCaption.__proto__ || Object.getPrototypeOf(ProjectImageCaption)).call(this, props));
+
+	    _this.state = {
+	      current: props.current,
+	      i: 0
+	    };
+	    return _this;
+	  }
+
+	  _createClass(ProjectImageCaption, [{
+	    key: 'render',
+	    value: function render() {
+	      var current = this.props.current;
+	      var imagesList = projectImages[current];
+	      var captions = imagesList.map(function (img) {
+	        return _react2.default.createElement(
+	          'p',
+	          { key: img.imageID, className: 'project-caption' },
+	          ' ',
+	          img.caption,
+	          ' '
+	        );
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'caption-container' },
+	        ' ',
+	        captions[0],
+	        ' '
+	      );
+	    }
+	  }]);
+
+	  return ProjectImageCaption;
+	}(_react2.default.Component);
+
+	exports.default = ProjectImageCaption;
+
+/***/ },
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
