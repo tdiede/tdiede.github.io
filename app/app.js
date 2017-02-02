@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     const header = projectsHeader();
     return (
-      <div className='container-projects'>
+      <div>
         {header}
         <ProjectGrid />
       </div>
@@ -41,7 +41,8 @@ function projectsSubtitle() {
 function projectsHeader() {
   const title = projectsTitle();
   const subtitle = projectsSubtitle();
-  return (<div className='row'>
+  return (<div className='row header'>
+    <hr className='orange-strip'/>
     {title}
     {subtitle}
   </div>);

@@ -60,7 +60,7 @@
 
 	var _ProjectGrid2 = _interopRequireDefault(_ProjectGrid);
 
-	var _Clock = __webpack_require__(186);
+	var _Clock = __webpack_require__(187);
 
 	var _Clock2 = _interopRequireDefault(_Clock);
 
@@ -87,7 +87,7 @@
 	      var header = projectsHeader();
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container-projects' },
+	        null,
 	        header,
 	        _react2.default.createElement(_ProjectGrid2.default, null)
 	      );
@@ -122,7 +122,8 @@
 	  var subtitle = projectsSubtitle();
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'row' },
+	    { className: 'row header' },
+	    _react2.default.createElement('hr', { className: 'orange-strip' }),
 	    title,
 	    subtitle
 	  );
@@ -21583,6 +21584,10 @@
 
 	var _Project2 = _interopRequireDefault(_Project);
 
+	var _ProjectSummary = __webpack_require__(186);
+
+	var _ProjectSummary2 = _interopRequireDefault(_ProjectSummary);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21603,24 +21608,36 @@
 
 	    _this.state = {
 	      isExpanded: false,
-	      currentProject: null
+	      currentProject: null,
+	      projectKeys: []
 	    };
 	    // this binding is necessary to make `this` work in the callback
+	    _this.update = _this.update.bind(_this);
 	    _this.handleClick = _this.handleClick.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(ProjectGrid, [{
+	    key: 'update',
+	    value: function update(value) {
+	      this.setState({ currentProject: value });
+	      console.log(this.state.currentProject);
+	    }
+	  }, {
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      // called the first time the component is loaded, right before component is added to page
+	      console.log('Component will mount.');
 	    }
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      // called after component has been rendered onto the page
-	      // this.isExpanded = false;
-	      // this.currentProject = null;
+	      console.log('Component did mount.');
+	      var projectKeyList = Object.keys(projectsList).map(function (prjct) {
+	        return prjct;
+	      });
+	      this.setState({ projectKeys: projectKeyList });
 	    }
 	  }, {
 	    key: 'componentWillReceiveProps',
@@ -21636,70 +21653,46 @@
 	    key: 'componentWillUnmount',
 	    value: function componentWillUnmount() {
 	      // called when the component is removed
+	      console.log('Component will unmount.');
 	    }
 	  }, {
 	    key: 'handleClick',
-	    value: function handleClick(value) {
+	    value: function handleClick() {
 	      this.setState(function (prevState) {
 	        return {
 	          isExpanded: !prevState.isExpanded
 	        };
 	      });
 	      console.log(this.state.isExpanded);
-	      this.setState(function (prevState) {
-	        return {
-	          currentProject: value
-	        };
-	      });
-	      console.log(this.state.currentProject);
+	    }
+	  }, {
+	    key: 'update',
+	    value: function update(value) {
+	      console.log(value);
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
-
-	      var projects = Object.keys(projectsList).map(function (prjct) {
-	        return _react2.default.createElement(
-	          'a',
-	          { href: '#projects', key: prjct },
-	          _react2.default.createElement(
-	            'li',
-	            { className: 'col-lg-3 col-md-3 col-sm-6 col-xs-12 project', onClick: function onClick() {
-	                _this2.handleClick(projectsList[prjct].projectID);
-	              } },
-	            _react2.default.createElement('img', { className: 'project-photo-thumbs', src: projectsList[prjct].thumbURL }),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'project-summary' },
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                projectsList[prjct].title
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                projectsList[prjct].summary
-	              )
-	            )
-	          )
-	        );
+	      var projects = this.state.projectKeys.map(function (key) {
+	        var prjct = projectsList[key];
+	        return _react2.default.createElement(_ProjectSummary2.default, {
+	          key: key,
+	          id: prjct.projectID,
+	          src: prjct.thumbURL,
+	          title: prjct.title,
+	          summary: prjct.summary });
 	      });
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'row' },
+	        { className: 'row wrap-content' },
 	        this.state.currentProject !== null && _react2.default.createElement(_Project2.default, { currentProject: this.state.currentProject }),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'wrap-content col-lg-12 col-md-12 col-sm-12 col-xs-12 row' },
+	          'ul',
+	          { className: 'project-container' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'fit-grid-content' },
-	            _react2.default.createElement(
-	              'ul',
-	              { className: 'project-container' },
-	              projects
-	            )
+	            { className: 'grid-content' },
+	            projects
 	          )
 	        )
 	      );
@@ -21752,7 +21745,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectsList = __webpack_require__(181);
+	var projectImages = __webpack_require__(183);
 
 	var Project = function (_React$Component) {
 	    _inherits(Project, _React$Component);
@@ -21763,12 +21756,64 @@
 	        var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
 
 	        _this.state = {
-	            currentProject: props.currentProject
+	            currentProject: props.currentProject,
+	            i: 0,
+	            imagesList: []
 	        };
+	        // this binding is necessary to make `this` work in the callback
+	        _this.nextImage = _this.nextImage.bind(_this);
+	        _this.particularImage = _this.particularImage.bind(_this);
 	        return _this;
 	    }
 
 	    _createClass(Project, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            console.log('Component will mount.');
+	            console.log("Just clicked (project): " + this.props.current);
+	        }
+	    }, {
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            console.log('Component did mount.');
+	            var current = this.state.current;
+	            this.setState({ imagesList: projectImages[current] });
+	            this.shiftTimer = setInterval(function () {
+	                return _this2.nextImage();
+	            }, 5000);
+	        }
+	    }, {
+	        key: 'componentWillUnmount',
+	        value: function componentWillUnmount() {
+	            console.log('Component will unmount.');
+	            clearInterval(this.shiftTimer);
+	        }
+	    }, {
+	        key: 'nextImage',
+	        value: function nextImage() {
+	            var _this3 = this;
+
+	            var len = this.state.imagesList.length;
+	            console.log("I have " + len + " images for this project.");
+	            this.setState(function (prevState) {
+	                return {
+	                    i: (_this3.state.i + 1) % len
+	                };
+	            });
+	            console.log(this.state.i);
+	        }
+	    }, {
+	        key: 'particularImage',
+	        value: function particularImage(value) {
+	            this.setState(function (prevState) {
+	                return {
+	                    i: value
+	                };
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -21841,37 +21886,9 @@
 	  }
 
 	  _createClass(ProjectDetails, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      // called the first time the component is loaded, right before component is added to page
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      // called after component has been rendered onto the page
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      // called when props provided to the component are changed
-	    }
-	  }, {
-	    key: 'componentWillUpdate',
-	    value: function componentWillUpdate(nextProps, nextState) {
-	      // called when props and/or state change
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      // called when the component is removed
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log("just clicked: " + this.props.current);
-	      var current = this.props.current;
-	      var prjct = projectsList[current];
-
+	      var prjct = projectsList[this.props.current];
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'project-text' },
@@ -22271,7 +22288,8 @@
 
 	    _this.state = {
 	      current: props.current,
-	      i: 0
+	      i: 0,
+	      imagesList: []
 	    };
 	    return _this;
 	  }
@@ -22279,19 +22297,18 @@
 	  _createClass(ProjectImage, [{
 	    key: 'render',
 	    value: function render() {
-	      console.log("just clicked: " + this.props.current);
-	      var current = this.props.current;
-	      var imagesList = projectImages[current];
-	      var images = imagesList.map(function (img) {
-	        return _react2.default.createElement('img', { key: img.imageID, className: 'project-photo-feature', src: img.url, onClick: function onClick() {} });
+	      var _this2 = this;
+
+	      var images = this.state.imagesList.map(function (img) {
+	        return _react2.default.createElement('img', { key: img.imageID, className: 'project-photo-feature', src: img.url, onClick: function onClick() {
+	            _this2.nextImage();
+	          } });
 	      });
-	      console.dir(images);
-	      console.log(images);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'project-image' },
 	        ' ',
-	        images[0],
+	        images[this.state.i],
 	        ' '
 	      );
 	    }
@@ -22601,6 +22618,98 @@
 
 /***/ },
 /* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var projectsList = __webpack_require__(181);
+
+	var ProjectSummary = function (_React$Component) {
+	    _inherits(ProjectSummary, _React$Component);
+
+	    function ProjectSummary(props) {
+	        _classCallCheck(this, ProjectSummary);
+
+	        var _this = _possibleConstructorReturn(this, (ProjectSummary.__proto__ || Object.getPrototypeOf(ProjectSummary)).call(this, props));
+
+	        _this.state = {
+	            id: props.id,
+	            src: props.src,
+	            title: props.title,
+	            summary: props.summary
+	        };
+	        // this binding is necessary to make `this` work in the callback
+	        _this.update = _this.update.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(ProjectSummary, [{
+	        key: 'update',
+	        value: function update(value) {
+	            console.log(value);
+	            var project = projectsList[value];
+	            console.log(project);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            var id = this.state.id;
+	            return _react2.default.createElement(
+	                'a',
+	                { href: '#projects', key: id, onClick: function onClick() {
+	                        _this2.update({ id: id });
+	                    } },
+	                _react2.default.createElement(
+	                    'li',
+	                    { className: 'project' },
+	                    _react2.default.createElement('img', { className: 'project-photo-thumbs', src: this.state.src }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'project-summary' },
+	                        _react2.default.createElement(
+	                            'h3',
+	                            null,
+	                            this.state.title
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            this.state.summary
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ProjectSummary;
+	}(_react2.default.Component);
+
+	exports.default = ProjectSummary;
+
+/***/ },
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";

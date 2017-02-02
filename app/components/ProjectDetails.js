@@ -12,27 +12,8 @@ class ProjectDetails extends React.Component {
       current: props.current,
     };
   }
-  componentWillMount() {
-    // called the first time the component is loaded, right before component is added to page
-  }
-  componentDidMount() {
-    // called after component has been rendered onto the page
-  }
-  componentWillReceiveProps(nextProps) {
-    // called when props provided to the component are changed
-  }
-  componentWillUpdate(nextProps,nextState) {
-    // called when props and/or state change
-  }
-  componentWillUnmount() {
-    // called when the component is removed
-  }
   render() {
-    console.log("just clicked: " + this.props.current);
-    let current = this.props.current;
-    let prjct = projectsList[current];
-
-
+    let prjct = projectsList[this.props.current];
     return (
           <div className='project-text'>
             <h2>{ prjct.title }</h2>

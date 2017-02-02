@@ -10,19 +10,15 @@ class ProjectImage extends React.Component {
     this.state = {
       current: props.current,
       i: 0,
+      imagesList: [],
     };
   }
   render() {
-    console.log("just clicked: " + this.props.current);
-    let current = this.props.current;
-    let imagesList = projectImages[current];
-    let images = imagesList.map( img =>
-        <img key={ img.imageID } className='project-photo-feature' src={ img.url } onClick={ () => {} } />
+    let images = this.state.imagesList.map( img =>
+        <img key={ img.imageID } className='project-photo-feature' src={ img.url } onClick={ () => { this.nextImage() } } />
     );
-    console.dir(images);
-    console.log(images);
     return (
-        <div className='project-image'> {images[0]} </div>
+        <div className='project-image'> {images[this.state.i]} </div>
     );
   }
 }

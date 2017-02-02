@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Project from './Project.js';
+import ProjectSummary from './ProjectSummary.js';
 
 const projectsList = require('../../data/projects.json');
+
 
 class ProjectGrid extends React.Component {
   constructor() {
@@ -11,17 +13,25 @@ class ProjectGrid extends React.Component {
     this.state = {
       isExpanded: false,
       currentProject: null,
+      projectKeys: [],
     };
     // this binding is necessary to make `this` work in the callback
+    this.update = this.update.bind(this);
     this.handleClick = this.handleClick.bind(this);
+  }
+  update(value) {
+    this.setState({currentProject: value});
+    console.log(this.state.currentProject);
   }
   componentWillMount() {
     // called the first time the component is loaded, right before component is added to page
+    console.log('Component will mount.');
   }
   componentDidMount() {
     // called after component has been rendered onto the page
-    // this.isExpanded = false;
-    // this.currentProject = null;
+    console.log('Component did mount.');
+    let projectKeyList = Object.keys(projectsList).map( prjct => prjct );
+    this.setState({ projectKeys:projectKeyList });
   }
   componentWillReceiveProps(nextProps) {
     // called when props provided to the component are changed
@@ -31,41 +41,41 @@ class ProjectGrid extends React.Component {
   }
   componentWillUnmount() {
     // called when the component is removed
+    console.log('Component will unmount.');
   }
-  handleClick(value) {
+  handleClick() {
     this.setState(prevState => ({
-      isExpanded: !prevState.isExpanded
+      isExpanded: !prevState.isExpanded,
     }));
     console.log(this.state.isExpanded);
-    this.setState(prevState => ({
-      currentProject: value
-    }));
-    console.log(this.state.currentProject);
+  }
+  update(value) {
+    console.log(value);
   }
   render() {
-    let projects = Object.keys(projectsList).map( prjct =>
-      <a href='#projects' key={ prjct }><li className='col-lg-3 col-md-3 col-sm-6 col-xs-12 project' onClick={ () => {this.handleClick( projectsList[prjct].projectID )} }>
-        <img className='project-photo-thumbs' src={ projectsList[prjct].thumbURL } />
-        <div className='project-summary'>
-          <h3>{ projectsList[prjct].title }</h3>
-          <p>{ projectsList[prjct].summary }</p>
-        </div>
-      </li></a>
-    );
+    let projects = this.state.projectKeys.map( key => {
+          let prjct = projectsList[key];
+          return (
+              <ProjectSummary
+                  key={key}
+                  id={prjct.projectID}
+                  src={prjct.thumbURL}
+                  title={prjct.title}
+                  summary={prjct.summary} />
+          );
+    });
     return (
-            <div className='row'>
+            <div className='row wrap-content'>
 
                 { this.state.currentProject !== null &&
                    <Project currentProject={ this.state.currentProject } />
                 }
 
-                <div className='wrap-content col-lg-12 col-md-12 col-sm-12 col-xs-12 row'>
-                    <div className='fit-grid-content'>
-                    <ul className='project-container'>
-                        { projects }
-                    </ul>
-                    </div>
-                </div>
+                <ul className='project-container'>
+                  <div className='grid-content'>
+                    {projects}
+                  </div>
+                </ul>
 
             </div>
     );

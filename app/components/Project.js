@@ -7,14 +7,49 @@ import ProjectImageGallery from './ProjectImageGallery.js';
 import ProjectImageCaption from './ProjectImageCaption.js';
 
 
-const projectsList = require('../../data/projects.json');
+const projectImages = require('../../data/project_images.json');
+
 
 class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentProject: props.currentProject,
+      i: 0,
+      imagesList: [],
     };
+    // this binding is necessary to make `this` work in the callback
+    this.nextImage = this.nextImage.bind(this);
+    this.particularImage = this.particularImage.bind(this);
+  }
+  componentWillMount() {
+    console.log('Component will mount.');
+    console.log("Just clicked (project): " + this.props.current);
+  }
+  componentDidMount() {
+    console.log('Component did mount.');
+    let current = this.state.current;
+    this.setState({ imagesList:projectImages[current] });
+    this.shiftTimer = setInterval(
+        () => this.nextImage(), 5000
+    );
+  }
+  componentWillUnmount() {
+    console.log('Component will unmount.');
+    clearInterval(this.shiftTimer);
+  }
+  nextImage() {
+      let len = this.state.imagesList.length;
+      console.log("I have " + len + " images for this project.");
+      this.setState(prevState => ({
+          i: (this.state.i + 1) % len,
+      }));
+      console.log(this.state.i);
+  }
+  particularImage(value) {
+      this.setState(prevState => ({
+          i: value,
+      }));
   }
   render() {
     return (

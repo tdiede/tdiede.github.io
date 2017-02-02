@@ -290,11 +290,18 @@ span.resume:hover {
 
 
 #projects {
-    background-color: #efefef;
+    width: 100%;
+    overflow-x: hidden;
 }
-
-.container-projects {
-    padding: 50px;
+.header {
+    /*background-color: rgba(244,194,13,0.2);*/
+    border-bottom: #cccccc 1px dashed;
+}
+hr.orange-strip {
+    background-color: rgba(244,194,13,0.8);
+    border: 0 none;
+    color: rgba(244,194,13,0.8);
+    height: 3px;
 }
 
 /* graphics. */
@@ -316,23 +323,26 @@ span.resume:hover {
 /* shows a grid of projects */
 .wrap-content {
     /*background-color: purple;*/
+    background-color: #eeeeee;
+    border-bottom: #cccccc 1px dashed;
     margin: 0;
     padding: 0;
-    overflow: auto;
+    overflow-x: auto;
+    width: 100%;
 }
-.fit-grid-content {
-    display: inline-block;
-    width: max-content;
-    max-width: 1500px;
-    min-width: 450px;
+.grid-content {
+    overflow-x: auto;
 }
 ul.project-container {
-    margin: 0 -10px;
+    width: 1280px;
+    margin: 0;
     padding-left: 0;
     padding-right: 0;
     list-style: none;
 }
 li.project {
+    display: inline-block;
+    float: left;
     width: max-content;
     max-width: 300px;
     min-height: 450px;
@@ -419,7 +429,7 @@ li.project {
     padding-left: 10px;
     padding-right: 10px;
     border-top: #333333 1px dotted;
-    background-color: rgba(155,155,155,0.5);
+    background-color: rgba(240,240,240,0.5);
 }
 .project-caption {
     color: #333333;
