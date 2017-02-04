@@ -2,9 +2,8 @@
   "name": "reactjs",
   "version": "1.0.0",
   "description": "portfolio projects",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel",
     "webpack": "webpack"
   },

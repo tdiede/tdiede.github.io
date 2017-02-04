@@ -56,7 +56,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _ProjectGrid = __webpack_require__(178);
+	var _Project = __webpack_require__(178);
+
+	var _Project2 = _interopRequireDefault(_Project);
+
+	var _ProjectSummary = __webpack_require__(185);
+
+	var _ProjectSummary2 = _interopRequireDefault(_ProjectSummary);
+
+	var _ProjectGrid = __webpack_require__(186);
 
 	var _ProjectGrid2 = _interopRequireDefault(_ProjectGrid);
 
@@ -72,24 +80,59 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var projectsList = __webpack_require__(180);
+
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
 	  function App() {
 	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+	    _this.state = {
+	      isExpanded: false,
+	      currentProject: null
+	    };
+	    // this binding is necessary to make `this` work in the callback
+	    _this.update = _this.update.bind(_this);
+	    // this.handleClick = this.handleClick.bind(this);
+	    return _this;
 	  }
 
 	  _createClass(App, [{
+	    key: 'update',
+	    value: function update(e) {
+	      console.log(e.target.id);
+	      this.setState({ currentProject: e.target.id });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+
+	      console.log(this.state.currentProject);
 	      var header = projectsHeader();
+	      var projects = Object.keys(projectsList).map(function (prjct) {
+	        return projectsList[prjct];
+	      });
+	      console.log(projects);
+	      var projectComponents = projects.map(function (prjct) {
+	        return _react2.default.createElement(_ProjectSummary2.default, {
+	          key: prjct.projectID,
+	          id: prjct.projectID,
+	          src: prjct.thumbURL,
+	          title: prjct.title,
+	          summary: prjct.summary,
+	          update: _this2.update.bind(_this2) });
+	      });
+	      console.log(projectComponents);
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        header,
-	        _react2.default.createElement(_ProjectGrid2.default, null)
+	        this.state.currentProject !== null && _react2.default.createElement(_Project2.default, { current: this.state.currentProject, update: this.update }),
+	        _react2.default.createElement(_ProjectGrid2.default, { projectComponents: projectComponents })
 	      );
 	    }
 	  }]);
@@ -21570,147 +21613,6 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Project = __webpack_require__(179);
-
-	var _Project2 = _interopRequireDefault(_Project);
-
-	var _ProjectSummary = __webpack_require__(186);
-
-	var _ProjectSummary2 = _interopRequireDefault(_ProjectSummary);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var projectsList = __webpack_require__(181);
-
-	var ProjectGrid = function (_React$Component) {
-	  _inherits(ProjectGrid, _React$Component);
-
-	  function ProjectGrid() {
-	    _classCallCheck(this, ProjectGrid);
-
-	    var _this = _possibleConstructorReturn(this, (ProjectGrid.__proto__ || Object.getPrototypeOf(ProjectGrid)).call(this));
-
-	    _this.state = {
-	      isExpanded: false,
-	      currentProject: null,
-	      projectKeys: []
-	    };
-	    // this binding is necessary to make `this` work in the callback
-	    _this.update = _this.update.bind(_this);
-	    _this.handleClick = _this.handleClick.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(ProjectGrid, [{
-	    key: 'update',
-	    value: function update(value) {
-	      this.setState({ currentProject: value });
-	      console.log(this.state.currentProject);
-	    }
-	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      // called the first time the component is loaded, right before component is added to page
-	      console.log('Component will mount.');
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      // called after component has been rendered onto the page
-	      console.log('Component did mount.');
-	      var projectKeyList = Object.keys(projectsList).map(function (prjct) {
-	        return prjct;
-	      });
-	      this.setState({ projectKeys: projectKeyList });
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      // called when props provided to the component are changed
-	    }
-	  }, {
-	    key: 'componentWillUpdate',
-	    value: function componentWillUpdate(nextProps, nextState) {
-	      // called when props and/or state change
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      // called when the component is removed
-	      console.log('Component will unmount.');
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      this.setState(function (prevState) {
-	        return {
-	          isExpanded: !prevState.isExpanded
-	        };
-	      });
-	      console.log(this.state.isExpanded);
-	    }
-	  }, {
-	    key: 'update',
-	    value: function update(value) {
-	      console.log(value);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var projects = this.state.projectKeys.map(function (key) {
-	        var prjct = projectsList[key];
-	        return _react2.default.createElement(_ProjectSummary2.default, {
-	          key: key,
-	          id: prjct.projectID,
-	          src: prjct.thumbURL,
-	          title: prjct.title,
-	          summary: prjct.summary });
-	      });
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'row wrap-content' },
-	        this.state.currentProject !== null && _react2.default.createElement(_Project2.default, { currentProject: this.state.currentProject }),
-	        _react2.default.createElement(
-	          'ul',
-	          { className: 'project-container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'grid-content' },
-	            projects
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ProjectGrid;
-	}(_react2.default.Component);
-
-	exports.default = ProjectGrid;
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	exports.default = undefined;
@@ -21721,19 +21623,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ProjectDetails = __webpack_require__(180);
+	var _ProjectDetails = __webpack_require__(179);
 
 	var _ProjectDetails2 = _interopRequireDefault(_ProjectDetails);
 
-	var _ProjectImage = __webpack_require__(182);
+	var _ProjectImage = __webpack_require__(181);
 
 	var _ProjectImage2 = _interopRequireDefault(_ProjectImage);
 
-	var _ProjectImageGallery = __webpack_require__(184);
+	var _ProjectImageGallery = __webpack_require__(183);
 
 	var _ProjectImageGallery2 = _interopRequireDefault(_ProjectImageGallery);
 
-	var _ProjectImageCaption = __webpack_require__(185);
+	var _ProjectImageCaption = __webpack_require__(184);
 
 	var _ProjectImageCaption2 = _interopRequireDefault(_ProjectImageCaption);
 
@@ -21744,8 +21646,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var projectImages = __webpack_require__(183);
 
 	var Project = function (_React$Component) {
 	    _inherits(Project, _React$Component);
@@ -21767,10 +21667,21 @@
 	    }
 
 	    _createClass(Project, [{
+	        key: 'update',
+	        value: function update() {
+	            var current = this.state.currentProject;
+	            this.setState(function (prevState) {
+	                return {
+	                    currentProject: current,
+	                    imagesList: projectImages[current]
+	                };
+	            });
+	        }
+	    }, {
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
 	            console.log('Component will mount.');
-	            console.log("Just clicked (project): " + this.props.current);
+	            console.log("Just clicked (project): " + this.props.currentProject);
 	        }
 	    }, {
 	        key: 'componentDidMount',
@@ -21778,8 +21689,6 @@
 	            var _this2 = this;
 
 	            console.log('Component did mount.');
-	            var current = this.state.current;
-	            this.setState({ imagesList: projectImages[current] });
 	            this.shiftTimer = setInterval(function () {
 	                return _this2.nextImage();
 	            }, 5000);
@@ -21818,7 +21727,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'project-details col-lg-12 col-md-12 col-sm-12 col-xs-12 row' },
+	                { className: 'row project-details' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'wrap-project-container col-lg-6 col-md-6 col-lg-push-6 col-md-push-6' },
@@ -21845,7 +21754,7 @@
 	exports.default = Project;
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21869,7 +21778,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectsList = __webpack_require__(181);
+	var projectsList = __webpack_require__(180);
 
 	var ProjectDetails = function (_React$Component) {
 	  _inherits(ProjectDetails, _React$Component);
@@ -21959,7 +21868,7 @@
 	exports.default = ProjectDetails;
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -22252,7 +22161,7 @@
 	// other projects: udemy course on node, udacity data science, udacity d3, three.js, partner projects (cocktail bucketlist, house plants, top words), general algorithms with discussion about runtime
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22276,7 +22185,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectImages = __webpack_require__(183);
+	var projectImages = __webpack_require__(182);
 
 	var ProjectImage = function (_React$Component) {
 	  _inherits(ProjectImage, _React$Component);
@@ -22322,7 +22231,7 @@
 	// this.handleClick( projectsList[prjct].projectID )
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -22476,7 +22385,7 @@
 
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22500,7 +22409,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectImages = __webpack_require__(183);
+	var projectImages = __webpack_require__(182);
 
 	var ProjectImageGallery = function (_React$Component) {
 	  _inherits(ProjectImageGallery, _React$Component);
@@ -22546,7 +22455,7 @@
 	exports.default = ProjectImageGallery;
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22570,7 +22479,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectImages = __webpack_require__(183);
+	var projectImages = __webpack_require__(182);
 
 	var ProjectImageCaption = function (_React$Component) {
 	  _inherits(ProjectImageCaption, _React$Component);
@@ -22617,13 +22526,58 @@
 	exports.default = ProjectImageCaption;
 
 /***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProjectSummary = function ProjectSummary(props) {
+	  return _react2.default.createElement(
+	    'li',
+	    { className: 'project' },
+	    _react2.default.createElement(
+	      'a',
+	      { href: '#projects' },
+	      _react2.default.createElement('img', { className: 'project-photo-thumbs', src: props.src, id: props.id, onClick: props.update }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'project-summary' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          props.title
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          props.summary
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = ProjectSummary;
+
+/***/ },
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.default = undefined;
 
@@ -22641,72 +22595,43 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var projectsList = __webpack_require__(181);
+	// import ProjectSummary from './ProjectSummary.js';
 
-	var ProjectSummary = function (_React$Component) {
-	    _inherits(ProjectSummary, _React$Component);
 
-	    function ProjectSummary(props) {
-	        _classCallCheck(this, ProjectSummary);
+	var ProjectGrid = function (_React$Component) {
+	  _inherits(ProjectGrid, _React$Component);
 
-	        var _this = _possibleConstructorReturn(this, (ProjectSummary.__proto__ || Object.getPrototypeOf(ProjectSummary)).call(this, props));
+	  function ProjectGrid(props) {
+	    _classCallCheck(this, ProjectGrid);
 
-	        _this.state = {
-	            id: props.id,
-	            src: props.src,
-	            title: props.title,
-	            summary: props.summary
-	        };
-	        // this binding is necessary to make `this` work in the callback
-	        _this.update = _this.update.bind(_this);
-	        return _this;
+	    return _possibleConstructorReturn(this, (ProjectGrid.__proto__ || Object.getPrototypeOf(ProjectGrid)).call(this, props));
+	  }
+
+	  _createClass(ProjectGrid, [{
+	    key: 'render',
+	    value: function render() {
+	      console.log(this.props.projectComponents);
+	      var projectComponents = this.props.projectComponents;
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'row wrap-content' },
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'row project-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'grid-content' },
+	            projectComponents
+	          )
+	        )
+	      );
 	    }
+	  }]);
 
-	    _createClass(ProjectSummary, [{
-	        key: 'update',
-	        value: function update(value) {
-	            console.log(value);
-	            var project = projectsList[value];
-	            console.log(project);
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            var id = this.state.id;
-	            return _react2.default.createElement(
-	                'a',
-	                { href: '#projects', key: id, onClick: function onClick() {
-	                        _this2.update({ id: id });
-	                    } },
-	                _react2.default.createElement(
-	                    'li',
-	                    { className: 'project' },
-	                    _react2.default.createElement('img', { className: 'project-photo-thumbs', src: this.state.src }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'project-summary' },
-	                        _react2.default.createElement(
-	                            'h3',
-	                            null,
-	                            this.state.title
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            this.state.summary
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return ProjectSummary;
+	  return ProjectGrid;
 	}(_react2.default.Component);
 
-	exports.default = ProjectSummary;
+	exports.default = ProjectGrid;
 
 /***/ },
 /* 187 */

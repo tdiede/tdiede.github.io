@@ -289,20 +289,6 @@ span.resume:hover {
 }
 
 
-#projects {
-    width: 100%;
-    overflow-x: hidden;
-}
-.header {
-    /*background-color: rgba(244,194,13,0.2);*/
-    border-bottom: #cccccc 1px dashed;
-}
-hr.orange-strip {
-    background-color: rgba(244,194,13,0.8);
-    border: 0 none;
-    color: rgba(244,194,13,0.8);
-    height: 3px;
-}
 
 /* graphics. */
 .profile-photo {
@@ -320,31 +306,49 @@ hr.orange-strip {
 }
 
 
+
+
+
+#projects {
+    width: 100%;
+    overflow-x: hidden;
+}
+.header {
+    /*background-color: rgba(244,194,13,0.2);*/
+    border-bottom: #cccccc 1px dashed;
+    margin: 0;
+}
+hr.orange-strip {
+    background-color: rgba(244,194,13,0.8);
+    border: 0 none;
+    color: rgba(244,194,13,0.8);
+    height: 3px;
+}
+
 /* shows a grid of projects */
 .wrap-content {
     /*background-color: purple;*/
     background-color: #eeeeee;
     border-bottom: #cccccc 1px dashed;
     margin: 0;
-    padding: 0;
-    overflow-x: auto;
+    padding: 10px;
     width: 100%;
 }
-.grid-content {
-    overflow-x: auto;
-}
 ul.project-container {
-    width: 1280px;
+    overflow-x: auto;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
     list-style: none;
 }
+.grid-content {
+    width: 1280px;
+    min-height: 1000px;
+}
 li.project {
     display: inline-block;
     float: left;
-    width: max-content;
-    max-width: 300px;
+    width: 300px;
     min-height: 450px;
     vertical-align: text-top;
     margin: 10px;
@@ -356,11 +360,16 @@ li.project {
 .project-summary {
     padding-left: 15px;
     padding-right: 15px;
+    cursor: text;
 }
 .project-photo-thumbs {
     width: 100%;
     max-width: 300px;
     height: auto;
+}
+.project-photo-thumbs:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 
@@ -371,7 +380,7 @@ li.project {
     overflow-x: hidden;
     height: 800px;
     overflow-y: auto;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
     text-align: left;
     background-color: white;
@@ -392,15 +401,33 @@ li.project {
 .wrap-project-container {
     height: inherit;
     margin: 0;
-    background-color: rgba(255,255,255,0.85);
+    /*background-color: rgba(255,255,255,0.85);*/
+    background-color: rgba(124,74,33,0.1);
+    overflow-y: auto;
+}
+.wrap-text {
+    padding: 0 15px;
+    height: 60%;
     overflow-y: auto;
 }
 .project-text {
-    padding: 0 15px;
+    overflow-y: hidden;
+}
+.slideshow-controls {
+    text-align: center;
+    font-size: 14pt;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: -2px 0 1px rgba(0,0,0,0.9);
+}
+.fa-play,.fa-pause,.fa-step-backward,.fa-step-forward {
+    color: #333333;
+    text-shadow: rgba(244,194,13,0.8) 1px 1px 1px;
 }
 .gallery-container {
     overflow-x: auto;
+    background-color: white;
     border-top: #333333 1px dotted;
+    border-bottom: white 3px solid;
 }
 .project-gallery {
     height: min-content;
@@ -418,6 +445,7 @@ li.project {
     cursor: pointer;
 }
 .wrap-footer {
+    max-height: 40%;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -428,8 +456,7 @@ li.project {
 .caption-container {
     padding-left: 10px;
     padding-right: 10px;
-    border-top: #333333 1px dotted;
-    background-color: rgba(240,240,240,0.5);
+    background-color: rgba(255,255,255,0.5);
 }
 .project-caption {
     color: #333333;

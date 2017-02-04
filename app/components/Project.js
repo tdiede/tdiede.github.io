@@ -7,8 +7,6 @@ import ProjectImageGallery from './ProjectImageGallery.js';
 import ProjectImageCaption from './ProjectImageCaption.js';
 
 
-const projectImages = require('../../data/project_images.json');
-
 
 class Project extends React.Component {
   constructor(props) {
@@ -22,14 +20,19 @@ class Project extends React.Component {
     this.nextImage = this.nextImage.bind(this);
     this.particularImage = this.particularImage.bind(this);
   }
+  update() {
+      let current = this.state.currentProject;
+      this.setState(prevState => ({
+          currentProject: current,
+          imagesList: projectImages[current]
+      }));
+  }
   componentWillMount() {
     console.log('Component will mount.');
-    console.log("Just clicked (project): " + this.props.current);
+    console.log("Just clicked (project): " + this.props.currentProject);
   }
   componentDidMount() {
     console.log('Component did mount.');
-    let current = this.state.current;
-    this.setState({ imagesList:projectImages[current] });
     this.shiftTimer = setInterval(
         () => this.nextImage(), 5000
     );
@@ -53,7 +56,7 @@ class Project extends React.Component {
   }
   render() {
     return (
-            <div className='project-details col-lg-12 col-md-12 col-sm-12 col-xs-12 row'>
+            <div className='row project-details'>
 
                 <div className='wrap-project-container col-lg-6 col-md-6 col-lg-push-6 col-md-push-6'>
                     { this.state.currentProject !== null &&

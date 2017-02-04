@@ -1,7 +1,5 @@
 [
-// module.exports = {
 
-// "0" :
 
 {
    "projectID": 0,
@@ -23,9 +21,6 @@
 },
 
 
-
-
-// "9" :
 {
    "projectID": 9,
    "projectName": "Battleship",
@@ -44,7 +39,6 @@
 },
 
 
-// "10" :
 {
    "projectID": 10,
    "projectName": "Color Wheel",
@@ -62,8 +56,6 @@
    "deployed": "https://battleshipnode.herokuapp.com"
 },
 
-
-// "11" :
 {
    "projectID": 11,
    "projectName": "Geocoder",
@@ -82,8 +74,6 @@
 },
 
 
-
-// "12" :
 {
    "projectID": 12,
    "projectName": "Eduists Timeline",
@@ -102,7 +92,7 @@
 },
 
 
-// "13" :
+
 {
    "projectID": 13,
    "projectName": "Project Include (Women in Tech)",
@@ -121,8 +111,6 @@
 },
 
 
-
-// "14" :
 {
    "projectID": 14,
    "projectName": "Game",
@@ -141,7 +129,6 @@
 },
 
 
-// "8" :
 {
    "projectID": 8,
    "projectName": "PackTheBox",
@@ -162,8 +149,6 @@
 
 
 
-
-// "1" :
 {
    "projectID": 1,
    "projectName": "ADU",
@@ -181,7 +166,7 @@
    "deployed": "https://adubentobox.herokuapp.com/"
 },
 
-// "2" :
+
 {
    "projectID": 2,
    "projectName": "RatingsLab",
@@ -201,7 +186,7 @@
    "deployed": "https://movieratingsmachinelearning.herokuapp.com"
 },
 
-// "3" :
+
 {
    "projectID": 3,
    "projectName": "ParametricRealizations",
@@ -221,7 +206,7 @@
    "deployed": ""
 },
 
-// "4" :
+
 {
    "projectID": 4,
    "projectName": "VelibThesis",
@@ -241,7 +226,7 @@
    "deployed": ""
 },
 
-// "5" :
+
 {
    "projectID": 5,
    "projectName": "RowanCarto",
@@ -261,7 +246,7 @@
    "deployed": "http://www.westpointhistoryofwarfare.com/more"
 },
 
-// "6" :
+
 {
    "projectID": 6,
    "projectName": "GobernaStudioLibrary",
@@ -281,7 +266,7 @@
    "deployed": ""
 },
 
-// "7" :
+
 {
    "projectID": 7,
    "projectName": "PudelmaPavilion",
@@ -300,8 +285,6 @@
    "github": "",
    "deployed": ""
 }
-// }
+
 
 ]
-
-// other projects: udemy course on node, udacity data science, udacity d3, three.js, partner projects (cocktail bucketlist, house plants, top words), general algorithms with discussion about runtime
