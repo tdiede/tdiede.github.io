@@ -142,29 +142,26 @@ function displayProjects(data) {
         $('img.project-photo-feature').attr('src',projectImagesList[index].url);
         $('p.project-caption').html(projectImagesList[index].caption);
     }
+    // initialize html containers for remaining images in gallery
+    // let isEmpty = $('div.project-gallery').children().length;
+    // $('img.gallery-photo#'+i).last().attr('src',projectImagesList[shift].url);
     // displays remaining project images in gallery
     function loadGallery(index) {
         $('div.project-gallery').empty();
-        // let isEmpty = $('div.project-gallery').children().length;
         for(let i=1; i<projectImagesList.length; i++) {
             $('div.project-gallery').append(galleryImage);
             let shift = Math.abs(i+index) % projectImagesList.length;
-            $('img.gallery-photo').last().attr('id',shift);
             $('img.gallery-photo').last().attr('src',projectImagesList[shift].url);
+            $('img.gallery-photo').last().attr('id',projectImagesList[shift].imageID);
         }
     }
 
-
-    // // if want to cycle through images automatically at loading, delay of 1000
-    // function startAutoplay(projectImagesList) {
-    //     setTimeout(() => cycleImages(projectImagesList,currentIndex), 1000);
-    // }
-
-
-
-    function slideshowControls() {
-        $('i.fa-play').toggle();
-        $('i.fa-pause').toggle();
+    // make images in gallery clickable to go to that image as feature
+    $('div.project-gallery').delegate('img','click',featureImage);
+    function featureImage(e) {
+        currentIndex = projectImagesList[this.id].imageID;
+        projectImage(currentIndex);
+        loadGallery(currentIndex);
     }
 
     const prevImage = () => {
@@ -175,7 +172,6 @@ function displayProjects(data) {
         loadGallery(index);
         currentIndex = index;
     }
-
     const nextImage = () => {
         let continuous = projectImagesList.length;
         let index = Math.abs(currentIndex+1) % continuous;
@@ -184,10 +180,29 @@ function displayProjects(data) {
         loadGallery(index);
         currentIndex = index;
     }
-
     $('i.fa-step-backward').on('click',prevImage).on('click',stopAutoplay);
     $('i.fa-step-forward').on('click',nextImage).on('click',stopAutoplay);
 
+    $('i.fa-play').on('click',slideshowControls)
+        .on('click',cycleImages)
+        .on('click',function() {
+            console.log(projectImagesList);
+            console.log(currentIndex);
+        });
+    $('i.fa-pause').on('click',slideshowControls)
+        .on('click',stopAutoplay)
+        .on('click',function() {
+            console.log(interval);
+        });
+    // toggle play and pause buttons
+    function slideshowControls() {
+        $('i.fa-play').toggle();
+        $('i.fa-pause').toggle();
+    }
+    // // if want to cycle through images automatically at loading, delay of 1000
+    // function startAutoplay(projectImagesList) {
+    //     setTimeout(() => cycleImages(projectImagesList,currentIndex), 1000);
+    // }
     // cycle through images
     function cycleImages() {
         nextImage(currentIndex);
@@ -200,38 +215,11 @@ function displayProjects(data) {
         }, 3000);
         console.log(interval);
     }
-
-    $('i.fa-play').on('click',slideshowControls)
-        .on('click',cycleImages)
-        .on('click',function() {
-            console.log(projectImagesList);
-            console.log(currentIndex);
-        });
-
-    $('i.fa-pause').on('click',slideshowControls)
-        .on('click',stopAutoplay)
-        .on('click',function() {
-            console.log(interval);
-        });
-
-    // make images in gallery clickable to go to that image as feature
-    // $('div.project-gallery').delegate('img', 'click', featureImage);
-
-    function featureImage(e) {
-        console.log(this.id);
-        currentIndex = this.id;
-        projectImage(currentIndex);
-        loadGallery(currentIndex);
-        console.log(currentIndex);
-    }
-
-
     function stopAutoplay() {
         clearInterval(interval);
         $('i.fa-pause').hide();
         $('i.fa-play').show();
     }
-
     // // when no project is to be displayed in project-details container
     // function resetProject() {
     //     stopAutoplay();
@@ -249,7 +237,4 @@ function displayProjects(data) {
         $('h3.card-prjct-title').last().html(project.title);
         $('p.card-prjct-summary').last().html(project.summary);
     }
-
 }
-
-
