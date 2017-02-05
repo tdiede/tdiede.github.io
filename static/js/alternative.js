@@ -46,7 +46,7 @@ Promise.all(promises)
 
 const cardHTML =
     `<li class='project'>
-      <a href='#projects'>
+      <a href='#project-details'>
         <img class='project-photo-thumbs' src='' />
         <div class='project-summary'>
           <h3 class='card-prjct-title'></h3>
@@ -77,7 +77,7 @@ const galleryImage =
     `<img class='gallery-photo' src='' />`
 
 
-$('div.row.project-details').hide();
+$('div.row#project-details').hide();
 
 function displayProjects(data) {
     console.log('Called to display each piece of data for ' + data.length + ' projects.');
@@ -95,24 +95,22 @@ function displayProjects(data) {
     let interval = 0;
 
     // make cards clickable
-    $('ul').delegate('li','click',expandProject);
+    $('ul.project-container').delegate('li','click',expandProject).delegate('li','click',hideNavbarTemporarily);
     // handle click events to show project in detail
     function expandProject(e) {
         if(interval)
             clearInterval(interval);
         setCurrentProject(this.id);
-        initializeProject(this.id)
+        initializeProject(this.id);
         // show complete html
         $('i.fa-pause').hide();
         $('i.fa-play').show();
-        $('div.row.project-details').show();
+        $('div.row#project-details').show();
     }
-
     function setCurrentProject(id) {
         currentProject = id;
         console.log(currentProject);
     }
-
     function initializeProject(id) {
         projectText(id);
         projectImagesList = imagesObj[id];
@@ -223,7 +221,7 @@ function displayProjects(data) {
     // // when no project is to be displayed in project-details container
     // function resetProject() {
     //     stopAutoplay();
-    //     $('div.row.project-details').hide();
+    //     $('div.row#project-details').hide();
     // }
 
     // instantiate grid
@@ -238,3 +236,16 @@ function displayProjects(data) {
         $('p.card-prjct-summary').last().html(project.summary);
     }
 }
+
+function hideNavbarTemporarily() {
+    $('nav').fadeOut(100);
+}
+
+$(document).ready(() => { 
+    $(window).scroll(() => {
+        console.log('scrolling');
+        if(!($('nav').is(':visible')))
+            $('nav').slideDown(1000);
+    }); 
+});
+

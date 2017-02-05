@@ -373,18 +373,32 @@ li.project {
 }
 
 
+/* CSS that should be displayed depending on width breakpoint for bootstrap medium */
+@media (max-width: 992px) {
+    .wrap-project-container {
+        border-bottom: black 3px solid;
+    }
+}
+@media (min-width: 993px) {
+    .wrap-project-container {
+        border-left: black 3px solid;
+    }
+}
+
 
 /* when a project is clicked */
-.project-details {
+#project-details {
     width: 100%;
     overflow-x: hidden;
     height: 800px;
     overflow-y: auto;
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
     text-align: left;
     background-color: white;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    border-top: black 3px solid;
+    border-bottom: black 3px solid;
+    /*box-shadow: 0 5px 2px rgba(0,0,0,0.3);*/
 }
 /* here is where image is made to float to left */
 .wrap-image-container {
@@ -426,8 +440,7 @@ li.project {
 .gallery-container {
     overflow-x: auto;
     background-color: white;
-    border-top: #333333 1px dotted;
-    border-bottom: white 3px solid;
+    /*border-top: #333333 1px dotted;*/
 }
 .project-gallery {
     height: min-content;

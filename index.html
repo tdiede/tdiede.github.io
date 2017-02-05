@@ -196,7 +196,17 @@
 </div>
 
 
-<div class='row project-details'>
+<div class='row wrap-content'>
+
+    <ul class='row project-container'>
+      <div class='grid-content'>
+      </div>
+    </ul>
+
+</div>
+
+
+<div class='row' id='project-details'>
 
     <div class='wrap-project-container col-lg-6 col-md-6 col-md-push-6'>
         <div class='wrap-text'>
@@ -229,14 +239,7 @@
 </div>
 
 
-<div class='row wrap-content'>
 
-    <ul class='row project-container'>
-      <div class='grid-content'>
-      </div>
-    </ul>
-
-</div>
 
 
 
@@ -255,7 +258,7 @@
   <div class='row'>
       <div class='col-md-offset-3 col-md-6'>
 
-        <p class='description-center'>On a scale of 1 to 10 here I rate my relative experience and familiarity with a wide range of skills, from 2D to 3D design software and data analysis tools to programming languages:</p>
+        <p class='description-center'>On a scale of 1 to 10 here I rate my relative experience/familiarity with a wide range of skills, from 2D to 3D design software and data analysis tools to programming languages:</p>
 
       </div>
   </div>
@@ -298,7 +301,7 @@
         crossorigin="anonymous"></script>
 
 <script src='/static/js/site.js'></script>
-<script src='/static/js/globe.js'></script>
+<!-- <script src='/static/js/globe.js'></script> -->
 
 <script type='text/javascript'>
 "use strict";
@@ -330,7 +333,7 @@ const height = 600 - margin.top - margin.bottom;
 const x = d3.scaleLinear().range([0,width]);
 const y = d3.scaleBand().range([0,height]).padding(0.5);
 
-svg = d3.select("#skills-barchart").append("svg")
+let svg = d3.select("#skills-barchart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

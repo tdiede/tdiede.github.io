@@ -126,6 +126,7 @@ $('img.project-photo-sidebar').on('click', function(e) {
 
 
 $('a[href^="#"]').on('click', function(e) {
+    hideNavbarTemporarily();
     var target = $(this.getAttribute('href'));
     if ( target.length ) {
         event.preventDefault();
