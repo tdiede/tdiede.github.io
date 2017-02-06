@@ -589,8 +589,8 @@ path {
     /*fill: #888888;*/
     font-family: 'Raleway', sans-serif;
     font-weight: extra-light;
-    font-size: 10pt;
-    color: #b8b8b8;
+    font-size: 9pt;
+    fill: #585858;
 }
 .axis path, .axis line {
     fill: none;
