@@ -101,10 +101,7 @@ div#project-info > div > p {
     display: inline;
 }
 
-p#intro-speech {
-    font-style: italic;
-    font-size: 11pt;
-}
+
 
 p#quotes {
     height: 100px;
@@ -145,12 +142,13 @@ section {
     position: relative;
     min-height: 800px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .container-home {
-    padding: 200px 0 0 0;
-    background-image: url("/static/img/drawing.png");
     margin-top: 50px;
+    width: 100%;
+    background-image: url("/static/img/drawing.png");
     background-repeat: repeat, repeat;
     background-position: 0 bottom, 1000 bottom;
 }
@@ -170,13 +168,27 @@ section {
 }
 
 .buffer {
-    background: rgba(255,255,255, 0.8);
-    margin: auto;
-    padding-top: 25px;
-    width: 20%;
+    /*background: rgba(255,255,255, 0.8);*/
+    margin: 0 auto;
+    padding-top: 175px;
+    padding-bottom: 275px;
+    width: 200px;
 }
 
+.social-media {
+    text-align: center;
+    min-width: 200px;
+}
 
+p#intro-speech {
+    text-align: center;
+    min-width: 200px;
+    display: inline-block;
+    margin: 10px;
+    font-style: italic;
+    font-size: 11pt;
+    text-shadow: #dddddd 1px 1px 1px;
+}
 
 /* specific link text. */
 section a:hover {
@@ -218,28 +230,41 @@ section a:hover {
 
 
 /* navbar. */
-.navbar {
-    background-color: rgba(255,255,255,0.4);
-    /*background-color: transparent;*/
-    /*opacity: 0.8;*/
-    border: 0;
-    max-height: 30px;
+@media (max-width: 768px) {
+    body {
+        background-color: #ededed;
+    }
+    .navbar {
+        border-bottom: white 3px solid;
+        background-color: rgba(255,255,255,0.3);
+    }
+    .navbar-links span {
+        /*color: white;*/
+        /*text-shadow: #b8b8b8 1px 1px 3px;*/
+    }
 }
-
-.navbar-left {
-    position: fixed;
+@media (min-width: 769px) {
+    .navbar {
+        max-height: 30px;
+        /*border: 0;*/
+        border-bottom: #333333 3px solid;
+        background-color: rgba(255,255,255,0.5);
+        /*background-color: transparent;*/
+        /*opacity: 0.8;*/
+    }
+    .navbar-links span {
+        /*color: #333333;*/
+    }
 }
 
 .navbar-links span {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14pt;
-    /*color: #ffdd42;*/
-    color: black;
+    color: #333333;
 }
-
 .navbar-links span:hover {
-    color: black;
+    color: #ffdd42;
     text-decoration: none;
     cursor: pointer;
 }
@@ -373,6 +398,8 @@ li.project {
 }
 
 
+
+
 /* CSS that should be displayed depending on width breakpoint for bootstrap medium */
 @media (max-width: 992px) {
     .wrap-project-container {
@@ -484,6 +511,7 @@ li.project {
 
 
 .project-photo-feature {
+    cursor: default;
 }
 
 .project-photo-sidebar {

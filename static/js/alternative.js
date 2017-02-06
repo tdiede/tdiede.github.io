@@ -100,6 +100,7 @@ function displayProjects(data) {
     function expandProject(e) {
         if(interval)
             clearInterval(interval);
+        $('img.project-photo-feature').attr('src','');
         setCurrentProject(this.id);
         initializeProject(this.id);
         // show complete html

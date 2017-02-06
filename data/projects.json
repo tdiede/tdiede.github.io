@@ -5,6 +5,7 @@
 
 {
    "projectID": 0,
+   "type": "software engineering",
    "projectName": "HackscrapersSF",
    "thumbURL": "/static/img/thumbs/hackscrapers_thumb.png",
    "title": "Hackscrapers SF",
@@ -28,6 +29,7 @@
 // "9" :
 {
    "projectID": 9,
+   "type": "software engineering",
    "projectName": "Battleship",
    "thumbURL": "/static/img/thumbs/battleship_thumb.png",
    "title": "Battleship Game",
@@ -47,6 +49,7 @@
 // "10" :
 {
    "projectID": 10,
+   "type": "software engineering",
    "projectName": "Color Wheel",
    "thumbURL": "/static/img/thumbs/colorwheel_thumb.png",
    "title": "Color Wheel",
@@ -66,6 +69,7 @@
 // "11" :
 {
    "projectID": 11,
+   "type": "software engineering",
    "projectName": "Geocoder",
    "thumbURL": "/static/img/thumbs/geocoder_thumb.png",
    "title": "Geocoder",
@@ -86,6 +90,7 @@
 // "12" :
 {
    "projectID": 12,
+   "type": "software engineering",
    "projectName": "Eduists Timeline",
    "thumbURL": "/static/img/thumbs/timeline_thumb.png",
    "title": "Battleship Game",
@@ -105,6 +110,7 @@
 // "13" :
 {
    "projectID": 13,
+   "type": "software engineering",
    "projectName": "Project Include (Women in Tech)",
    "thumbURL": "/static/img/thumbs/women_thumb.png",
    "title": "Data Visualization",
@@ -125,6 +131,7 @@
 // "14" :
 {
    "projectID": 14,
+   "type": "software engineering",
    "projectName": "Game",
    "thumbURL": "/static/img/thumbs/boomboom_thumb.png",
    "title": "A multi-player game.",
@@ -144,6 +151,7 @@
 // "8" :
 {
    "projectID": 8,
+   "type": "software engineering",
    "projectName": "PackTheBox",
    "thumbURL": "/static/img/thumbs/packthebox_thumb.gif",
    "title": "Pack the Box",
@@ -166,6 +174,7 @@
 // "1" :
 {
    "projectID": 1,
+   "type": "software engineering",
    "projectName": "ADU",
    "thumbURL": "/static/img/thumbs/bentobox_thumb.png",
    "title": "ADU Toolkit",
@@ -184,6 +193,7 @@
 // "2" :
 {
    "projectID": 2,
+   "type": "software engineering",
    "projectName": "RatingsLab",
    "thumbURL": "/static/img/thumbs/movieratings_thumb.png",
    "title": "Movie Ratings Lab",
@@ -204,6 +214,7 @@
 // "3" :
 {
    "projectID": 3,
+   "type": "architecture",
    "projectName": "ParametricRealizations",
    "thumbURL": "/static/img/thumbs/parametric_thumb.png",
    "title": "Parametric Realizations",
@@ -224,6 +235,7 @@
 // "4" :
 {
    "projectID": 4,
+   "type": "urban planning",
    "projectName": "VelibThesis",
    "thumbURL": "/static/img/thumbs/velib_thumb.png",
    "title": "Modal Shift to Vélib’ Bike Share: A Cognitive Mapping Approach",
@@ -244,6 +256,7 @@
 // "5" :
 {
    "projectID": 5,
+   "type": "cartography",
    "projectName": "RowanCarto",
    "thumbURL": "/static/img/thumbs/map_thumb.png",
    "title": "West Point History of Warfare: Cartography",
@@ -264,6 +277,7 @@
 // "6" :
 {
    "projectID": 6,
+   "type": "architecture",
    "projectName": "GobernaStudioLibrary",
    "thumbURL": "/static/img/thumbs/cubes_thumb.png",
    "title": "Revolving Architecture: Rotating Cubes",
@@ -278,12 +292,13 @@
    "apis": "",
    "links": "",
    "github": "",
-   "deployed": ""
-},
+   "deployed":""
+}
 
 // "7" :
 {
    "projectID": 7,
+   "type": "architecture",
    "projectName": "PudelmaPavilion",
    "thumbURL": "/static/img/thumbs/pavilion_thumb.png",
    "title": "Pudelma Pavilion",
