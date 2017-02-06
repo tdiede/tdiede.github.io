@@ -4,15 +4,23 @@
    "images" : [
       {
          "imageID": 0,
-         "url": "/static/img/features/hackscrapers_0_map_500.png",
-         "caption": "The app interface allows users to toggle back and forth between map and table views."
-      },{
-         "imageID": 1,
-         "url": "/static/img/features/hackscrapers_1_dashboard_500.png",
+         "url": "/static/img/features/hackscrapers_0_dashboard_500.png",
          "caption": "Users can collect and customize trading cards of their favorite buildings. Users can view other users' cards and discuss the city skyline in a comments section. A future use case of this feature is a platform by which city planners can engage residents about proposed construction projects."
       },{
+         "imageID": 1,
+         "url": "/static/img/features/hackscrapers_1_loginflickr_500.png",
+         "caption": "Login with Flickr (OAuth2) in order to save favorite photos and upload your own."
+      },{
          "imageID": 2,
-         "url": "/static/img/features/hackscrapers_2_curatorial_500.png",
+         "url": "/static/img/features/hackscrapers_2_dualview_500.png",
+         "caption": "The app interface allows users to toggle back and forth between map and table views."
+      },{
+         "imageID": 3,
+         "url": "/static/img/features/hackscrapers_3_userscontribute_500.png",
+         "caption": "For buildings that cannot be found among Flickr's existing photos, the app suggests users go out and snap the photo themselves!"
+      },{
+         "imageID": 4,
+         "url": "/static/img/features/hackscrapers_4_curatorial_500.png",
          "caption": "An offshoot of this project is a curatorial tool where users help build the photo database of city buildings. Here users identify buildings in photos and remove those that do not belong, a process which crowdsources the accuracy of photo tags."
       }
    ]
@@ -145,8 +153,18 @@
    "images" : [
       {
          "imageID": 0,
-         "url": "/static/img/features/bentobox_0_roof_500.png",
-         "caption": "The app interface allows users to toggle back and forth between map and table views."
+         "url": "/static/img/features/packthebox_defaults-2frames_500.gif",
+         "caption": "In this sequence the default container, shape, and shape size selections play out."
+      },
+      {
+         "imageID": 1,
+         "url": "/static/img/features/packthebox_user-input_500.gif",
+         "caption": "The Python command-line interface collects user input to begin packing. Default 400px by 400px container is shown drawn by Turtle graphics package."
+      },
+      {
+         "imageID": 2,
+         "url": "/static/img/features/packthebox_large-container-circles-results_500.gif",
+         "caption": "A larger container (max 1000px by 700px) of 25px-radius circles resulted in a 51.06% packing efficiency. A total of 182 circles were packed. At most, 20 circles were packed consecutively before a random placement generated an overlap. There were 365,189 total instances where a circle could not be drawn because of overlap. Once a consecutive 100,000 instances of overlap occurred, the script stopped attempting to pack."
       }
    ]
 }

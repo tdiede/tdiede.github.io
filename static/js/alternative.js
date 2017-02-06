@@ -43,6 +43,7 @@ Promise.all(promises)
   });
 
 
+const careerCats = {'software engineering':'💾','architecture':'🏗','cartography':'🗺','urban planning':'🚲'};
 
 const cardHTML =
     `<li class='project'>
@@ -59,19 +60,21 @@ const projectHTML =
     `<h2 class='prjct-title'></h2>
     <h4 class='prjct-date'></h4>
     <br />
-    <br />
-    <p class='prjct-description'></p>
-    <p class='prjct-problem'></p>
-    <p class='prjct-solution'></p>
-    <p class='prjct-future'></p>
-    <br />
+    <hr class='text-break' />
+        <p class='prjct-problem'></p>
+        <p class='prjct-solution'></p>
+        <p class='prjct-description'></p>
+        <p class='prjct-future'></p>
+    <hr class='text-break' />
+        <p class='prjct-techstack'></p>
+        <p class='prjct-apis'></p>
+        <p class='prjct-data'></p>
+    <hr class='text-break' />
     <h4 class='prjct-partners'></h4>
-    <h4 class='prjct-techstack'></h4>
     <br />
     <br />
-    <a class='prjct-github' href=''></a>
-    <br />
-    <a class='prjct-deployed' href=''></a>`
+    <p class='prjct-github'></p>
+    <p class='prjct-deployed'></p>`
 
 const galleryImage =
     `<img class='gallery-photo' src='' />`
@@ -127,14 +130,18 @@ function displayProjects(data) {
         let project = projectsObj[id];
         $('h2.prjct-title').html(project.title);
         $('h4.prjct-date').html(project.date);
-        $('p.prjct-description').html(project.description);
         $('p.prjct-problem').html(project.problem);
         $('p.prjct-solution').html(project.solution);
+        $('p.prjct-description').html(project.description);
         $('p.prjct-future').html(project.future);
         $('h4.prjct-partners').html(project.partners);
-        $('h4.prjct-techstack').html(project.techstack);
-        $('a.prjct-github').html(project.github);
-        $('a.prjct-deployed').html(project.deployed);
+        $('p.prjct-techstack').html(project.techstack);
+        $('p.prjct-apis').html(project.apis);
+        $('p.prjct-data').html(project.data);
+        if(project.github)
+            $('p.prjct-github').html(`Github repo: <a target=_blank href=`+project.github+`>`+project.github+`</a>`);
+        if(project.deployed)
+            $('p.prjct-deployed').html(`Deployed web app: <a target=_blank href=`+project.deployed+`>`+project.deployed+`</a>`);
     }
     // displays project image as feature
     function projectImage(index) {
@@ -156,7 +163,7 @@ function displayProjects(data) {
     }
 
     // make images in gallery clickable to go to that image as feature
-    $('div.project-gallery').delegate('img','click',featureImage);
+    $('div.project-gallery').delegate('img','click',featureImage).delegate('img','click',hideNavbarTemporarily);
     function featureImage(e) {
         currentIndex = projectImagesList[this.id].imageID;
         projectImage(currentIndex);
@@ -235,6 +242,8 @@ function displayProjects(data) {
         $('img.project-photo-thumbs').last().attr('src',project.thumbURL);
         $('h3.card-prjct-title').last().html(project.title);
         $('p.card-prjct-summary').last().html(project.summary);
+        // let career = careerCats[project.type];
+        // $('li.project').last().append(`<div class='emoji'>`+career+' '+`</div>`);
     }
 }
 

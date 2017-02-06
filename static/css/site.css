@@ -97,6 +97,14 @@ p {
     color: #333333;
 }
 
+
+hr.text-break {
+    background-color: #dddddd;
+    border: 0 none;
+    color: #d8d8d8;
+    height: 1px;
+}
+
 div#project-info > div > p {
     display: inline;
 }
@@ -125,7 +133,14 @@ span.bold {
 }
 span.emoji {
     font-size: 24pt;
+    font-style: normal;
 }
+
+div.emoji {
+    float: left;
+}
+
+
 
 
 /* block elements. */
@@ -156,8 +171,6 @@ section {
 .container-aboutme {
     padding: 100px 50px 50px 50px;
 }
-
-
 
 .container-skills {
     padding: 50px 50px 0 50px;
@@ -337,6 +350,7 @@ span.resume:hover {
 #projects {
     width: 100%;
     overflow-x: hidden;
+    padding-top: 20px;
 }
 .header {
     /*background-color: rgba(244,194,13,0.2);*/
