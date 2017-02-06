@@ -583,10 +583,14 @@ path {
     cursor: pointer;
 }
 .axis text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-weight: 400;*/
+    /*font-size: 10pt;*/
+    /*fill: #888888;*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: extra-light;
     font-size: 10pt;
-    fill: #888888;
+    color: #333333;
 }
 .axis path, .axis line {
     fill: none;
