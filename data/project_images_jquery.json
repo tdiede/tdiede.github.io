@@ -92,8 +92,8 @@
          "caption": "A still from an animated in-depth feature asset: the Battle of Little Bighorn. I built a 3D model of the terrain from a digital elevation model and crafted a custom rendering material out of aerial imagery to bring out the unique colors and textures of the landscape."
       },{
          "imageID": 3,
-         "url": "/static/img/features/map_2_little_bighorn_500.png",
-         "caption": "This choropleth map..."
+         "url": "/static/img/features/map_3_incheon_tides_500.png",
+         "caption": "Another photo-realistic perspective map built with a 3D model and image overlay showing tides in Incheon, South Korea."
       }
    ]
 }

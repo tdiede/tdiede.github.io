@@ -100,6 +100,27 @@
    "github": "",
    "deployed": "",
    "links": "http://www.sinamesdaghi.com"
+},
+
+{
+   "projectID": 5,
+   "type": "cartography",
+   "projectName": "RowanCarto",
+   "thumbURL": "/static/img/thumbs/map_thumb.png",
+   "title": "West Point History of Warfare: Cartography",
+   "summary": "Professional cartography produced for a digital interactive textbook about military history.",
+   "date": "2013–2014",
+   "problem": "",
+   "solution": "",
+   "description": "The award-winning <i>West Point History of Warfare</i> offers an innovative interactive learning experience on the topic of military history. As lead cartographer I developed a process to generate 500+ maps in less than 9 months for a product used concurrently by West Point cadets. From Plato to NATO the maps and other graphic content, including data visualizations and 3D terrain fly-throughs, bring battles to life and situate conflicts in their larger political context.",
+   "future": "",
+   "partners": "ROWAN TECH professional experience",
+   "techstack": "ArcMap, Illustrator, Photoshop, After Effects, iBooks Author, Rhinoceros, 3dsMax, GDAL, JavaScript",
+   "apis": "",
+   "data": "A multitude of open data, and specialized content developed by historians at West Point.",
+   "github": "",
+   "deployed": "",
+   "links": "http://www.westpointhistoryofwarfare.com/more"
 }
 
 
