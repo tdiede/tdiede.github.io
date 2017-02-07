@@ -69,7 +69,7 @@
    "title": "Color Wheel",
    "summary": "A tool to pick a color from a photo, and convert between HEX and RGB values (made as a birthday present for a friend).",
    "date": "2017",
-   "problem": "As a designer I frequently found myself wanting to identify colors from images. In this mini-app, you can use the eyedropper to pick a color from a photo, drawn on an HTML5 canvas. Based on the pixel where the eyedropper lands, both RGB and HEX values are displayed and can be adjusted by the user for comparison to the photo's color. JavaScript functions convert RGB to HEX, and vice versa.",
+   "problem": "As a designer I frequently find myself wanting to identify colors from images. In this mini-app, you can use the eyedropper to pick a color from a photo, drawn on an HTML5 canvas. Based on the pixel where the eyedropper lands, both RGB and HEX values are displayed and can be adjusted by the user for comparison to the photo's color. JavaScript functions convert RGB to HEX, and vice versa.",
    "solution": "",
    "description": "",
    "future": "Next step will be to enable users to upload their own photos. Also needs data validation so users are restricted to entering actual RGB and HEX values.",
