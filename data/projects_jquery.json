@@ -9,10 +9,10 @@
    "title": "Pack the Box",
    "summary": "A Python script that packs a container with a specified shape using randomized placement, then calculates the resulting space efficiency.",
    "date": "2016",
-   "problem": "You have a container. Given a series of items of the same size and shape, what space efficiency can be achieved by randomly selecting an x,y coordinate at which to place each item inside the container? • Is space efficiency greater or smaller when items are smaller? • What shapes fare better than others? • Does the size of the container matter?",
-   "solution": "Test your hypotheses, and see how space-efficient your selections can be.",
-   "description": "Please clone my github repository (link below) and follow the instructions posted in the README.",
-   "future-features": "",
+   "problem": "You have a container. Given a series of items of the same size and shape, what space efficiency can be achieved by randomly selecting an x,y coordinate at which to place each item inside the container?",
+   "solution": "• Is space efficiency greater or smaller when items are smaller? What shapes fare better than others?",
+   "description": "• Does the size of the container matter?",
+   "future-features": "Test your hypotheses, and see how space-efficient your selections can be. Please clone my github repository (link below) and follow the instructions posted in the README.",
    "partners": "SOLO PROJECT",
    "techstack": "Python3, Turtle",
    "apis": "",
@@ -72,15 +72,35 @@
    "problem": "As a designer I frequently found myself wanting to identify colors from images. In this mini-app, you can use the eyedropper to pick a color from a photo, drawn on an HTML5 canvas. Based on the pixel where the eyedropper lands, both RGB and HEX values are displayed and can be adjusted by the user for comparison to the photo's color. JavaScript functions convert RGB to HEX, and vice versa.",
    "solution": "",
    "description": "",
-   "future": "Next step will be to enable users to upload their own photos.",
+   "future": "Next step will be to enable users to upload their own photos. Also needs data validation so users are restricted to entering actual RGB and HEX values.",
    "partners": "SOLO PROJECT",
    "techstack": "JavaScript, jQuery, HTML5 canvas",
    "apis": "",
    "data": "",
    "github": "https://github.com/tdiede/sherry30thbdaycolorwheel",
    "deployed": "http://theresediede.com/sherry30thbdaycolorwheel"
-}
+},
 
+{
+   "projectID": 3,
+   "type": "architecture",
+   "projectName": "ParametricRealizations",
+   "thumbURL": "/static/img/thumbs/parametric_thumb.png",
+   "title": "Parametric Realizations",
+   "summary": "Scripted geometries in architecture, and a set of instructions employed by CNC machine to make a series of bas-relief plates.",
+   "date": "2008",
+   "problem": "In architecture (the design of physical buildings) the goal of parametric design is to allow the generation of options and iterations, based on known or desired constraints. The architect then serves to critique and evaluate the results through the lens of design expertise.",
+   "solution": "RhinoScript is a scripting tool based on Microsoft's VBScript language, written for the 3D modeling application Rhinoceros. My partner and I automated the visualization of a variety of geometric designs. A CNC (Computer Numeric Control) machine then took the digital instructions and drilled a series of wood bas-relief plates as prototypes.",
+   "description": "The script took a circle (the shape of our plates) and identified a random number of pull points along the circumference. These pull points defined arcs to cut across the plate, along with a z-depth dimension input parameter.",
+   "future": "In some cases the drill path overlaps itself, so the script could be further refined to prevent impossible geometry.",
+   "partners": "PARTNER: Sina Mesdaghi",
+   "techstack": "RhinoScript (based on Microsoft's VBScript), Rhinoceros, Mastercam CAD",
+   "apis": "",
+   "data": "",
+   "github": "",
+   "deployed": "",
+   "links": "http://www.sinamesdaghi.com"
+}
 
 
 

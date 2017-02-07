@@ -1,13 +1,27 @@
 [
 // module.exports = {
 
-// "0" :
+// archive, more to work on:
+{
+   "projectID": 12,
+   "type": "software engineering",
+   "projectName": "Timeline of U.S. Presidents",
+   "thumbURL": "/static/img/thumbs/timeline_thumb.png",
+   "title": "Timeline of U.S. Presidents",
+   "summary": "A visual graph of when each American president lived (if still alive, when born).",
+   "date": "2016",
+   "problem": "",
+   "solution": "",
+   "description": "",
+   "future-features": "",
+   "partners": "SOLO PROJECT",
+   "apis": "",
+   "techstack": "JavaScript, jQuery, HTML5 canvas",
+   "data": "http://www.presidentsusa.net",
+   "github": "",
+   "deployed": "http://theresediede.com/horizontalTimeline-3wb7Dj3S1lf30cHgKuVY8y9R8g2Tr515"
+}
 
-
-
-
-
-// "9" :
 {
    "projectID": 9,
    "type": "software engineering",
@@ -24,7 +38,14 @@
    "techstack": "JavaScript, Node.js",
    "github": "https://github.com/tdiede/battleshipnode",
    "deployed": "https://battleshipnode.herokuapp.com"
-},
+}
+
+
+
+
+// "0" :
+
+// "9" :
 
 
 // "10" :
@@ -37,23 +58,7 @@
 
 
 // "12" :
-{
-   "projectID": 12,
-   "type": "software engineering",
-   "projectName": "Eduists Timeline",
-   "thumbURL": "/static/img/thumbs/timeline_thumb.png",
-   "title": "Battleship Game",
-   "summary": "Timeline of events.",
-   "date": "2017",
-   "problem": "",
-   "solution": "",
-   "description": "",
-   "future-features": "",
-   "partners": "solo project",
-   "techstack": "JavaScript, Node.js",
-   "github": "https://github.com/tdiede/battleshipnode",
-   "deployed": "https://battleshipnode.herokuapp.com"
-},
+
 
 
 // "13" :
