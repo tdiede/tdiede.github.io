@@ -141,7 +141,7 @@ function displayProjects(data) {
         if(project.github)
             $('p.prjct-github').html(`Github repo: <a target=_blank href=`+project.github+`>`+project.github+`</a>`);
         if(project.deployed)
-            $('p.prjct-deployed').html(`Deployed web app: <a target=_blank href=`+project.deployed+`>`+project.deployed+`</a>`);
+            $('p.prjct-deployed').html(`Deployed web app: <a target=_blank href=`+project.deployed+`>`+'click here to try it out yourself'+`</a>`);
     }
     // displays project image as feature
     function projectImage(index) {

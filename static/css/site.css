@@ -258,6 +258,9 @@ section a:hover {
 
 /* navbar. */
 @media (max-width: 768px) {
+    .grid-content {
+        width: 640px;
+    }
     body {
         background-color: #ededed;
     }
@@ -271,6 +274,9 @@ section a:hover {
     }
 }
 @media (min-width: 769px) {
+    .grid-content {
+        width: 1280px;
+    }
     .navbar {
         max-height: 30px;
         /*border: 0;*/
@@ -395,8 +401,8 @@ ul.project-container {
     list-style: none;
 }
 .grid-content {
-    width: 1280px;
-    min-height: 1000px;
+    /*width: 1280px;*/
+    /*min-height: 1000px;*/
 }
 li.project {
     display: inline-block;
@@ -431,12 +437,12 @@ img.project-photo-thumbs {
 /* CSS that should be displayed depending on width breakpoint for bootstrap medium */
 @media (max-width: 992px) {
     .wrap-project-container {
-        border-bottom: black 3px solid;
+        border-bottom: white 3px solid;
     }
 }
 @media (min-width: 993px) {
     .wrap-project-container {
-        border-left: black 3px solid;
+        border-left: white 3px solid;
     }
 }
 

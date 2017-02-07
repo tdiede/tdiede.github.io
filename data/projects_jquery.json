@@ -29,18 +29,57 @@
    "title": "Hackscrapers SF",
    "summary": "A Python/Flask full-stack web app built over the course of 4 weeks during the intensive Hackbright software engineering fellowship.",
    "date": "2016",
-   "problem": "Hackscrapers SF encourages users to get to know the skyline of their city and explore the tall buildings around them. An API call to Flickr returns building photo urls, based on a query of photo tags, but the accuracy of existing Flickr tags, given the intent of the search, is not 100%. The quality of these tags is improved as users of the Hackscrapers app crowdsource their accuracy.",
+   "problem": "Hackscrapers SF encourages users to get to know the skyline of their city and explore the tall buildings around them. An API call to Flickr returns building photo urls, based on a query of photo tags, and the accuracy of existing Flickr tags, given the intent of the search, is not 100%. The quality of these tags is improved as users of the Hackscrapers app crowdsource their accuracy.",
    "solution": "The app authenticates with a Flickr account and makes API calls so that users can save their favorite photos of buildings and contribute their own photos to the photos database.",
    "description": "Users interact with a Mapbox GL web map that displays markers to represent tall buildings from a PostgreSQL database. An AJAX request returns a chart with more information and a Flickr photo selected at random from metadata stored in a MongoDB database. The photo results can be further queried to allow users to contribute their own search terms and filter per their interests. Users can then assemble collectible cards to display favorite buildings on their profile.",
    "future": "Future features: Establish a training dataset to tag a good or bad photo, using machine learning to know which photos are of an actual building and of decent quality.",
    "partners": "SOLO PROJECT",
    "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, MongoDB, PyMongo, Javascript, jQuery, AJAX, Jinja, Bootstrap, Chart.js, D3.js, turf.js",
-   "apis": "Mapbox, Google Places, Flickr",
+   "apis": "Mapbox, Google Places, Flickr APIs",
    "data": "Data come from the Skyscraper Center, a database of tall buildings maintained and updated by the Council on Tall Buildings and Urban Habitat.",
    "github": "https://github.com/tdiede/hackscrapers_SF",
    "deployed": "https://hackscrapers.herokuapp.com"
-}
+},
 
+{
+   "projectID": 11,
+   "type": "software engineering",
+   "projectName": "Geocoder",
+   "thumbURL": "/static/img/thumbs/geocoder_thumb.png",
+   "title": "Geocoder",
+   "summary": "Input a table of place names to map, and out comes a GEOJSON of latitudes and longitudes. For frequent mappers.",
+   "date": "2017",
+   "problem": "This is a simple geocoding tool I created to map geographic locations. Whenever I want to map point data, this is my go-to Python script.",
+   "solution": "Taking a list of locations (city, state, country) saved in a comma-delimited .CSV file, for each location a request is made to the Google Places API. Once all the features have been appended to a Python list, the script then formats the point geodata (latitude and longitude) as GEOJSON and writes to a file, ready to map.",
+   "description": "",
+   "future": "",
+   "partners": "SOLO PROJECT",
+   "techstack": "Python",
+   "apis": "Google Places API",
+   "data": "",
+   "github": "https://github.com/tdiede/google_places_geocoder",
+   "deployed": ""
+},
+
+{
+   "projectID": 10,
+   "type": "software engineering",
+   "projectName": "Color Wheel",
+   "thumbURL": "/static/img/thumbs/colorwheel_thumb.png",
+   "title": "Color Wheel",
+   "summary": "A tool to pick a color from a photo, and convert between HEX and RGB values (made as a birthday present for a friend).",
+   "date": "2017",
+   "problem": "As a designer I frequently found myself wanting to identify colors from images. In this mini-app, you can use the eyedropper to pick a color from a photo, drawn on an HTML5 canvas. Based on the pixel where the eyedropper lands, both RGB and HEX values are displayed and can be adjusted by the user for comparison to the photo's color. JavaScript functions convert RGB to HEX, and vice versa.",
+   "solution": "",
+   "description": "",
+   "future": "Next step will be to enable users to upload their own photos.",
+   "partners": "SOLO PROJECT",
+   "techstack": "JavaScript, jQuery, HTML5 canvas",
+   "apis": "",
+   "data": "",
+   "github": "https://github.com/tdiede/sherry30thbdaycolorwheel",
+   "deployed": "http://theresediede.com/sherry30thbdaycolorwheel"
+}
 
 
 

@@ -3,25 +3,6 @@
 
 // "0" :
 
-{
-   "projectID": 0,
-   "type": "software engineering",
-   "projectName": "HackscrapersSF",
-   "thumbURL": "/static/img/thumbs/hackscrapers_thumb.png",
-   "title": "Hackscrapers SF",
-   "summary": "A Python/Flask full-stack web app built during Hackbright fellowship.",
-   "date": "2016",
-   "problem-statement": "Hackscrapers SF encourages users to get to know the skyline of their city and explore the tall buildings around them. An API call to Flickr returns building photo urls, based on a query of photo tags, but the accuracy of existing Flickr tags, given the intent of the search, is not 100%. The quality of these tags is improved as users of the Hackscrapers app crowdsource their accuracy.",
-   "solution-statement": "The app authenticates with a Flickr account and makes API calls so that users can save their favorite photos of buildings and contribute their own photos to the photos database.",
-   "description": "Hackscrapers SF encourages San Francisco residents to get to know the skyline of their city and explore the tall buildings around them. Users can interact with a Mapbox GL web map that displays markers to represent tall buildings from a PostgreSQL database. An AJAX request returns a chart with more information and a Flickr photo selected at random from metadata stored in a MongoDB database. The photo results can be further queried to allow users to contribute their own search terms and filter per their interests. Users can then assemble collectible cards to display favorite buildings on their profile.",
-   "future": "Establishing a training dataset to tag a good or bad photo, using machine learning to know which photos are of an actual building and of decent quality.",
-   "partners": "solo project",
-   "data": "Data come from the Skyscraper Center, a database of tall buildings maintained and updated by the Council on Tall Buildings and Urban Habitat.",
-   "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, MongoDB, PyMongo, Javascript, jQuery, AJAX, Jinja, Bootstrap, Chart.js, D3.js, turf.js",
-   "apis": "Mapbox, Google Places, Flickr",
-   "github": "https://github.com/tdiede/hackscrapers_SF",
-   "deployed": "https://hackscrapers.herokuapp.com"
-},
 
 
 
@@ -47,43 +28,11 @@
 
 
 // "10" :
-{
-   "projectID": 10,
-   "type": "software engineering",
-   "projectName": "Color Wheel",
-   "thumbURL": "/static/img/thumbs/colorwheel_thumb.png",
-   "title": "Color Wheel",
-   "summary": "A tool to pick a color from a photo, and convert between HEX and RGB.",
-   "date": "2017",
-   "problem": "",
-   "solution": "",
-   "description": "",
-   "future": "",
-   "partners": "solo project",
-   "techstack": "JavaScript, Node.js",
-   "github": "https://github.com/tdiede/battleshipnode",
-   "deployed": "https://battleshipnode.herokuapp.com"
-},
+
 
 
 // "11" :
-{
-   "projectID": 11,
-   "type": "software engineering",
-   "projectName": "Geocoder",
-   "thumbURL": "/static/img/thumbs/geocoder_thumb.png",
-   "title": "Geocoder",
-   "summary": "Input a table of locations, and out comes a GEOJSON of latitudes and longitudes.",
-   "date": "2017",
-   "problem": "",
-   "solution": "",
-   "description": "",
-   "future": "",
-   "partners": "solo project",
-   "techstack": "JavaScript, Node.js",
-   "github": "https://github.com/tdiede/battleshipnode",
-   "deployed": "https://battleshipnode.herokuapp.com"
-},
+
 
 
 
@@ -149,23 +98,6 @@
 
 
 // "8" :
-{
-   "projectID": 8,
-   "type": "software engineering",
-   "projectName": "PackTheBox",
-   "thumbURL": "/static/img/thumbs/packthebox_thumb.gif",
-   "title": "Pack the Box",
-   "summary": "A Python script that packs the box with a specified shape using randomized placement, then calculates the resulting space efficiency.",
-   "date": "2016",
-   "problem-statement": "",
-   "solution-statement": "",
-   "description": "",
-   "future-features": "",
-   "partners": "solo project",
-   "techstack": "Python, Turtle",
-   "github": "https://github.com/tdiede/packthebox",
-   "deployed": "n/a"
-},
 
 
 
