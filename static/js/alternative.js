@@ -146,7 +146,7 @@ function displayProjects(data) {
     // displays project image as feature
     function projectImage(index) {
         $('img.project-photo-feature').attr('src',projectImagesList[index].url);
-        $('p.project-caption').html(projectImagesList[index].caption);
+        $('p.project-caption').html(projectImagesList[index].caption).prepend(`<span class='caption'>&#x25C4; </span>`);
     }
     // initialize html containers for remaining images in gallery
     // let isEmpty = $('div.project-gallery').children().length;

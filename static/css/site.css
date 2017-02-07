@@ -135,7 +135,21 @@ span.emoji {
     font-size: 24pt;
     font-style: normal;
 }
-
+@media (max-width: 992px) {
+    span.caption {
+        font-size: 14pt;
+        font-style: normal;
+        display: inline-block;
+        transform: rotate(-90deg);
+        margin-right: 10px;
+    }
+}
+@media (min-width: 993px) {
+    span.caption {
+        font-size: 14pt;
+        font-style: normal;
+    }
+}
 div.emoji {
     float: left;
 }
@@ -401,7 +415,7 @@ li.project {
     padding-right: 15px;
     cursor: text;
 }
-.project-photo-thumbs {
+img.project-photo-thumbs {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -445,12 +459,15 @@ li.project {
 .wrap-image-container {
     overflow-x: auto;
     overflow-y: auto;
-    height: 100%;
+    height: inherit;
     margin: 0;
     padding: 0;
 }
-.project-image {
-    cursor: pointer;
+.wrap-image {
+}
+img.project-photo-feature {
+    overflow-y: hidden;
+    cursor: default;
 }
 /* here is where text description is made to float to right */
 .wrap-project-container {
@@ -461,11 +478,13 @@ li.project {
     overflow-y: auto;
 }
 .wrap-text {
-    padding: 0 15px;
-    height: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-height: 450px;
     overflow-y: auto;
 }
 .project-text {
+    padding-bottom: 15px;
     overflow-y: hidden;
 }
 .slideshow-controls {
@@ -481,25 +500,24 @@ li.project {
 .gallery-container {
     overflow-x: auto;
     background-color: white;
-    /*border-top: #333333 1px dotted;*/
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
 }
 .project-gallery {
-    height: min-content;
-    max-height: 230px;
+    height: 250px;
     width: max-content;
     margin: 0;
     padding-left: 5px;
     padding-right: 5px;
 }
-.gallery-photo {
+img.gallery-photo {
     width: 100%;
     max-width: 200px;
-    height: auto;
-    padding: 10px 5px;
+    height: 220px;
+    margin: 10px 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
     cursor: pointer;
 }
 .wrap-footer {
-    max-height: 40%;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -508,25 +526,27 @@ li.project {
     padding: 0;
 }
 .caption-container {
+    max-height: 100px;
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgba(255,255,255,0.5);
+    /*background-color: rgba(255,255,255,0.5);*/
+    box-shadow: -2px 0 20px rgba(0,0,0,0.2);
 }
-.project-caption {
-    color: #333333;
+p.project-caption {
     height: max-content;
+    overflow-y: hidden;
     padding: 5px;
     margin: 0;
     font-style: italic;
     font-size: 10pt;
+    color: #333333;
 }
 
 
 
 
-.project-photo-feature {
-    cursor: default;
-}
+
 
 .project-photo-sidebar {
     width: 100%;
