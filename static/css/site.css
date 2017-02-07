@@ -532,7 +532,8 @@ img.gallery-photo {
     padding: 0;
 }
 .caption-container {
-    max-height: 100px;
+    max-height: 120px;
+    overflow-y: auto;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -541,7 +542,6 @@ img.gallery-photo {
 }
 p.project-caption {
     height: max-content;
-    overflow-y: hidden;
     padding: 5px;
     margin: 0;
     font-style: italic;

@@ -186,7 +186,7 @@
       {
          "imageID": 0,
          "url": "/static/img/features/colorwheel_0_500.png",
-         "caption": "The app interface allows users to toggle back and forth between map and table views."
+         "caption": "The eyedropper has selected the blue thumb, whose RGB value is (0,137,138)."
       }
    ]
 }
@@ -206,7 +206,7 @@
       {
          "imageID": 0,
          "url": "/static/img/features/bentobox_0_roof_500.png",
-         "caption": "The eyedropper has selected the blue thumb, whose RGB value is (0,137,138)."
+         "caption": ""
       }
    ]
 }
