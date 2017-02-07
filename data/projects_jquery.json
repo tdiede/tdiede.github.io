@@ -121,6 +121,27 @@
    "github": "",
    "deployed": "",
    "links": "http://www.westpointhistoryofwarfare.com/more"
+},
+
+{
+   "projectID": 7,
+   "type": "architecture",
+   "projectName": "PudelmaPavilion",
+   "thumbURL": "/static/img/thumbs/pavilion_thumb.png",
+   "title": "Pudelma Pavilion",
+   "summary": "A built pavilion where each component beam is uniquely cut according to the overall design and structural requirements.",
+   "date": "2011",
+   "problem": "Pudelma is a pavilion in Turku, Finland. Now a landmark, the pavilion's design combined inspiration from traditional Finnish wood-working techniques and innovation made possible by computer-aided manufacturing methods. The structure stands via a basic mortise and tenon joint, where each beam either receives of abuts to four other beams creating a highly stable weave pattern. A factory-scale CNC machine cut 490 distinct Kerto-Q wood beams, ranging in length from 2-6 feet. The use of CNC fabrication resulted in extremely high tolerance, allowing the entire structure to work in compression with no glue, and minimal screws.",
+   "solution": "I participated in a 4-week workshop with 20 students as a Finnish exchange: 2 weeks in New York to design the pavilion and 2 weeks in Finland to cut the wood and assemble the final structure, which still stands in the city of Turku today.",
+   "description": "",
+   "future": "",
+   "partners": "TEAM: a collaborative effort between students from University of Oulu and Columbia University",
+   "techstack": "Rhinoceros, Grasshopper, rubber mallets and hard hats",
+   "apis": "",
+   "data": "",
+   "github": "",
+   "deployed": "",
+   "links": "http://www.archdaily.com/265933/venice-biennale-2012-finnish-pavilion-presents-new-forms-in-wood/eero-lunden-markus-wikar-pudelma-in-turku-finland-04-photo-by-taavi-henttonen"
 }
 
 

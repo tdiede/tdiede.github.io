@@ -135,15 +135,15 @@
       {
          "imageID": 0,
          "url": "/static/img/features/pavilion_0_interior_500.png",
-         "caption": "interior"
+         "caption": "The pavilion offers a sunlit interior space both shaded and exposed under a waffle-grid canopy."
       },{
          "imageID": 1,
          "url": "/static/img/features/pavilion_1_joint_typology_500.png",
-         "caption": "mortise + tenon | mono-directional, mortise + tenon | bi-directional, shoulder | bi-directional, shoulder | base plate attachment"
+         "caption": "Diagram showing the following joint typologies in the pavilion structure: mortise + tenon | mono-directional, mortise + tenon | bi-directional, shoulder | bi-directional, shoulder | base plate attachment ."
       },{
          "imageID": 2,
          "url": "/static/img/features/pavilion_2_joint_directionality_500.png",
-         "caption": "a | 1, a | 2, b | 1, b | 2"
+         "caption": "Joint directionality: a | 1, a | 2, b | 1, b | 2 ."
       }
    ]
 }

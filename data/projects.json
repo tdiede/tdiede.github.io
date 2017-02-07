@@ -149,25 +149,7 @@
 },
 
 // "3" :
-{
-   "projectID": 3,
-   "type": "architecture",
-   "projectName": "ParametricRealizations",
-   "thumbURL": "/static/img/thumbs/parametric_thumb.png",
-   "title": "Parametric Realizations",
-   "summary": "Scripted geometries, and a set of instructions employed by CNC machine.",
-   "date": "2008",
-   "description": "RhinoScript is a scripting tool based on Microsoft's VBScript language. Written for the 3D modeling application Rhinoceros, my partner and I automated the generation of a variety of geometric designs. A CNC machine then took the digital instructions and drilled a series of wood plates as prototypes. Knowing some geometries would be realistically impossible, the script could be further refined.",
-   "partners": "<h4>partner: </h4><a href='http://www.sinamesdaghi.com' target='_blank'>Sina Mesdaghi</a>",
-   "technology": "",
-   "datasets": "",
-   "software": "Rhinoceros, Mastercam CAD",
-   "techstack": "RhinoScript (based on Microsoft's VBScript)",
-   "apis": "",
-   "links": "",
-   "github": "",
-   "deployed": ""
-},
+
 
 // "4" :
 {
@@ -191,25 +173,7 @@
 },
 
 // "5" :
-{
-   "projectID": 5,
-   "type": "cartography",
-   "projectName": "RowanCarto",
-   "thumbURL": "/static/img/thumbs/map_thumb.png",
-   "title": "West Point History of Warfare: Cartography",
-   "summary": "Professional cartography produced for a digital interactive textbook.",
-   "date": "2013–2014",
-   "description": "The award-winning <i>West Point History of Warfare</i> offers an innovative interactive learning experience on the topic of military history. As lead cartographer I developed a process to generate 500+ maps in less than 9 months for a product used concurrently by West Point cadets. From Plato to NATO the maps and other graphic content, including data visualizations and 3D terrain fly-throughs, bring battles to life and situate conflicts in their larger political context.",
-   "partners": "<h4>professional experience at ROWAN TECH</h4>",
-   "technology": "",
-   "datasets": "",
-   "software": "ArcMap, Illustrator, Photoshop, After Effects, iBooks Author, Rhinoceros, 3dsMax",
-   "techstack": "GDAL, JavaScript",
-   "apis": "",
-   "links": "",
-   "github": "",
-   "deployed": "http://www.westpointhistoryofwarfare.com/more"
-},
+
 
 // "6" :
 {
@@ -233,27 +197,188 @@
 }
 
 // "7" :
-{
-   "projectID": 7,
-   "type": "architecture",
-   "projectName": "PudelmaPavilion",
-   "thumbURL": "/static/img/thumbs/pavilion_thumb.png",
-   "title": "Pudelma Pavilion",
-   "summary": "A built pavilion where each component beam is uniquely cut according to the overall design and structural requirements.",
-   "date": "2011",
-   "description": "Pudelma is a pavilion in Turku, Finland. Now a landmark, the pavilion's design combined inspiration from traditional Finnish wood-working techniques and innovation made possible by computer-aided manufacturing methods. The structure stands via a basic mortise and tenon joint, where each beam either receives of abuts to four other beams creating a highly stable weave pattern. A factory-scale CNC machine cut 490 distinct Kerto-Q wood beams, ranging in length from 2-6 feet. The use of CNC fabrication resulted in extremely high tolerance, allowing the entire structure to work in compression with no glue, and minimal screws.",
-   "partners": "<h4>team: </h4><a href='http://www.archdaily.com/265933/venice-biennale-2012-finnish-pavilion-presents-new-forms-in-wood/eero-lunden-markus-wikar-pudelma-in-turku-finland-04-photo-by-taavi-henttonen' target='_blank'>a collaborative effort between students from University of Oulu and Columbia University</a>",
-   "technology": "",
-   "datasets": "",
-   "software": "Rhinoceros, Grasshopper",
-   "techstack": "",
-   "apis": "",
-   "links": "",
-   "github": "",
-   "deployed": ""
-}
+
 // }
 
 ]
 
 // other projects: udemy course on node, udacity data science, udacity d3, three.js, partner projects (cocktail bucketlist, house plants, top words), general algorithms with discussion about runtime
+
+
+
+
+
+
+
+
+
+
+{
+   "projectID": 9,
+   "type": "software engineering",
+   "projectName": "Battleship",
+   "thumbURL": "/static/img/thumbs/battleship_thumb.png",
+   "title": "Battleship Game",
+   "summary": "A two-player battleship game built in Node.js.",
+   "date": "2017",
+   "problem": "",
+   "solution": "",
+   "description": "",
+   "future": "",
+   "partners": "solo project",
+   "techstack": "JavaScript, Node.js",
+   "github": "https://github.com/tdiede/battleshipnode",
+   "deployed": "https://battleshipnode.herokuapp.com"
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+   "projectID": 13,
+   "type": "software engineering",
+   "projectName": "Project Include (Women in Tech)",
+   "thumbURL": "/static/img/thumbs/women_thumb.png",
+   "title": "Data Visualization",
+   "summary": "Visualizing the data on women in tech.",
+   "date": "2017",
+   "problem": "",
+   "solution": "",
+   "description": "",
+   "future-features": "",
+   "partners": "solo project",
+   "techstack": "JavaScript, Node.js",
+   "github": "https://github.com/tdiede/battleshipnode",
+   "deployed": "https://battleshipnode.herokuapp.com"
+},
+
+
+{
+   "projectID": 14,
+   "type": "software engineering",
+   "projectName": "Game",
+   "thumbURL": "/static/img/thumbs/boomboom_thumb.png",
+   "title": "A multi-player game.",
+   "summary": "Visualizing the data on women in tech.",
+   "date": "2017",
+   "problem-statement": "",
+   "solution-statement": "",
+   "description": "",
+   "future-features": "",
+   "partners": "solo project",
+   "techstack": "JavaScript, Node.js",
+   "github": "https://github.com/tdiede/battleshipnode",
+   "deployed": "https://battleshipnode.herokuapp.com"
+},
+
+
+
+
+
+{
+   "projectID": 1,
+   "type": "software engineering",
+   "projectName": "ADU",
+   "thumbURL": "/static/img/thumbs/bentobox_thumb.png",
+   "title": "ADU Toolkit",
+   "summary": "A tool to customize and preview your ADU (Accessory Dwelling Unit) with a variety of architectural features.",
+   "date": "2012",
+   "problem": "As everyone knows, the San Francisco Bay Area is in a housing crisis. According to San Francisco's Chief Economist, in order to stabilize median rents in the city, an estimated 100,000 units of housing would need to be constructed; this amount equals the number of units built since 1920.",
+   "solution": "Where lot size allows, the solution may be modular. Here we look to architecture for a minimum viable living condition. What sort of secondary structure can property owners consider to add capacity to their lots? This app guides users through various design and material options and their aesthetic implications.",
+   "description": "",
+   "future": "",
+   "partners": "a collaborative effort with WARE in which I was the solo developer<p>ADU design, 3D model of unit, and drawings by: <a href='https://christophergparschalk.wordpress.com' target='_blank'>Chris Parschalk</a></p>",
+   "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, Javascript, jQuery, AJAX, Jinja, Bootstrap",
+   "github": "https://github.com/tdiede/bentobox_adu",
+   "deployed": "https://adubentobox.herokuapp.com/"
+},
+
+
+{
+   "projectID": 2,
+   "type": "software engineering",
+   "projectName": "RatingsLab",
+   "thumbURL": "/static/img/thumbs/movieratings_thumb.png",
+   "title": "Movie Ratings Lab",
+   "summary": "Coming soon to a screen near you...",
+   "date": "2016",
+   "problem-statement": "There are so many movies available to watch, so which ones will I like and which ones should I not waste my time watching? Here is an app that provides movie recommendations based on user ratings, à la Netflix.",
+   "solution-statement": "Using Pearson correlation, the back end of the app correlates users with similar movie tastes as well as users with divergent movie tastes. Based on correlation and machine learning on the existing ratings, the app predicts a user's rating of a movie yet unrated.",
+   "description": "Movie ratings a la Netflix.",
+   "future-features": "",
+   "partners": "<h4>partner: </h4><a href='https://github.com/IlsalaciousCrum' target='_blank'>Ilsa Gordon</a>",
+   "data": "machine learning through Pearson correlation",
+   "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, JavaScript, jQuery, AJAX, Jinja, Bootstrap",
+   "apis": "OMDB, https://www.omdbapi.com/",
+   "github": "https://github.com/tdiede/hblab_0801-0804_ratings.git",
+   "deployed": "https://movieratingsmachinelearning.herokuapp.com"
+},
+
+
+
+
+
+
+
+
+
+
+{
+   "projectID": 4,
+   "type": "urban planning",
+   "projectName": "VelibThesis",
+   "thumbURL": "/static/img/thumbs/velib_thumb.png",
+   "title": "Modal Shift to Vélib’ Bike Share: A Cognitive Mapping Approach",
+   "summary": "A master's thesis using GIS analysis and mapping to study bike sharing in Paris.",
+   "date": "2009",
+   "description": "By probing the travel behavior and modal shifts of Vélib users, I investigated the interplay between both real and perceived effects of bike-sharing as a new transportation option in Paris. Informed by the cognitive mapping literature, the study methodology involved the gathering of route sketches from Vélib’ users’ and analyzing the resulting maps in relation to modal shifts to Vélib’, trip purpose, and trip distance estimation. In addition, I used GIS to test for spatial patterns according to levels of station use. The findings in this paper include the following: among a significant portion of Vélib’ users, the Vélib’ system serves as a substitute commuter mode from bus and metro use; longer Vélib’ trips tend to be underestimated; and a walkability measure of 200 meters to the nearest bike station appears to influence stations’ level of use. Ultimately, although the data are insufficient to be conclusive, my thesis proposes that initial system scale and density of bike stations contribute to the overall success of a bikesharing program, as measured by both ridership and modal shifts.",
+   "partners": "<h4>solo academic project: master's thesis</h4>",
+   "technology": "",
+   "datasets": "French census, Mathieu Arnold's Vélib data pull",
+   "software": "ArcMap, Spatial Statistics Toolbox, Stata, SPSS",
+   "techstack": "",
+   "apis": "",
+   "links": "",
+   "github": "",
+   "deployed": ""
+},
+
+
+
+
+
+
+{
+   "projectID": 6,
+   "type": "architecture",
+   "projectName": "GobernaStudioLibrary",
+   "thumbURL": "/static/img/thumbs/cubes_thumb.png",
+   "title": "Revolving Architecture: Rotating Cubes",
+   "summary": "An architectural design studio: a library inspired by a work of fiction.",
+   "date": "2011",
+   "description": "The program of this design studio taught by Cristina Goberna was a library, which we explored through a novel of our choosing: <i>The Name of the Rose</i> by Umberto Eco. From the role the library playes in the novel, I extrapolated the theme of desire: that through never reaching an endpoint, as in a labyrinth, one continues to experience desire. Once fulfilled desire dissipates. The architectural manifestation of desire is the continual rotation of cubes: the opening and closing of new and different pop-up spaces. No experience of the library is the same as another. Each visit to the library produces a new engagement with it. In order to model the architecture to perform this function, I created a Grasshopper script to model the constraints of the rotating cubes. Through pop-up spaces, each visit is a new experience.",
+   "partners": "<h4>solo design studio</h4>",
+   "technology": "",
+   "datasets": "Rhinoceros, Grasshopper, Illustrator",
+   "software": "",
+   "techstack": "",
+   "apis": "",
+   "links": "",
+   "github": "",
+   "deployed": ""
+},
+
+
+
