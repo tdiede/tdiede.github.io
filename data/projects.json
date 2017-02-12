@@ -143,7 +143,7 @@
    "partners": "<h4>partner: </h4><a href='https://github.com/IlsalaciousCrum' target='_blank'>Ilsa Gordon</a>",
    "data": "machine learning through Pearson correlation",
    "techstack": "Python, Flask, PostgreSQL, SQLAlchemy, JavaScript, jQuery, AJAX, Jinja, Bootstrap",
-   "apis": "OMDB, https://www.omdbapi.com/",
+   "apis": "OMDB, https://www.omdbapi.com/ and namey http://namey.muffinlabs.com/api.js",
    "github": "https://github.com/tdiede/hblab_0801-0804_ratings.git",
    "deployed": "https://movieratingsmachinelearning.herokuapp.com"
 },
@@ -203,7 +203,8 @@
 ]
 
 // other projects: udemy course on node, udacity data science, udacity d3, three.js, partner projects (cocktail bucketlist, house plants, top words), general algorithms with discussion about runtime
-
+// shopping cart
+// furniture
 
 
 

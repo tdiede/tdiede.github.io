@@ -540,7 +540,7 @@ img.gallery-photo {
     /*background-color: rgba(255,255,255,0.5);*/
     box-shadow: -2px 0 20px rgba(0,0,0,0.2);
 }
-p.project-caption {
+p.project-caption, p.profile-caption {
     height: max-content;
     padding: 5px;
     margin: 0;
