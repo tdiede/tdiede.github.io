@@ -93,8 +93,11 @@ h4 {
 p {
     font-family: 'Raleway', sans-serif;
     font-weight: extra-light;
+    font-size: 11pt;
+    color: #000000;
+}
+p.card-prjct-summary {
     font-size: 10pt;
-    color: #333333;
 }
 
 
