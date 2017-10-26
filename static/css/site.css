@@ -118,6 +118,7 @@ p#quotes {
     height: 100px;
     width: 50%;
     display: inline-block;
+    font-style: italic;
 }
 
 
