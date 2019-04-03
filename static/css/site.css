@@ -356,6 +356,7 @@ span.resume:hover {
 .profile-photo {
     width: 200px;
     height: auto;
+    clip: rect(0px,150px,150px,0px);
 }
 
 #photos-row, #skills-row {
