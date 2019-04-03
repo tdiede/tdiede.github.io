@@ -363,6 +363,7 @@ span.resume:hover {
     width: 200px;
     height: auto;
     overflow: hidden;
+    border-radius: 55%;
 }
 
 #photos-row, #skills-row {
