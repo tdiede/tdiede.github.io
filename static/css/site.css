@@ -366,6 +366,11 @@ span.resume:hover {
     border-radius: 20%;
 }
 
+.activity-photo {
+    width: 200px;
+    height: auto;
+}
+
 #photos-row, #skills-row {
     text-align: center;
 }
