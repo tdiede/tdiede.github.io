@@ -354,13 +354,13 @@ span.resume:hover {
 
 /* graphics. */
 .profile-photo {
-    width: 200px;
+    width: 120px;
     height: auto;
     transform: scale(1.5);
 }
 
 .profile-photo-mask {
-    width: 200px;
+    width: 120px;
     height: auto;
     overflow: hidden;
     border-radius: 20%;
