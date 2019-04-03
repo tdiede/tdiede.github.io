@@ -359,6 +359,12 @@ span.resume:hover {
     transform: scale(1.5);
 }
 
+.profile-photo-mask {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
 #photos-row, #skills-row {
     text-align: center;
 }
