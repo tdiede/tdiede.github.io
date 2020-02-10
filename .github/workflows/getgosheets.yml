@@ -1,0 +1,18 @@
+name: Get latest data from Google Sheets
+
+on:
+  schedule:
+  - cron: "0 2 * * *"
+
+jobs:
+  logLatestRelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tdiede/request-action@v2.x
+        id: get_latest_data
+        with:
+          route: GET /repos/:repository/releases/latest
+          repository: ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: "echo done"
