@@ -4,10 +4,6 @@
       "experience": 6
     },
     {
-      "skill": "Ruby",
-      "experience": 2
-    },
-    {
       "skill": "SQL",
       "experience": 4
     },
@@ -16,115 +12,7 @@
       "experience": 6
     },
     {
-      "skill": "JavaScript (ES6)",
+      "skill": "Golang",
       "experience": 6
-    },
-    {
-      "skill": "HTML5",
-      "experience": 7
-    },
-    {
-      "skill": "CSS3",
-      "experience": 5
-    },
-    {
-      "skill": "Bootstrap",
-      "experience": 5
-    },
-    {
-      "skill": "Flask",
-      "experience": 5
-    },
-    {
-      "skill": "SQLAlchemy",
-      "experience": 4
-    },
-    {
-      "skill": "Jinja2",
-      "experience": 4
-    },
-    {
-      "skill": "PostgreSQL",
-      "experience": 5
-    },
-    {
-      "skill": "MongoDB",
-      "experience": 5
-    },
-    {
-      "skill": "Git",
-      "experience": 5
-    },
-    {
-      "skill": "Angular2",
-      "experience": 3
-    },
-    {
-      "skill": "React",
-      "experience": 3
-    },
-    {
-      "skill": "JSON/AJAX",
-      "experience": 5
-    },
-    {
-      "skill": "jQuery",
-      "experience": 5
-    },
-    {
-      "skill": "D3.js",
-      "experience": 4
-    },
-    {
-      "skill": "GIS",
-      "experience": 8
-    },
-    {
-      "skill": "CAD",
-      "experience": 8
-    },
-    {
-      "skill": "Illustrator",
-      "experience": 8
-    },
-    {
-      "skill": "Photoshop",
-      "experience": 8
-    },
-    {
-      "skill": "InDesign",
-      "experience": 8
-    },
-    {
-      "skill": "After Effects",
-      "experience": 6
-    },
-    {
-      "skill": "Sketch",
-      "experience": 3
-    },
-    {
-      "skill": "CNC",
-      "experience": 4
-    },
-    {
-      "skill": "Rhinoceros",
-      "experience": 8
-    },
-    {
-      "skill": "Grasshopper",
-      "experience": 6
-    },
-    {
-      "skill": "3dsMax",
-      "experience": 4
-    },
-    {
-      "skill": "V-Ray",
-      "experience": 4
-    },
-    {
-      "skill": "Unity",
-      "experience": 2
     }
 ]
