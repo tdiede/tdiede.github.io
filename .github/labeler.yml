@@ -4,5 +4,13 @@ repo:
 static:
   - ./static/*
 
-testing:
-- ./testfile
+bug:
+  - ./testfile.txt
+
+
+# Add 'label1' to any changes within 'example' folder or any subfolders
+label1:
+  - ./**/*
+
+# Add 'label2' to any file changes within 'example2' folder
+label2: ./*
