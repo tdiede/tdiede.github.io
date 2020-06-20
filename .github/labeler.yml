@@ -3,3 +3,6 @@ repo:
 
 static:
   - ./static/*
+
+testing:
+- ./testfile
