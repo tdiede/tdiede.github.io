@@ -2,7 +2,7 @@ name: Get latest data from Google Sheets
 
 on:
   schedule:
-  - cron: "* */3 * * *"
+  - cron: ""
 
 jobs:
   logLatestRelease:
