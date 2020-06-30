@@ -5,6 +5,12 @@ bug:
 test:
   - 'testfile.txt'
 
+newlabel:
+  - 'testfile.txt'
+
+new label with spaces:
+  - 'testfile.txt'
+
 # repo:
   #- ./*
 
