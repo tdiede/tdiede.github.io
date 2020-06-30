@@ -16,5 +16,5 @@ jobs:
     steps:
     - uses: actions/labeler@master
       with:
-        configuration-path: ./.github/labeler.yml
+        configuration-path: .github/labeler.yml
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
