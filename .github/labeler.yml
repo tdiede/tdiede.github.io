@@ -2,6 +2,9 @@
 bug:
   - any: ['./testfile.txt', 'testfile.txt', './*', '*']
 
+invalid:
+  - 'testfile.txt'
+
 # repo:
   #- ./*
 
