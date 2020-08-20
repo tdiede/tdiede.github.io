@@ -6,15 +6,13 @@ var config = {
     output: {
         path: __dirname, filename: 'bundle.js' },
     watch: true,
+    mode: 'production',
     module : {
-        loaders : [
+        rules : [
             {
                 test : /\.js$/,
-                loader : 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+   		exclude: /(node_modules|bower_components)/,
+   	 	loader: 'babel-loader?presets[]=env,presets[]=react,presets[]=es2015'
             }
         ]
     }

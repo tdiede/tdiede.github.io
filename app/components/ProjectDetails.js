@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const projectsList = require('../../data/projects.json');
+const projectsList = require('../../data/projects_jquery.json');
 
 
 class ProjectDetails extends React.Component {

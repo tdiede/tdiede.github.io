@@ -7,7 +7,7 @@ import ProjectSummary from './components/ProjectSummary.js';
 import ProjectGrid from './components/ProjectGrid.js';
 import Clock from './components/Clock.js';
 
-const projectsList = require('../data/projects.json');
+const projectsList = require('../data/projects_jquery.json');
 
 class App extends React.Component {
   constructor() {

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const projectImages = require('../../data/project_images.json');
+const projectImages = require('../../data/project_images_jquery.json');
 
 class ProjectImageCaption extends React.Component {
   constructor(props) {
