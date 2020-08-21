@@ -1,5 +1,8 @@
+<!-- THIS FILE IS ENTRY POINT - SINGLE-PAGE APPLICATION -->
+
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <title>tmdd</title>
@@ -7,169 +10,172 @@
 
   <script src="https://use.fontawesome.com/2f8f34d248.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/static/css/site.css">
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-    <ul class="nav navbar-nav">
-      <li><a class='navbar-links' href='#home'><span>THERESE DIEDE</span></a></li>
-      <li><a class='navbar-links' href='#projects'><span>projects</span></a></li>
-      <li><a class='navbar-links' href='#aboutme'><span>about me</span></a></li>
-      <li><a class='navbar-links' href='#skills'><span>skills</span></a></li>
-      <li><a class='navbar-links' href='#contact'><span>contact</span></a></li>
-    </ul>
+      <a class='navbar-links' href='#home'>
+        <h1>tmdd</h1>
+      </a>
+      <ul class="nav navbar-nav">
+        <li><a class='navbar-links' href='#projects'><span>projects</span></a></li>
+        <li><a class='navbar-links' href='#aboutme'><span>about me</span></a></li>
+        <li><a class='navbar-links' href='#skills'><span>skills</span></a></li>
+        <li><a class='navbar-links' href='#contact'><span>contact</span></a></li>
+      </ul>
     </div>
   </nav>
 
-<section id='home'>
+  <section id='home'>
 
-<div class='container-home'>
-<div class='buffer'>
+    <div class='container-home'>
+      <div class='buffer'>
 
-    <p id='intro-speech'>
-      Hello!
-    </p>
+        <p id='intro-speech'>
+          Hello!
+        </p>
 
-    <div class='profile-photo-mask'><a href='#aboutme'><img class='profile-photo' /></a><!-- <h1>tmdd</h1> --></div>
+        <div class='profile-photo-mask'><a href='#aboutme'><img class='profile-photo' /></a>
+          <!-- <h1>tmdd</h1> -->
+        </div>
 
-    <div class='social-media'>
-        <a href='http://www.twitter.com/thyrese' target='_blank'><span><i class="fa fa-twitter"></i></span></a>
-        <a href='http://www.instagram.com/tmdd_ly' target='_blank'><span><i class="fa fa-instagram"></i></span></a>
-        <a href='http://www.linkedin.com/in/theresediede' target='_blank'><span><i class="fa fa-linkedin"></i></span></a>
-        <a href='http://github.com/tdiede' target='_blank'><span><i class="fa fa-github"></i></span></a>
+        <div class='social-media'>
+          <a href='http://www.twitter.com/thyrese' target='_blank'><span><i class="fa fa-twitter"></i></span></a>
+          <a href='http://www.instagram.com/tmdd_ly' target='_blank'><span><i class="fa fa-instagram"></i></span></a>
+          <a href='http://www.linkedin.com/in/theresediede' target='_blank'><span><i class="fa fa-linkedin"></i></span></a>
+          <a href='http://github.com/tdiede' target='_blank'><span><i class="fa fa-github"></i></span></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="projects">
+
+
+    <div class='row header'>
+      <hr class='orange-strip' />
+      <!-- <h2>projects</h2> -->
+      <!-- <p>These are a few of my projects.</p> -->
     </div>
 
-</div>
-</div>
-</section>
+
+    <div class='row wrap-content'>
+
+      <ul class='row project-container'>
+        <div class='grid-content'>
+        </div>
+      </ul>
+
+    </div>
 
 
+    <div class='row' id='project-details'>
 
-
-<section id="projects">
-
-
-<div class='row header'>
-    <hr class='orange-strip'/>
-    <!-- <h2>projects</h2> -->
-    <!-- <p>These are a few of my projects.</p> -->
-</div>
-
-
-<div class='row wrap-content'>
-
-    <ul class='row project-container'>
-      <div class='grid-content'>
-      </div>
-    </ul>
-
-</div>
-
-
-<div class='row' id='project-details'>
-
-    <div class='wrap-project-container col-lg-6 col-md-6 col-md-push-6'>
+      <div class='wrap-project-container col-lg-6 col-md-6 col-md-push-6'>
         <div class='wrap-text'>
           <div class='project-text'></div>
         </div>
 
         <div class='wrap-footer'>
-            <!-- <div class='slideshow-controls'> -->
-              <!-- <i class="fa fa-step-backward"></i> -->
-              <!-- <i class="fa fa-pause"></i> -->
-              <!-- <i class="fa fa-play"></i> -->
-              <!-- <i class="fa fa-step-forward"></i> -->
-            <!-- </div> -->
-            <div class='caption-container'>
-                <p class='project-caption'></p>
-            </div>
-            <div class='gallery-container'>
-                <div class='project-gallery'></div>
-            </div>
+          <!-- <div class='slideshow-controls'> -->
+          <!-- <i class="fa fa-step-backward"></i> -->
+          <!-- <i class="fa fa-pause"></i> -->
+          <!-- <i class="fa fa-play"></i> -->
+          <!-- <i class="fa fa-step-forward"></i> -->
+          <!-- </div> -->
+          <div class='caption-container'>
+            <p class='project-caption'></p>
+          </div>
+          <div class='gallery-container'>
+            <div class='project-gallery'></div>
+          </div>
         </div>
 
-    </div>
-
-    <div class='wrap-image-container col-lg-6 col-md-6 col-md-pull-6'>
-
-      <div class='wrap-image'>
-          <img class='project-photo-feature' src='' />
       </div>
 
-      <!-- <div class='wrap-header'>
+      <div class='wrap-image-container col-lg-6 col-md-6 col-md-pull-6'>
+
+        <div class='wrap-image'>
+          <img class='project-photo-feature' src='' />
+        </div>
+
+        <!-- <div class='wrap-header'>
         <div class='caption-container'>
             &#x25C4;<p class='project-caption'></p>
         </div>
       </div> -->
 
+      </div>
+
     </div>
 
-</div>
-
-</section>
+  </section>
 
 
 
 
-<section id='aboutme'>
-<div class='container-aboutme'>
+  <section id='aboutme'>
+    <div class='container-aboutme'>
 
-  <h2>about me</h2>
-
-    <br>
-
-  <div class='row' id='photos-row'>
-      <div class='photo-container'>
-        <img class='activity-photo' src='/static/img/me/hardhat.png'>
-        <p class='profile-caption'>Wearing other hats.</p>
-      </div>
-      <div class='photo-container'>
-        <img class='activity-photo' src='/static/img/me/half-marathon.png'>
-        <p class='profile-caption'>Running halfs.</p>
-      </div>
-      <div class='photo-container'>
-        <img class='activity-photo' src='/static/img/me/kitchen.png'>
-        <p class='profile-caption'>Running tasty experiments.</p>
-      </div>
-
-  </div>
-
-  <div class='row'>
-    <div class='col-md-offset-2 col-md-8'>
-
-<!--     <p class='description'>I am a <span class='bold'>FULL STACK SOFTWARE ENGINEER</span> with a background in urban planning, cartography, and architecture. My primary tech stack for database-driven web apps is Python/Flask with jQuery and PostgreSQL, but I also work with MongoDB and in full-stack JavaScript (ES6): Node.js, Meteor.js, React.js, and other frameworks as needed — always changing! I love to solve problems both practical and imaginary. Clean, modular code is important to me, as is good visual design. The user is always at the forefront of my decisions on application interface.</p> -->
-
-<!--     <p class='description'>What drew me to tech was the fast pace, team orientation, and creative environment, where there are always new challenges and it is possible to prototype an entire web application in a relatively short timeframe. I first learned code during my time in graduate school at Columbia University, implementing scripts to analyze open data about all things planning-related New York City and generate countless iterations of geometry to automate architectural possibilities. In both contract and full time roles, I have extensive professional experience in <span class='bold'>GIS</span> mapping, spatial data analysis, and architectural <span class='bold'>3D</span> and <span class='bold'>BIM</span> modeling. Working with clients as well as independently to build a variety of software tools, web apps, and games, I have the combined equivalent of <span class='bold'>one+ year</span> of programming experience.</p> -->
-
-    </div>
-  </div>
-
-
-  <div class='row'>
-    <div class='col-md-offset-4 col-md-4'>
+      <h2>about me</h2>
 
       <br>
-      <hr class='resume'>
-      <br>
 
-      <h3>EDUCATION</h3><br>
+      <div class='row' id='photos-row'>
+        <div class='photo-container'>
+          <img class='activity-photo' src='/static/img/me/hardhat.png'>
+          <p class='profile-caption'>Wearing other hats.</p>
+        </div>
+        <div class='photo-container'>
+          <img class='activity-photo' src='/static/img/me/half-marathon.png'>
+          <p class='profile-caption'>Running halfs.</p>
+        </div>
+        <div class='photo-container'>
+          <img class='activity-photo' src='/static/img/me/kitchen.png'>
+          <p class='profile-caption'>Running tasty experiments.</p>
+        </div>
 
-      <h4>COLUMBIA UNIVERSITY | NY</h4>
-      <p>Master of Architecture, M.S. Urban Planning • 2013</p>
+      </div>
 
-      <h4>TULANE UNIVERSITY | NOLA</h4>
-      <p>B.A. Sociology & Environmental Science</p>
-<!--          Magna Cum Laude, Senior Scholar</p> -->
+      <div class='row'>
+        <div class='col-md-offset-2 col-md-8'>
 
-<!--       <br>
+          <!--     <p class='description'>I am a <span class='bold'>FULL STACK SOFTWARE ENGINEER</span> with a background in urban planning, cartography, and architecture. My primary tech stack for database-driven web apps is Python/Flask with jQuery and PostgreSQL, but I also work with MongoDB and in full-stack JavaScript (ES6): Node.js, Meteor.js, React.js, and other frameworks as needed — always changing! I love to solve problems both practical and imaginary. Clean, modular code is important to me, as is good visual design. The user is always at the forefront of my decisions on application interface.</p> -->
+
+          <!--     <p class='description'>What drew me to tech was the fast pace, team orientation, and creative environment, where there are always new challenges and it is possible to prototype an entire web application in a relatively short timeframe. I first learned code during my time in graduate school at Columbia University, implementing scripts to analyze open data about all things planning-related New York City and generate countless iterations of geometry to automate architectural possibilities. In both contract and full time roles, I have extensive professional experience in <span class='bold'>GIS</span> mapping, spatial data analysis, and architectural <span class='bold'>3D</span> and <span class='bold'>BIM</span> modeling. Working with clients as well as independently to build a variety of software tools, web apps, and games, I have the combined equivalent of <span class='bold'>one+ year</span> of programming experience.</p> -->
+
+        </div>
+      </div>
+
+
+      <div class='row'>
+        <div class='col-md-offset-4 col-md-4'>
+
+          <br>
+          <hr class='resume'>
+          <br>
+
+          <h3>EDUCATION</h3><br>
+
+          <h4>COLUMBIA UNIVERSITY | NY</h4>
+          <p>Master of Architecture, M.S. Urban Planning • 2013</p>
+
+          <h4>TULANE UNIVERSITY | NOLA</h4>
+          <p>B.A. Sociology & Environmental Science</p>
+          <!--          Magna Cum Laude, Senior Scholar</p> -->
+
+          <!--       <br>
       <hr class='resume'>
       <br>
 
@@ -187,65 +193,64 @@
       <h4>Lead Cartographer + 3D Visualization | ROWAN TECH</h4>
       <p>Jul 2013 – Oct 2014 • New York</p> -->
 
-      <br>
-      <hr class='resume'>
-      <br>
+          <br>
+          <hr class='resume'>
+          <br>
 
-<!--       <h3>VOLUNTEER</h3><br> -->
+          <!--       <h3>VOLUNTEER</h3><br> -->
 
-      <h4>Studio + Tools | The Crucible</h4>
-      <p>2015 - 2016 • Oakland</p>
+          <h4>Studio + Tools | The Crucible</h4>
+          <p>2015 - 2016 • Oakland</p>
 
-      <br>
-      <hr class='resume'>
-      <br>
+          <br>
+          <hr class='resume'>
+          <br>
 
-      <a href='static/pdf/Resume_ThereseDiede.pdf' target='_blank'>
-        <span class='resume'><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Click here for a PDF version of my resumé.</span>
-      </a>
+          <a href='static/pdf/Resume_ThereseDiede.pdf' target='_blank'>
+            <span class='resume'><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Click here for a PDF version of my resumé.</span>
+          </a>
 
-      <br>
-      <br>
+          <br>
+          <br>
 
-<!--  <h3>PROJECTS</h3><a href='#projects'>See section below.</a>
+          <!--  <h3>PROJECTS</h3><a href='#projects'>See section below.</a>
       <h3>SKILLS</h3><a href='#skills'>See section below.</a> -->
 
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
 
 
 
-<section id='skills'>
-<div class='container-skills'>
-</div>
-</section>
+  <section id='skills'>
+    <div class='container-skills'>
+    </div>
+  </section>
 
 
 
 
-<section id='contact'>
-<div class='container-contact'>
-    <div class='row'>
+  <section id='contact'>
+    <div class='container-contact'>
+      <div class='row'>
         <p><span class='emoji'>🐧</span> Be in touch.</p>
+      </div>
     </div>
-</div>
-</section>
+  </section>
 
 
 
 
-<footer id='clock'></footer>
+  <footer id='clock'></footer>
 
-<script src='/static/js/alternative.js'></script>
+  <script src='/static/js/alternative.js'></script>
 
-<script src="http://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-<script src='/static/js/site.js'></script>
+  <script src='/static/js/site.js'></script>
 
 </body>
+
 </html>

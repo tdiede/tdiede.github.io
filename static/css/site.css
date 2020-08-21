@@ -48,7 +48,8 @@ hr.resume {
 
 /*tmdd*/
 h1 {
-    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    font-family: 'Brush Script Std', cursive;
     font-weight: 600;
     font-size: 24pt;
     color: #333333;
@@ -207,18 +208,21 @@ section {
 }
 
 .social-media {
-    text-align: center;
     min-width: 200px;
+    position: relative;
+    left: 60%;
+    padding: 70px 90px;
 }
 
 p#intro-speech {
-    text-align: center;
     min-width: 200px;
-    display: inline-block;
-    margin: 10px;
+    position: relative;
+    left: 70%;
+    padding: 10px;
     font-style: italic;
     font-size: 11pt;
     text-shadow: #dddddd 1px 1px 1px;
+    cursor: default;
 }
 
 /* specific link text. */
@@ -360,7 +364,7 @@ span.resume:hover {
 }
 
 .profile-photo-mask {
-    width: 120px;
+    width: 160px;
     height: auto;
     overflow: hidden;
     border-radius: 20%;
