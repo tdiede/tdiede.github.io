@@ -3,7 +3,7 @@
 var portfolio = {};
 var projects;
 
-var json = '../../data/projects.json';
+var json = '../../data/projects_jquery.json';
 var response = $.getJSON(json);
 
 function createPortfolio() {
@@ -135,4 +135,3 @@ $('a[href^="#"]').on('click', function(e) {
         }, 1000);
     }
 });
-
