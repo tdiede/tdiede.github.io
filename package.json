@@ -11,8 +11,7 @@
   "author": "Therese Diede",
   "license": "ISC",
   "dependencies": {},
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/tdiede/tdiede.github.io"
