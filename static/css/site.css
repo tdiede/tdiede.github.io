@@ -2,8 +2,8 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway|Roboto';
 
 
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
 a, a:active {
@@ -586,71 +586,4 @@ footer {
     font-weight: 400;
     font-size: 10pt;
     color: #FFA500;
-}
-
-
-
-
-/*#map-mapbox {
-    height: 600px;
-}
-
-.mapboxgl-ctrl-top-left {
-    padding: 10px;
-}*/
-
-
-
-/* d3 world. */
-
-#globe {
-    background-color: #48D1CC;
-    opacity: 0.4;
-}
-
-svg {
-    height: 600px;
-    width: 100%;
-    pointer-events: all;
-}
-
-circle {
-    fill: red;
-}
-
-path {
-    fill: #FFFAFA;
-    stroke: #48D1CC;
-}
-
-
-
-
-.bar {
-    /*fill: #AADD99;*/
-    fill: #FFA500;
-    /*stroke: #CF2D08;*/
-}
-.bar:hover {
-    fill: none;
-    stroke: #FFA500;
-    /*fill: #AADD99;*/
-    /*stroke: orange;*/
-    /*fill: #009999;*/
-    cursor: pointer;
-}
-.axis text {
-    /*font-family: 'Roboto', sans-serif;*/
-    /*font-weight: 400;*/
-    /*font-size: 10pt;*/
-    /*fill: #888888;*/
-    font-family: 'Raleway', sans-serif;
-    font-weight: extra-light;
-    font-size: 9pt;
-    fill: #585858;
-}
-.axis path, .axis line {
-    fill: none;
-    stroke: #AAAAAA;
-    shape-rendering: crispEdges;
 }
